@@ -5,6 +5,12 @@ export const personal = {
   email: "bhavyadarji462@gmail.com",
   phone: "+91 8433791241",
   location: "Mumbai, India",
+  profileImage: "/profile.jpg",
+  heroSubtitle: "React Native & Next.js for Designers",
+  origin: "Mumbai — Origin",
+  workingWith: "Working with India & beyond",
+  techStack: "REACT NATIVE & NEXT.JS",
+  animations: "GSAP ANIMATIONS",
   summary:
     "I'm a web and mobile developer who builds polished, user-first products — from responsive WordPress sites to cross-platform apps with React Native and Expo. I thrive whether I'm shipping solo as a freelancer or collaborating inside a team, and I care deeply about clean design, solid engineering, and outcomes that actually matter.",
   social: {
@@ -71,7 +77,7 @@ export const projects = [
     title: "Handwrite",
     category: "Business Venture",
     status: "Live Product",
-    accent: "violet",
+    accent: "teal",
     description:
       "A SaaS platform that transforms typed text into realistic handwritten pages using personalized handwriting profiles — built for students drowning in mandatory handwritten submissions.",
     highlights: [
@@ -99,7 +105,7 @@ export const projects = [
     title: "Medway",
     category: "Healthcare",
     status: "Completed",
-    accent: "rose",
+    accent: "sky",
     description:
       "A healthcare monitoring app designed for elderly users and caregivers — real-time vitals, emergency support, and complete care coordination.",
     highlights: [
@@ -188,9 +194,24 @@ export const languages = [
 
 export const navLinks = [
   { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
+  { href: "#about", label: "About Me" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
+];
+
+export const footerTags = [
+  "PIXEL-PERFECT",
+  "SUPPORT ∞",
+  "/CODE-QUALITY",
+  "//HASSLE-FREE",
+];
+
+export const heroNavLinks = [
+  { href: "#about", label: "About Me" },
+  { href: "#experience", label: "Why Me" },
+  { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Approach" },
+  { href: "#contact", label: "Let's Talk ↗" },
 ];

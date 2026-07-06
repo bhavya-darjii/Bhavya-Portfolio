@@ -69,7 +69,7 @@ export function Header() {
             className="group flex items-center gap-2"
             onClick={() => setMobileOpen(false)}
           >
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-cyan-400 text-sm font-bold text-white shadow-lg shadow-violet-500/25 transition-transform group-hover:scale-105">
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-cyan-400 text-sm font-bold text-white shadow-lg shadow-teal-500/25 transition-transform group-hover:scale-105">
               BD
             </span>
             <span className="hidden font-display text-sm font-semibold tracking-wide text-white sm:block">
@@ -104,7 +104,7 @@ export function Header() {
 
           <a
             href="#contact"
-            className="hidden rounded-xl bg-gradient-to-r from-violet-600 to-violet-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-violet-600/30 transition-all hover:shadow-violet-500/40 hover:brightness-110 md:inline-flex"
+            className="hidden rounded-xl bg-gradient-to-r from-teal-600 to-teal-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-teal-600/30 transition-all hover:shadow-teal-500/40 hover:brightness-110 md:inline-flex"
           >
             Let&apos;s Talk
           </a>
@@ -161,7 +161,7 @@ export function Header() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: navLinks.length * 0.05 }}
                 onClick={() => setMobileOpen(false)}
-                className="mt-4 rounded-xl bg-gradient-to-r from-violet-600 to-violet-500 px-4 py-3 text-center text-lg font-semibold text-white"
+                className="mt-4 rounded-xl bg-gradient-to-r from-teal-600 to-teal-500 px-4 py-3 text-center text-lg font-semibold text-white"
               >
                 Let&apos;s Talk
               </motion.a>

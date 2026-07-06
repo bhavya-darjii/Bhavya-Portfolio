@@ -22,7 +22,7 @@ export function SectionHeading({
       transition={{ duration: 0.6 }}
       className="mb-12 md:mb-16"
     >
-      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-violet-400">
+      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-teal-400">
         {label}
       </p>
       <h2 className="font-display text-3xl font-bold text-white md:text-4xl lg:text-5xl">
@@ -57,7 +57,7 @@ export function About() {
                 <MapPin size={14} className="text-cyan-400" />
                 {personal.location}
               </span>
-              <span className="rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-2 text-sm text-violet-300">
+              <span className="rounded-full border border-teal-500/30 bg-teal-500/10 px-4 py-2 text-sm text-teal-300">
                 Web & Mobile Developer
               </span>
               <span className="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 text-sm text-cyan-300">
@@ -68,8 +68,8 @@ export function About() {
 
           <GlassCard className="lg:col-span-2" delay={0.2}>
             <div className="mb-6 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-500/20">
-                <GraduationCap size={20} className="text-violet-400" />
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/20">
+                <GraduationCap size={20} className="text-teal-400" />
               </div>
               <h3 className="font-display text-lg font-semibold text-white">
                 Education
@@ -81,7 +81,7 @@ export function About() {
                   {i < education.length - 1 && (
                     <span className="absolute left-[5px] top-6 h-full w-px bg-white/10" />
                   )}
-                  <span className="absolute left-0 top-1.5 h-2.5 w-2.5 rounded-full border-2 border-violet-500 bg-[#0a0a12]" />
+                  <span className="absolute left-0 top-1.5 h-2.5 w-2.5 rounded-full border-2 border-teal-500 bg-[#0a0a12]" />
                   <p className="text-sm font-medium text-white">{item.degree}</p>
                   <p className="text-sm text-zinc-400">{item.school}</p>
                   <p className="mt-0.5 text-xs text-zinc-500">{item.period}</p>

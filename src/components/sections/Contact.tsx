@@ -1,125 +1,146 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { GlassCard } from "@/components/ui/GlassCard";
-import { SectionHeading } from "@/components/sections/About";
+import { ArrowUpRight } from "lucide-react";
 import { personal } from "@/data/portfolio";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+
+const topics = ["Collaboration", "Potential Project", "Networking"] as const;
 
 export function Contact() {
+  const [selectedTopic, setSelectedTopic] = useState<string>(topics[0]);
+  const [contactMethod, setContactMethod] = useState<"email" | "social">("email");
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+    const country = (form.elements.namedItem("country") as HTMLInputElement).value;
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+
+    const subject = encodeURIComponent(
+      `${selectedTopic} — ${name} from ${country}`
+    );
+    const body = encodeURIComponent(
+      `Hi Bhavya,\n\nMy name is ${name} from ${country}.\n\nLet's connect about: ${selectedTopic}\n\n${message}\n\nReach me at: ${email}`
+    );
+    window.location.href = `mailto:${personal.email}?subject=${subject}&body=${body}`;
+  };
+
   return (
     <section id="contact" className="px-4 py-24 md:px-6 md:py-32">
-      <div className="mx-auto max-w-6xl">
-        <SectionHeading
-          label="Contact"
-          title="Let's build something remarkable"
-          description="Have a project in mind or just want to connect? I'd love to hear from you."
-        />
+      <div className="mx-auto max-w-5xl">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="hero-gradient-bg overflow-hidden rounded-3xl p-8 shadow-2xl shadow-teal-900/20 md:p-12 lg:p-16"
+        >
+          <form onSubmit={handleSubmit} className="space-y-8">
+            <p className="font-display text-xl leading-relaxed text-slate-900 md:text-2xl lg:text-3xl">
+              Hey,{" "}
+              <span className="font-bold">{personal.name.toUpperCase()}!</span>{" "}
+              My name is{" "}
+              <input
+                name="name"
+                required
+                placeholder="Your Name"
+                className="inline-block min-w-[8rem] border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600 md:min-w-[12rem]"
+              />{" "}
+              and I am from{" "}
+              <input
+                name="country"
+                required
+                placeholder="Country"
+                className="inline-block min-w-[6rem] border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600 md:min-w-[10rem]"
+              />
+            </p>
 
-        <div className="grid gap-6 lg:grid-cols-5">
-          <GlassCard className="lg:col-span-2" delay={0.1}>
-            <h3 className="mb-6 font-display text-xl font-semibold text-white">
-              Reach Out
-            </h3>
-            <ul className="space-y-5">
-              <li>
-                <a
-                  href={personal.social.email}
-                  className="group flex items-center gap-4 rounded-xl border border-white/5 bg-white/[0.02] p-4 transition-all hover:border-violet-500/30 hover:bg-violet-500/5"
-                >
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-500/20 transition-colors group-hover:bg-violet-500/30">
-                    <Mail size={18} className="text-violet-400" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-zinc-500">Email</p>
-                    <p className="text-sm text-white">{personal.email}</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a
-                  href={personal.social.phone}
-                  className="group flex items-center gap-4 rounded-xl border border-white/5 bg-white/[0.02] p-4 transition-all hover:border-cyan-500/30 hover:bg-cyan-500/5"
-                >
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-500/20 transition-colors group-hover:bg-cyan-500/30">
-                    <Phone size={18} className="text-cyan-400" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-zinc-500">Phone</p>
-                    <p className="text-sm text-white">{personal.phone}</p>
-                  </div>
-                </a>
-              </li>
-              <li className="flex items-center gap-4 rounded-xl border border-white/5 bg-white/[0.02] p-4">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-rose-500/20">
-                  <MapPin size={18} className="text-rose-400" />
-                </div>
-                <div>
-                  <p className="text-xs text-zinc-500">Location</p>
-                  <p className="text-sm text-white">{personal.location}</p>
-                </div>
-              </li>
-            </ul>
-          </GlassCard>
+            <div>
+              <p className="mb-4 font-display text-xl text-slate-900 md:text-2xl">
+                Let&apos;s connect about
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {topics.map((topic) => (
+                  <button
+                    key={topic}
+                    type="button"
+                    onClick={() => setSelectedTopic(topic)}
+                    className={`rounded-full border-2 px-5 py-2 text-sm font-semibold transition-all md:text-base ${
+                      selectedTopic === topic
+                        ? "border-slate-900 bg-slate-900 text-white"
+                        : "border-slate-900/30 text-slate-800 hover:border-slate-900/60"
+                    }`}
+                  >
+                    {topic}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-          <GlassCard className="lg:col-span-3" delay={0.2}>
-            <h3 className="mb-6 font-display text-xl font-semibold text-white">
-              Send a Message
-            </h3>
-            <form
-              action={`mailto:${personal.email}`}
-              method="GET"
-              className="space-y-4"
-            >
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div>
-                  <label htmlFor="name" className="mb-2 block text-xs text-zinc-500">
-                    Name
-                  </label>
-                  <input
-                    id="name"
-                    name="subject"
-                    type="text"
-                    placeholder="Your name"
-                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-zinc-600 outline-none transition-colors focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/30"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="mb-2 block text-xs text-zinc-500">
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="you@example.com"
-                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-zinc-600 outline-none transition-colors focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/30"
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="message" className="mb-2 block text-xs text-zinc-500">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="body"
-                  rows={5}
-                  placeholder="Tell me about your project..."
-                  className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-zinc-600 outline-none transition-colors focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/30"
-                />
-              </div>
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-violet-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-violet-600/25 transition-shadow hover:shadow-violet-500/40"
+            <p className="font-display text-xl leading-relaxed text-slate-900 md:text-2xl">
+              We can talk in more detail at{" "}
+              <input
+                name="email"
+                type="email"
+                required
+                placeholder="name@website.com"
+                className="inline-block min-w-[10rem] border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600 md:min-w-[16rem]"
+              />
+            </p>
+
+            <div className="flex flex-wrap gap-3">
+              <button
+                type="button"
+                onClick={() => setContactMethod("social")}
+                className={`rounded-full border-2 px-5 py-2 text-sm font-semibold transition-all ${
+                  contactMethod === "social"
+                    ? "border-slate-900 bg-slate-900 text-white"
+                    : "border-slate-900/30 text-slate-800"
+                }`}
               >
-                <Send size={16} />
-                Send Message
-              </motion.button>
-            </form>
-          </GlassCard>
-        </div>
+                WhatsApp / LinkedIn
+              </button>
+              <button
+                type="button"
+                onClick={() => setContactMethod("email")}
+                className={`rounded-full border-2 px-5 py-2 text-sm font-semibold transition-all ${
+                  contactMethod === "email"
+                    ? "border-slate-900 bg-slate-900 text-white"
+                    : "border-slate-900/30 text-slate-800"
+                }`}
+              >
+                Email
+              </button>
+            </div>
+
+            <p className="font-display text-xl text-slate-900 md:text-2xl">
+              In short,{" "}
+              <textarea
+                name="message"
+                required
+                rows={2}
+                placeholder="Type your message"
+                className="mt-2 w-full resize-none border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600"
+              />
+            </p>
+
+            <motion.button
+              type="submit"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="group flex items-center gap-3 font-display text-3xl font-bold text-slate-900 transition-colors hover:text-teal-700 md:text-5xl"
+            >
+              Send a form
+              <ArrowUpRight
+                size={40}
+                className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+              />
+            </motion.button>
+          </form>
+        </motion.div>
       </div>
     </section>
   );

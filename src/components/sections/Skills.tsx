@@ -29,7 +29,7 @@ export function Skills() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.03, duration: 0.3 }}
                   whileHover={{ scale: 1.05, y: -2 }}
-                  className="cursor-default rounded-xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 px-4 py-2.5 text-sm font-medium text-zinc-200 backdrop-blur-sm transition-shadow hover:border-violet-500/30 hover:shadow-lg hover:shadow-violet-500/10"
+                  className="cursor-default rounded-xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 px-4 py-2.5 text-sm font-medium text-zinc-200 backdrop-blur-sm transition-shadow hover:border-teal-500/30 hover:shadow-lg hover:shadow-teal-500/10"
                 >
                   {skill}
                 </motion.span>
@@ -61,7 +61,7 @@ export function Skills() {
                       }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, ease: "easeOut" }}
-                      className="h-full rounded-full bg-gradient-to-r from-violet-500 to-cyan-400"
+                      className="h-full rounded-full bg-gradient-to-r from-teal-500 to-cyan-400"
                     />
                   </div>
                 </li>
@@ -79,7 +79,7 @@ export function Skills() {
                   key={skill}
                   className="flex items-center gap-3 rounded-xl border border-white/5 bg-white/[0.02] px-4 py-3"
                 >
-                  <span className="h-2 w-2 rounded-full bg-gradient-to-r from-violet-400 to-cyan-400" />
+                  <span className="h-2 w-2 rounded-full bg-gradient-to-r from-teal-400 to-cyan-400" />
                   <span className="text-sm text-zinc-300">{skill}</span>
                 </div>
               ))}

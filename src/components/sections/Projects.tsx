@@ -7,12 +7,11 @@ import { cn } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
 
 const accentMap: Record<string, string> = {
-  violet: "from-violet-500/20 to-violet-600/5 border-violet-500/20 text-violet-300",
+  teal: "from-teal-500/20 to-teal-600/5 border-teal-500/20 text-teal-300",
   cyan: "from-cyan-500/20 to-cyan-600/5 border-cyan-500/20 text-cyan-300",
-  rose: "from-rose-500/20 to-rose-600/5 border-rose-500/20 text-rose-300",
+  sky: "from-sky-500/20 to-sky-600/5 border-sky-500/20 text-sky-300",
   amber: "from-amber-500/20 to-amber-600/5 border-amber-500/20 text-amber-300",
   emerald: "from-emerald-500/20 to-emerald-600/5 border-emerald-500/20 text-emerald-300",
-  sky: "from-sky-500/20 to-sky-600/5 border-sky-500/20 text-sky-300",
 };
 
 export function Projects() {
@@ -64,7 +63,7 @@ export function Projects() {
                     key={item.slice(0, 30)}
                     className="flex gap-2 text-sm text-zinc-500"
                   >
-                    <ArrowUpRight size={14} className="mt-0.5 shrink-0 text-violet-400" />
+                    <ArrowUpRight size={14} className="mt-0.5 shrink-0 text-teal-400" />
                     {item}
                   </li>
                 ))}
