@@ -25,7 +25,7 @@ export function SectionHeading({
       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-teal-400">
         {label}
       </p>
-      <h2 className="font-display text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+      <h2 className="text-3xl font-black text-white md:text-4xl lg:text-5xl">
         {title}
       </h2>
       {description && (
@@ -39,7 +39,7 @@ export function SectionHeading({
 
 export function About() {
   return (
-    <section id="about" className="px-4 py-24 md:px-6 md:py-32">
+    <section id="about" className="px-4 py-12 md:px-6 md:py-16">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           label="About Me"
@@ -49,10 +49,19 @@ export function About() {
 
         <div className="grid gap-6 lg:grid-cols-5">
           <GlassCard className="lg:col-span-3" delay={0.1}>
-            <p className="text-base leading-relaxed text-zinc-300 md:text-lg md:leading-relaxed">
-              {personal.summary}
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="space-y-6">
+              <p className="text-lg font-medium leading-relaxed text-zinc-100 md:text-xl md:leading-relaxed">
+                {personal.summary}
+              </p>
+
+              <div className="h-px w-full bg-gradient-to-r from-teal-500/30 via-white/10 to-transparent" />
+
+              <p className="text-base leading-[1.8] text-zinc-400 md:text-lg">
+                {personal.profileSummary}
+              </p>
+            </div>
+
+            <div className="mt-10 flex flex-wrap gap-3 border-t border-white/5 pt-8">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300">
                 <MapPin size={14} className="text-cyan-400" />
                 {personal.location}
@@ -71,7 +80,7 @@ export function About() {
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/20">
                 <GraduationCap size={20} className="text-teal-400" />
               </div>
-              <h3 className="font-display text-lg font-semibold text-white">
+              <h3 className="text-lg font-semibold text-white">
                 Education
               </h3>
             </div>

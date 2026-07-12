@@ -78,53 +78,32 @@ body {
   animation: shimmer 3s linear infinite;
 }
 
-@keyframes gradient-shift {
-  0%,
-  100% {
-    --gradient-hero-from: #bae6fd;
-    --gradient-hero-via: #99f6e4;
-    --gradient-hero-to: #a5f3fc;
-  }
-  33% {
-    --gradient-hero-from: #a5f3fc;
-    --gradient-hero-via: #5eead4;
-    --gradient-hero-to: #7dd3fc;
-  }
-  66% {
-    --gradient-hero-from: #cffafe;
-    --gradient-hero-via: #6ee7b7;
-    --gradient-hero-to: #bae6fd;
-  }
-}
-
-@keyframes backdrop-pulse {
-  0%,
-  100% {
-    opacity: 0.6;
-    transform: scale(1) translate(0, 0);
+@keyframes smooth-gradient {
+  0% {
+    background-position: 0% 50%;
   }
   50% {
-    opacity: 0.85;
-    transform: scale(1.05) translate(2%, -2%);
+    background-position: 100% 50%;
   }
-}
-
-.animate-gradient-shift {
-  animation: gradient-shift 12s ease-in-out infinite;
-}
-
-.animate-backdrop-pulse {
-  animation: backdrop-pulse 8s ease-in-out infinite;
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hero-gradient-bg {
   background: linear-gradient(
     135deg,
-    var(--gradient-hero-from) 0%,
-    var(--gradient-hero-via) 50%,
-    var(--gradient-hero-to) 100%
+    #bae6fd,
+    #99f6e4,
+    #a5f3fc,
+    #5eead4,
+    #7dd3fc,
+    #cffafe,
+    #6ee7b7,
+    #bae6fd
   );
-  animation: gradient-shift 12s ease-in-out infinite;
+  background-size: 400% 400%;
+  animation: smooth-gradient 10s ease-in-out infinite;
 }
 
 /* Custom scrollbar */

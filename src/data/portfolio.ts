@@ -5,17 +5,20 @@ export const personal = {
   email: "bhavyadarji462@gmail.com",
   phone: "+91 8433791241",
   location: "Mumbai, India",
-  profileImage: "/profile.jpg",
+  profileImage: "/bhavya.png",
   heroSubtitle: "React Native & Next.js for Designers",
   origin: "Mumbai — Origin",
   workingWith: "Working with India & beyond",
   techStack: "REACT NATIVE & NEXT.JS",
   animations: "GSAP ANIMATIONS",
   summary:
-    "I'm a web and mobile developer who builds polished, user-first products — from responsive WordPress sites to cross-platform apps with React Native and Expo. I thrive whether I'm shipping solo as a freelancer or collaborating inside a team, and I care deeply about clean design, solid engineering, and outcomes that actually matter.",
+    "I'm a web and mobile developer who builds polished, user-first products — from responsive WordPress sites to cross-platform apps with React Native and Expo.",
+  profileSummary:
+    "Whether I'm shipping solo as a freelancer or collaborating inside a team, I care deeply about clean design, solid engineering, and outcomes that actually matter. Proficient in WordPress, React Native, Expo, HTML5, CSS, and Bootstrap — I've spent years delivering tailored digital solutions for small businesses and growing teams.",
   social: {
     email: "mailto:bhavyadarji462@gmail.com",
     phone: "tel:+918433791241",
+    linkedin: "https://www.linkedin.com/in/bhavya-darji-181573242/",
   },
 };
 
@@ -36,20 +39,21 @@ export const experience = [
     period: "Nov 2024 – Mar 2025",
     type: "Internship",
     highlights: [
-      "Built a POS system for local restaurants to manage offline orders seamlessly.",
-      "Developed a Business Insights app delivering real-time sales, purchase, and performance metrics.",
-      "Strengthened cross-platform skills with React Native and Expo in production-like environments.",
+      "Gained hands-on experience in app development using React Native and Expo during a focused internship.",
+      "Built a POS system for local restaurants to manage offline orders seamlessly, streamlining daily operations.",
+      "Developed a Business Insights app delivering real-time sales, purchase, and performance metrics for decision-making.",
+      "Strengthened cross-platform skills, problem-solving, and delivering user-focused solutions in production-like environments.",
     ],
   },
   {
     company: "WebGyor Technologies",
-    role: "WordPress Developer",
-    period: "May 2022 – Aug 2022",
+    role: "WordPress Website Development",
+    period: "2022 – 2023",
     type: "Internship",
     highlights: [
-      "Maintained visual consistency across fonts, layouts, and imagery for a cohesive brand presence.",
-      "Managed front-end and back-end for Portfolio Analyst, Employee Track, and Account Management systems.",
-      "Coordinated design, development, and launch of a new website — boosting visibility and engagement.",
+      "Achieved a consistent look and visual theme across the website by promoting uniform fonts, formatting, images, and layout.",
+      "Managed front-end and back-end development in Portfolio Analyst, Employee Track, and Account Management systems.",
+      "Coordinated the design, development, and launch of a new website — increasing online visibility and customer engagement.",
     ],
   },
 ];
@@ -79,11 +83,12 @@ export const projects = [
     status: "Live Product",
     accent: "teal",
     description:
-      "A SaaS platform that transforms typed text into realistic handwritten pages using personalized handwriting profiles — built for students drowning in mandatory handwritten submissions.",
+      "A SaaS platform that transforms typed text into realistic handwritten pages using personalized handwriting profiles — built for students facing mandatory handwritten submissions across Indian education.",
     highlights: [
-      "Personal handwriting engine from a single sample upload",
-      "Print-ready PDFs with perfect spacing and multi-page flow",
-      "Student-friendly pricing with smart page rollover",
+      "Upload handwriting once to create a personalized engine with accurate style matching",
+      "Print-ready PDFs with perfect spacing, margins, alignment, and multi-page flow",
+      "Student-friendly page bundles with smart 30-day rollover — no complicated subscriptions",
+      "Mobile-ready editor with preview, in-app guidance, and zero learning curve",
     ],
     tags: ["SaaS", "Product Design", "Mobile-Ready"],
   },
@@ -93,11 +98,11 @@ export const projects = [
     status: "In Development",
     accent: "cyan",
     description:
-      "An on-demand driver booking app connecting users with verified professional drivers for hourly or trip-based rides — personal and corporate.",
+      "An on-demand driver booking app connecting users with verified professional drivers for hourly or trip-based rides — personal and corporate, with instant or advance scheduling.",
     highlights: [
-      "Instant or scheduled booking with fare estimates",
-      "Real-time driver tracking and secure in-app payments",
-      "Verified profiles, ratings, and booking history",
+      "Simple booking for one-way, round-trip, or outstation travel with fare estimates",
+      "Real-time driver tracking, secure in-app payments, and verified driver profiles",
+      "Ratings, reviews, notifications, and booking history for a seamless experience",
     ],
     tags: ["React Native", "Expo", "Real-time"],
   },
@@ -109,9 +114,10 @@ export const projects = [
     description:
       "A healthcare monitoring app designed for elderly users and caregivers — real-time vitals, emergency support, and complete care coordination.",
     highlights: [
-      "Wearable heart-rate integration with live vitals",
-      "One-click emergency ambulance calling",
-      "Doctor appointments, pharmacy orders, and monthly health reports",
+      "Wearable heart-rate sensor integration with live vitals display",
+      "One-click emergency ambulance calling for critical situations",
+      "Doctor appointment booking, pharmacy ordering, and monthly health reports",
+      "Multi-user access for caregivers and family with real-time alerts",
     ],
     tags: ["Flutter", "Health Tech", "IoT"],
   },
@@ -123,9 +129,9 @@ export const projects = [
     description:
       "Corporate marketing site for a growth acceleration agency — advertising, AI automation, and international expansion positioned with outcome-focused UX.",
     highlights: [
-      "Industry-specific service pages and lead-generation CTAs",
-      "Trust-building layout with testimonials and case studies",
-      "Fully responsive, conversion-optimized design",
+      "Industry-specific service pages (FinTech, Cybersecurity, Healthcare) and lead CTAs",
+      "Outcome-focused UX emphasizing client partnership and measurable results",
+      "Fully responsive design with testimonials and consultation booking flow",
     ],
     tags: ["WordPress", "UI/UX", "Marketing"],
   },
@@ -137,9 +143,9 @@ export const projects = [
     description:
       "Corporate website for a financial services firm — execution, custody, settlement, and portfolio management presented with authority and clarity.",
     highlights: [
-      "Regulatory licensing and global access prominently featured",
-      "Intuitive navigation across Services, Markets, and Insights",
-      "Professional branding that builds institutional trust",
+      "Services, Markets, Insights, About, and Contact navigation structure",
+      "Regulatory licensing, global access, and boutique firm positioning",
+      "Professional branding with advisory board and full legal contact information",
     ],
     tags: ["WordPress", "FinTech", "Responsive"],
   },
@@ -151,9 +157,9 @@ export const projects = [
     description:
       "Official company website showcasing Barter.Tech's services and value proposition in a clean, content-driven format.",
     highlights: [
-      "Modern UI/UX with accessibility across devices",
-      "Structured content architecture for services and contact",
-      "Professional presentation for B2B audience",
+      "Clean, professional layout showcasing company services and value proposition",
+      "Responsive, user-friendly interface with modern UI/UX across devices",
+      "Content-driven structure for services, company info, and contact details",
     ],
     tags: ["WordPress", "Bootstrap", "B2B"],
   },
@@ -169,6 +175,8 @@ export const technicalSkills = [
   "JavaScript",
   "Python",
   "Java",
+  "C",
+  "C++",
   "SQL",
   "MySQL",
   "WordPress",
@@ -179,10 +187,10 @@ export const technicalSkills = [
 export const softSkills = [
   "Project Management",
   "Teamwork",
-  "Leadership",
-  "Critical Thinking",
-  "Communication",
   "Time Management",
+  "Leadership",
+  "Effective Communication",
+  "Critical Thinking",
 ];
 
 export const languages = [

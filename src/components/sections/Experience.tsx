@@ -7,7 +7,7 @@ import { Briefcase } from "lucide-react";
 
 export function Experience() {
   return (
-    <section id="experience" className="px-4 py-24 md:px-6 md:py-32">
+    <section id="experience" className="px-4 py-12 md:px-6 md:py-16">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           label="Experience"
@@ -28,7 +28,7 @@ export function Experience() {
                     <Briefcase size={18} className="text-teal-400" />
                   </div>
                   <div>
-                    <h3 className="font-display text-xl font-semibold text-white">
+                    <h3 className="text-xl font-semibold text-white">
                       {job.role}
                     </h3>
                     <p className="text-teal-300">{job.company}</p>

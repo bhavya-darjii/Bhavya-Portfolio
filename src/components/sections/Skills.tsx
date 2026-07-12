@@ -7,7 +7,7 @@ import { technicalSkills, softSkills, languages } from "@/data/portfolio";
 
 export function Skills() {
   return (
-    <section id="skills" className="px-4 py-24 md:px-6 md:py-32">
+    <section id="skills" className="px-4 py-12 md:px-6 md:py-16">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           label="Skills"
@@ -17,7 +17,7 @@ export function Skills() {
 
         <div className="grid gap-6 lg:grid-cols-3">
           <GlassCard className="lg:col-span-2" delay={0.1}>
-            <h3 className="mb-6 font-display text-lg font-semibold text-white">
+            <h3 className="mb-6 text-lg font-semibold text-white">
               Technical Stack
             </h3>
             <div className="flex flex-wrap gap-2.5">
@@ -38,7 +38,7 @@ export function Skills() {
           </GlassCard>
 
           <GlassCard delay={0.2}>
-            <h3 className="mb-6 font-display text-lg font-semibold text-white">
+            <h3 className="mb-6 text-lg font-semibold text-white">
               Languages
             </h3>
             <ul className="space-y-4">
@@ -70,7 +70,7 @@ export function Skills() {
           </GlassCard>
 
           <GlassCard className="lg:col-span-3" delay={0.3}>
-            <h3 className="mb-6 font-display text-lg font-semibold text-white">
+            <h3 className="mb-6 text-lg font-semibold text-white">
               Beyond the Code
             </h3>
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">

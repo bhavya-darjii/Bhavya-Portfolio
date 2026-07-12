@@ -29,7 +29,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="px-4 py-24 md:px-6 md:py-32">
+    <section id="contact" className="px-4 py-12 md:px-6 md:py-16">
       <div className="mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -39,7 +39,7 @@ export function Contact() {
           className="hero-gradient-bg overflow-hidden rounded-3xl p-8 shadow-2xl shadow-teal-900/20 md:p-12 lg:p-16"
         >
           <form onSubmit={handleSubmit} className="space-y-8">
-            <p className="font-display text-xl leading-relaxed text-slate-900 md:text-2xl lg:text-3xl">
+            <p className="text-xl leading-relaxed text-slate-900 md:text-2xl lg:text-3xl">
               Hey,{" "}
               <span className="font-bold">{personal.name.toUpperCase()}!</span>{" "}
               My name is{" "}
@@ -59,7 +59,7 @@ export function Contact() {
             </p>
 
             <div>
-              <p className="mb-4 font-display text-xl text-slate-900 md:text-2xl">
+              <p className="mb-4 text-xl text-slate-900 md:text-2xl">
                 Let&apos;s connect about
               </p>
               <div className="flex flex-wrap gap-3">
@@ -80,7 +80,7 @@ export function Contact() {
               </div>
             </div>
 
-            <p className="font-display text-xl leading-relaxed text-slate-900 md:text-2xl">
+            <p className="text-xl leading-relaxed text-slate-900 md:text-2xl">
               We can talk in more detail at{" "}
               <input
                 name="email"
@@ -116,7 +116,7 @@ export function Contact() {
               </button>
             </div>
 
-            <p className="font-display text-xl text-slate-900 md:text-2xl">
+            <p className="text-xl text-slate-900 md:text-2xl">
               In short,{" "}
               <textarea
                 name="message"
@@ -131,7 +131,7 @@ export function Contact() {
               type="submit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="group flex items-center gap-3 font-display text-3xl font-bold text-slate-900 transition-colors hover:text-teal-700 md:text-5xl"
+              className="group flex items-center gap-3 text-3xl font-bold text-slate-900 transition-colors hover:text-teal-700 md:text-5xl"
             >
               Send a form
               <ArrowUpRight

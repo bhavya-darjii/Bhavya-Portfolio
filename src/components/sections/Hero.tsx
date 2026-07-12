@@ -6,18 +6,19 @@ import { ProfileImage } from "@/components/ui/ProfileImage";
 
 export function Hero() {
   return (
-    <section id="home" className="relative px-4 pt-24 pb-8 md:px-6 md:pt-28">
-      <div className="mx-auto max-w-7xl">
+    <section id="home" className="relative w-full min-h-screen">
+      <div className="w-full h-full">
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="hero-gradient-bg relative overflow-hidden rounded-3xl shadow-2xl shadow-teal-900/20"
+          className="hero-gradient-bg relative overflow-hidden shadow-2xl shadow-teal-900/20 w-full min-h-screen"
         >
-          <div className="relative flex min-h-[85vh] flex-col">
-            {/* Large background typography */}
+          <div className="relative flex min-h-screen flex-col">
+
+            {/* Large background typography — behind photo */}
             <div
-              className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center select-none"
+              className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center select-none z-0"
               aria-hidden
             >
               <motion.span
@@ -56,28 +57,28 @@ export function Hero() {
               ))}
             </motion.nav>
 
-            {/* Profile image — centered, overlapping text */}
-            <div className="relative z-10 mx-auto mt-4 flex flex-1 items-end justify-center md:mt-0">
+            {/* Profile image — centered, touching the bottom, behind footer row but above bg text */}
+            <div className="absolute bottom-0 left-0 right-0 z-10 flex justify-center">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="relative h-[55vh] w-full max-w-lg md:h-[65vh] md:max-w-xl"
+                className="w-full max-w-2xl md:max-w-3xl lg:max-w-4xl"
+                style={{ height: "92vh", marginLeft: "-100px" /* ← adjust this to shift image left/right */ }}
               >
-                <div className="relative h-full w-full">
-                  <ProfileImage className="h-full w-full [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)]" />
-                </div>
+                <ProfileImage />
               </motion.div>
             </div>
 
-            {/* Footer meta row */}
+            {/* Footer meta row — pinned to bottom, above image */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.9 }}
-              className="relative z-20 grid grid-cols-1 gap-4 px-6 pb-8 md:grid-cols-3 md:items-end md:gap-0"
+              className="absolute bottom-0 left-0 right-0 z-20 flex items-end justify-between px-6 pb-8"
             >
-              <div className="text-center md:text-left">
+              {/* Left */}
+              <div>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-slate-800/60">
                   {personal.origin}
                 </p>
@@ -85,10 +86,9 @@ export function Hero() {
                   {personal.workingWith}
                 </p>
               </div>
-              <p className="text-center text-[10px] font-medium uppercase tracking-[0.2em] text-slate-800/50 md:text-xs">
-                {personal.heroSubtitle}
-              </p>
-              <div className="text-center md:text-right">
+
+              {/* Right */}
+              <div className="text-right">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-slate-800/60">
                   {personal.techStack}
                 </p>
@@ -97,6 +97,7 @@ export function Hero() {
                 </p>
               </div>
             </motion.div>
+
           </div>
         </motion.div>
       </div>

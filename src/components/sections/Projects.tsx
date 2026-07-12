@@ -16,7 +16,7 @@ const accentMap: Record<string, string> = {
 
 export function Projects() {
   return (
-    <section id="projects" className="px-4 py-24 md:px-6 md:py-32">
+    <section id="projects" className="px-4 py-12 md:px-6 md:py-16">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           label="Projects"
@@ -39,7 +39,7 @@ export function Projects() {
                   <p className="mb-1 text-xs font-medium uppercase tracking-wider text-zinc-500">
                     {project.category}
                   </p>
-                  <h3 className="font-display text-2xl font-bold text-white">
+                  <h3 className="text-2xl font-bold text-white">
                     {project.title}
                   </h3>
                 </div>

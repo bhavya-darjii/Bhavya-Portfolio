@@ -140,39 +140,37 @@ export function Preloader({ onComplete }: PreloaderProps) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#030308]"
+          className="fixed inset-0 z-[100] h-screen w-screen overflow-hidden bg-[#030308]"
         >
-          <div className="relative mx-4 w-full max-w-4xl overflow-hidden rounded-2xl border border-white/5">
-            <motion.div
-              animate={{
-                background: [
-                  "linear-gradient(135deg, #0c4a6e 0%, #134e4a 50%, #164e63 100%)",
-                  "linear-gradient(135deg, #134e4a 0%, #0c4a6e 50%, #155e75 100%)",
-                  "linear-gradient(135deg, #164e63 0%, #134e4a 50%, #0c4a6e 100%)",
-                ],
-              }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="relative flex min-h-[50vh] items-center justify-center px-8 py-24"
+          <motion.div
+            animate={{
+              background: [
+                "linear-gradient(135deg, #0c4a6e 0%, #134e4a 50%, #164e63 100%)",
+                "linear-gradient(135deg, #134e4a 0%, #0c4a6e 50%, #155e75 100%)",
+                "linear-gradient(135deg, #164e63 0%, #134e4a 50%, #0c4a6e 100%)",
+              ],
+            }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="relative flex h-full w-full items-center justify-center px-8"
+          >
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-2xl font-medium tracking-wide text-white md:text-4xl"
             >
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="font-display text-2xl font-medium tracking-wide text-white md:text-4xl"
-              >
-                You Design — I Develop
-              </motion.p>
+              You Design — I Develop
+            </motion.p>
 
-              <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="absolute bottom-8 right-8 font-display text-[clamp(3rem,12vw,8rem)] font-bold leading-none text-white/10"
-              >
-                {Math.min(Math.round(progress), 100)}%
-              </motion.span>
-            </motion.div>
-          </div>
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="absolute bottom-8 right-8 text-[clamp(3rem,12vw,8rem)] font-bold leading-none text-white/10"
+            >
+              {Math.min(Math.round(progress), 100)}%
+            </motion.span>
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>
