@@ -140,7 +140,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed inset-0 z-[100] h-screen w-screen overflow-hidden bg-[#030308]"
+          className="fixed inset-0 z-[100] overflow-hidden bg-[#030308]"
         >
           <motion.div
             animate={{

@@ -13,10 +13,36 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer ref={ref} className="relative border-t border-white/5 w-full min-h-screen flex flex-col bg-black">
-      <div className="w-full flex-1 flex flex-col justify-center">
-        {/* Large name display */}
-        <div className="flex-1 overflow-hidden bg-black px-6 py-16 md:px-12 md:py-20 flex flex-col justify-center">
+    <footer
+      ref={ref}
+      className="relative w-full min-h-[40dvh] md:min-h-[50dvh] flex flex-col bg-black"
+    >
+      {/* Soft blur blend — fades the Contact section into the black footer */}
+      <div
+        className="absolute left-0 right-0 -top-16 h-16 pointer-events-none z-10"
+        style={{
+          background: "linear-gradient(to bottom, transparent, #000000)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+          maskImage: "linear-gradient(to bottom, transparent, black)",
+          WebkitMaskImage: "linear-gradient(to bottom, transparent, black)",
+          transform: "translate3d(0, 0, 0)",
+          WebkitTransform: "translate3d(0, 0, 0)",
+        }}
+      />
+      <div className="w-full flex-1 flex flex-col justify-center relative z-10">
+        <div className="flex-1 px-6 py-16 md:px-12 md:py-20 flex flex-col justify-center items-center">
+          
+          {/* Name comes first */}
+          <h2
+            className="text-center font-display text-[clamp(3rem,12vw,10rem)] font-extrabold uppercase leading-[0.9] tracking-tighter text-zinc-800 mb-8"
+            aria-label={personal.name}
+          >
+            <span className="block">BHAVYA</span>
+            <span className="block">DARJI</span>
+          </h2>
+
+          {/* Icons come second */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
@@ -48,16 +74,9 @@ export function Footer() {
             </a>
           </motion.div>
 
-          <h2
-            className="text-center font-display text-[clamp(3rem,12vw,10rem)] font-extrabold uppercase leading-[0.9] tracking-tighter text-zinc-800"
-            aria-label={personal.name}
-          >
-            <span className="block">BHAVYA</span>
-            <span className="block">DARJI</span>
-          </h2>
-
+          {/* Copyright comes last */}
           {inView && (
-            <div className="mt-12 flex flex-col items-center justify-center">
+            <div className="mt-4 flex flex-col items-center justify-center">
               <TypewriterText
                 text={`© ${year} ${personal.name.toUpperCase()}. ALL RIGHTS RESERVED.`}
                 className="text-[10px] font-semibold uppercase tracking-[0.25em] text-zinc-600"

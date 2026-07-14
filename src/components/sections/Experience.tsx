@@ -11,8 +11,8 @@ export function Experience() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           label="Experience"
-          title="Building real products, not just prototypes"
-          description="From WordPress platforms to React Native apps — hands-on experience across the stack."
+          title="Professional Journey"
+          description="A track record of building robust applications and delivering scalable software solutions across diverse environments."
         />
 
         <div className="relative space-y-6">

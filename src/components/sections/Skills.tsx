@@ -11,8 +11,8 @@ export function Skills() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           label="Skills"
-          title="Tools I wield daily"
-          description="A blend of technical depth and the soft skills that make collaboration actually work."
+          title="Technical Expertise"
+          description="A comprehensive toolkit spanning modern web frameworks, cross-platform mobile development, and core software engineering."
         />
 
         <div className="grid gap-6 lg:grid-cols-3">
@@ -53,11 +53,13 @@ export function Skills() {
                       initial={{ width: 0 }}
                       whileInView={{
                         width:
-                          lang.level === "Fluent"
+                          lang.level === "Native"
                             ? "100%"
-                            : lang.level === "Intermediate"
-                              ? "65%"
-                              : "40%",
+                            : lang.level === "Fluent"
+                              ? "85%"
+                              : lang.level === "Intermediate"
+                                ? "65%"
+                                : "40%",
                       }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, ease: "easeOut" }}

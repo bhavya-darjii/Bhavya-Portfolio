@@ -6,12 +6,11 @@ import { projects } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
 
-const accentMap: Record<string, string> = {
-  teal: "from-teal-500/20 to-teal-600/5 border-teal-500/20 text-teal-300",
-  cyan: "from-cyan-500/20 to-cyan-600/5 border-cyan-500/20 text-cyan-300",
-  sky: "from-sky-500/20 to-sky-600/5 border-sky-500/20 text-sky-300",
-  amber: "from-amber-500/20 to-amber-600/5 border-amber-500/20 text-amber-300",
-  emerald: "from-emerald-500/20 to-emerald-600/5 border-emerald-500/20 text-emerald-300",
+const statusColorMap: Record<string, string> = {
+  "Live Product": "from-sky-500/20 to-sky-600/5 border-sky-500/20 text-sky-300",
+  "In Development": "from-purple-500/20 to-purple-600/5 border-purple-500/20 text-purple-300",
+  "Completed": "from-cyan-500/20 to-cyan-600/5 border-cyan-500/20 text-cyan-300",
+  "Delivered": "from-emerald-500/20 to-emerald-600/5 border-emerald-500/20 text-emerald-300",
 };
 
 export function Projects() {
@@ -20,8 +19,8 @@ export function Projects() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           label="Projects"
-          title="Selected work & ventures"
-          description="Websites, apps, and products — each built with intent and attention to detail."
+          title="Featured Work & Ventures"
+          description="A curated collection of impactful applications, demonstrating expertise in product design and robust engineering."
         />
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -46,7 +45,7 @@ export function Projects() {
                 <span
                   className={cn(
                     "shrink-0 rounded-full border bg-gradient-to-r px-3 py-1 text-xs font-medium",
-                    accentMap[project.accent]
+                    statusColorMap[project.status] || "from-white/20 to-white/5 border-white/20 text-white"
                   )}
                 >
                   {project.status}

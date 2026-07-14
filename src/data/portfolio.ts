@@ -9,8 +9,8 @@ export const personal = {
   heroSubtitle: "React Native & Next.js for Designers",
   origin: "Mumbai — Origin",
   workingWith: "Working with India & beyond",
-  techStack: "REACT NATIVE & NEXT.JS",
-  animations: "GSAP ANIMATIONS",
+  techStack: "FULL STACK ENGINEER",
+  animations: "APPLICATION AND WEB DEVELOPER",
   summary:
     "I'm a web and mobile developer who builds polished, user-first products — from responsive WordPress sites to cross-platform apps with React Native and Expo.",
   profileSummary:
@@ -196,7 +196,7 @@ export const softSkills = [
 export const languages = [
   { name: "English", level: "Fluent" },
   { name: "Hindi", level: "Fluent" },
-  { name: "Gujarati", level: "Fluent" },
+  { name: "Gujarati", level: "Native" },
   { name: "Marathi", level: "Intermediate" },
 ];
 
@@ -218,7 +218,7 @@ export const footerTags = [
 
 export const heroNavLinks = [
   { href: "#about", label: "About Me" },
-  { href: "#experience", label: "Why Me" },
+  { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Approach" },
   { href: "#contact", label: "Let's Talk ↗" },
