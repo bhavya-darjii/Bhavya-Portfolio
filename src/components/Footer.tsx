@@ -32,13 +32,13 @@ export function Footer() {
       />
       <div className="w-full flex-1 flex flex-col justify-center relative z-10">
         <div className="flex-1 px-6 py-16 md:px-12 md:py-20 flex flex-col justify-center items-center">
-          
+
           {/* Name comes first */}
           <h2
-            className="text-center font-display text-[clamp(3rem,12vw,10rem)] font-extrabold uppercase leading-[0.9] tracking-tighter text-zinc-800 mb-8"
+            className="text-center font-display text-[clamp(3rem,12vw,10rem)] font-extrabold uppercase leading-[0.9] text-zinc-800 mb-8"
             aria-label={personal.name}
           >
-            <span className="block">BHAVYA</span>
+            <span className="block">BHA<span style={{ marginLeft: "-0.28em" }}>V</span><span style={{ marginLeft: "0.03em" }}>Y</span><span style={{ marginLeft: "-0.29em" }}>A</span></span>
             <span className="block">DARJI</span>
           </h2>
 
