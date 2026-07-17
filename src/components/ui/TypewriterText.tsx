@@ -151,7 +151,8 @@ export function Preloader({ onComplete }: PreloaderProps) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute top-0 left-0 w-screen h-[120vh] z-[100] overflow-hidden bg-[#07101a]"
+          className="absolute top-0 left-0 w-screen h-[120vh] z-[100] overflow-hidden"
+          style={{ background: "linear-gradient(to bottom, #07101a 65%, #0d4a44 100%)" }}
         >
           {/* Top-left gradient (Red) */}
           <motion.div
