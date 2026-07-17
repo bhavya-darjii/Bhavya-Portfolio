@@ -117,20 +117,31 @@ export function Preloader({ onComplete }: PreloaderProps) {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
+    // Lock scroll to prevent iOS Safari rubber-banding and address bar shifting
+    document.body.style.overflow = "hidden";
+    
+    const steps = [0, 25, 50, 75, 100];
+    let stepIndex = 0;
+
     const interval = setInterval(() => {
-      setProgress((p) => {
-        const next = Math.min(p + Math.random() * 12 + 4, 100);
-        if (next >= 100) {
-          clearInterval(interval);
+      stepIndex++;
+      if (stepIndex >= steps.length) {
+        clearInterval(interval);
+        setTimeout(() => {
+          setVisible(false);
           setTimeout(() => {
-            setVisible(false);
-            setTimeout(onComplete, 600);
-          }, 400);
-        }
-        return next;
-      });
-    }, 120);
-    return () => clearInterval(interval);
+            document.body.style.overflow = "";
+            onComplete();
+          }, 600);
+        }, 400);
+      } else {
+        setProgress(steps[stepIndex]);
+      }
+    }, 800);
+    return () => {
+      clearInterval(interval);
+      document.body.style.overflow = "";
+    };
   }, [onComplete]);
 
   return (
@@ -140,19 +151,32 @@ export function Preloader({ onComplete }: PreloaderProps) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed inset-0 z-[100] overflow-hidden bg-[#030308]"
+          className="absolute top-0 left-0 w-screen h-[120vh] z-[100] overflow-hidden bg-[#07101a]"
         >
+          {/* Top-left gradient (Red) */}
           <motion.div
-            animate={{
-              background: [
-                "linear-gradient(135deg, #0c4a6e 0%, #134e4a 50%, #164e63 100%)",
-                "linear-gradient(135deg, #134e4a 0%, #0c4a6e 50%, #155e75 100%)",
-                "linear-gradient(135deg, #164e63 0%, #134e4a 50%, #0c4a6e 100%)",
-              ],
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: [0, 0, 1], opacity: [0, 0, 1] }}
+            transition={{ duration: 3.5, times: [0, 0.4, 1], ease: "easeInOut" }}
+            className="absolute top-0 left-0 w-[200vmax] h-[200vmax] -translate-x-1/2 -translate-y-1/2 pointer-events-none mix-blend-screen"
+            style={{
+              background: "radial-gradient(circle at center, rgba(220,38,38,0.8) 0%, rgba(220,38,38,0.2) 40%, transparent 65%)"
             }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="relative flex h-full w-full items-center justify-center px-8"
-          >
+          />
+
+          {/* Bottom-right gradient (Turquoise) - Anchored to 120vh bottom to bleed beautifully into Safari gap */}
+          <motion.div
+            initial={{ scale: 0.8, opacity: 1 }}
+            animate={{ scale: [0.8, 1.5, 1], opacity: [1, 1, 1] }}
+            transition={{ duration: 3.5, times: [0, 0.4, 1], ease: "easeInOut" }}
+            className="absolute bottom-0 right-0 w-[200vmax] h-[200vmax] translate-x-1/2 translate-y-1/2 pointer-events-none mix-blend-screen"
+            style={{
+              background: "radial-gradient(circle at center, rgba(64,224,208,0.8) 0%, rgba(64,224,208,0.2) 40%, transparent 65%)"
+            }}
+          />
+
+          {/* Text Container: Locked exactly to the visible screen size (100dvh) so text doesn't fall off screen */}
+          <div className="absolute top-0 left-0 w-full h-[100dvh] flex items-center justify-center px-8">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -166,11 +190,11 @@ export function Preloader({ onComplete }: PreloaderProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="absolute bottom-8 right-8 text-[clamp(3rem,12vw,8rem)] font-bold leading-none text-white/10"
+              className="absolute bottom-8 right-8 text-[clamp(3rem,12vw,8rem)] font-bold leading-none text-white"
             >
               {Math.min(Math.round(progress), 100)}%
             </motion.span>
-          </motion.div>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
