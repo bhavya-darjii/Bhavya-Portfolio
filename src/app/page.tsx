@@ -24,7 +24,7 @@ export default function Home() {
         <Hero />
 
         {/* Middle sections: teal background scoped here only */}
-        <div className="relative">
+        <div className="relative z-10">
           <MiddleBackground />
           <About />
           <Experience />
