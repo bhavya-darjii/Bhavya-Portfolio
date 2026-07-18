@@ -119,7 +119,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
   useEffect(() => {
     // Lock scroll to prevent iOS Safari rubber-banding and address bar shifting
     document.body.style.overflow = "hidden";
-    
+
     const steps = [0, 25, 50, 75, 100];
     let stepIndex = 0;
 
@@ -151,8 +151,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute top-0 left-0 w-screen h-[120vh] z-[100] overflow-hidden"
-          style={{ background: "linear-gradient(to bottom, #07101a 65%, #0d4a44 100%)" }}
+          className="absolute top-0 left-0 w-screen h-[120vh] z-[100] overflow-hidden bg-[#07101a]"
         >
           {/* Top-left gradient (Red) */}
           <motion.div
