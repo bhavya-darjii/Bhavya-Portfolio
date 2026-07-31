@@ -10,22 +10,6 @@ interface GlassCardProps {
   delay?: number;
 }
 
-// Keyframe paths — blobs wander the full card surface
-const tealBlob = {
-  x: ["10%", "55%", "30%", "70%", "15%", "60%", "10%"],
-  y: ["15%", "60%", "80%", "20%", "70%", "35%", "15%"],
-};
-
-const cyanBlob = {
-  x: ["70%", "20%", "65%", "10%", "80%", "40%", "70%"],
-  y: ["70%", "25%", "60%", "80%", "15%", "55%", "70%"],
-};
-
-const accentBlob = {
-  x: ["40%", "75%", "15%", "50%", "85%", "25%", "40%"],
-  y: ["40%", "10%", "65%", "85%", "45%", "20%", "40%"],
-};
-
 export function GlassCard({
   children,
   className,
@@ -44,42 +28,9 @@ export function GlassCard({
         className
       )}
     >
-      <div className="pointer-events-none absolute inset-0">
-        {/* Teal blob — roams the full card */}
-        <motion.div
-          animate={{ left: tealBlob.x, top: tealBlob.y }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut",
-            repeatType: "loop",
-          }}
-          className="absolute h-48 w-48 -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal-400/55 blur-2xl"
-        />
-        {/* Cyan blob — counter-roam */}
-        <motion.div
-          animate={{ left: cyanBlob.x, top: cyanBlob.y }}
-          transition={{
-            duration: 22,
-            repeat: Infinity,
-            ease: "easeInOut",
-            repeatType: "loop",
-            delay: 3,
-          }}
-          className="absolute h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/50 blur-2xl"
-        />
-        {/* Soft accent blob */}
-        <motion.div
-          animate={{ left: accentBlob.x, top: accentBlob.y }}
-          transition={{
-            duration: 26,
-            repeat: Infinity,
-            ease: "easeInOut",
-            repeatType: "loop",
-            delay: 6,
-          }}
-          className="absolute h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal-300/40 blur-xl"
-        />
+      <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+        <div className="absolute -left-1/4 -top-1/4 h-1/2 w-1/2 rounded-full bg-teal-500/10 blur-3xl" />
+        <div className="absolute -bottom-1/4 -right-1/4 h-1/2 w-1/2 rounded-full bg-cyan-500/10 blur-3xl" />
       </div>
       <div className="relative z-10 flex h-full flex-col">{children}</div>
     </motion.div>
