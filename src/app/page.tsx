@@ -11,6 +11,7 @@ import { Experience } from "@/components/sections/Experience";
 import { Hero } from "@/components/sections/Hero";
 import { Projects } from "@/components/sections/Projects";
 import { Skills } from "@/components/sections/Skills";
+import { Certificates } from "@/components/sections/Certificates";
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
@@ -30,6 +31,7 @@ export default function Home() {
           <Experience />
           <Projects />
           <Skills />
+          <Certificates />
           <Contact />
         </div>
       </main>

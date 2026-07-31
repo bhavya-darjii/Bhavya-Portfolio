@@ -32,7 +32,7 @@ export function GlassCard({
         <div className="absolute -left-1/4 -top-1/4 h-1/2 w-1/2 rounded-full bg-teal-500/10 blur-3xl" />
         <div className="absolute -bottom-1/4 -right-1/4 h-1/2 w-1/2 rounded-full bg-cyan-500/10 blur-3xl" />
       </div>
-      <div className="relative z-10">{children}</div>
+      <div className="relative z-10 flex h-full flex-col">{children}</div>
     </motion.div>
   );
 }

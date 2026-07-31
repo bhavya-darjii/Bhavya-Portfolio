@@ -165,6 +165,33 @@ export const projects = [
   },
 ];
 
+export const certificates = [
+  {
+    title: "AI - ML Course",
+    issuer: "Reliance Foundation", // Or a generic if we don't know, maybe I'll just say "Course Completion" or omit issuer
+    date: "2023",
+    link: "/certificates/ai-ml-course.pdf",
+  },
+  {
+    title: "Claude AI Fluency",
+    issuer: "Anthropic",
+    date: "2024",
+    link: "/certificates/claude-ai-fluency.pdf",
+  },
+  {
+    title: "Claude AI Fluency for Students",
+    issuer: "Anthropic",
+    date: "2024",
+    link: "/certificates/claude-ai-fluency-students.pdf",
+  },
+  {
+    title: "Claude for Small Businesses",
+    issuer: "Anthropic",
+    date: "2024",
+    link: "/certificates/claude-small-businesses.pdf",
+  },
+];
+
 export const technicalSkills = [
   "React Native",
   "Expo",
@@ -206,6 +233,7 @@ export const navLinks = [
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Skills" },
+  { href: "#certificates", label: "Certificates" },
   { href: "#contact", label: "Contact" },
 ];
 
