@@ -18,11 +18,11 @@ export default function Home() {
 
   return (
     <>
-      {!loaded && <Preloader onComplete={() => setLoaded(true)} />}
+      <Preloader onComplete={() => setLoaded(true)} />
       <BackgroundEffects />
       <main>
         {/* Hero: pure black background */}
-        <Hero />
+        <Hero loaded={loaded} />
 
         {/* Middle sections: teal background scoped here only */}
         <div className="relative">

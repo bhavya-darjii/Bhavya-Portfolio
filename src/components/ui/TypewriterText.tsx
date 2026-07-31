@@ -117,7 +117,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    // Lock scroll to prevent iOS Safari rubber-banding and address bar shifting
+    // Lock scroll but use scrollbar-gutter to prevent layout shift
     document.body.style.overflow = "hidden";
 
     const steps = [0, 25, 50, 75, 100];
@@ -129,10 +129,10 @@ export function Preloader({ onComplete }: PreloaderProps) {
         clearInterval(interval);
         setTimeout(() => {
           setVisible(false);
+          onComplete(); // Call immediately as it starts fading out
           setTimeout(() => {
             document.body.style.overflow = "";
-            onComplete();
-          }, 600);
+          }, 1200);
         }, 400);
       } else {
         setProgress(steps[stepIndex]);
@@ -150,8 +150,8 @@ export function Preloader({ onComplete }: PreloaderProps) {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute top-0 left-0 w-screen h-[120vh] z-[100] overflow-hidden bg-[#07101a]"
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          className="fixed top-0 left-0 w-screen h-[120vh] z-[100] overflow-hidden bg-[#07101a]"
         >
           {/* Top-left gradient (Red) */}
           <motion.div

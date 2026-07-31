@@ -1,12 +1,25 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { heroNavLinks, personal } from "@/data/portfolio";
 import { ProfileImage } from "@/components/ui/ProfileImage";
 
-export function Hero() {
+export function Hero({ loaded = true }: { loaded?: boolean }) {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  const textOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
+  const textScale = useTransform(scrollYProgress, [0, 0.4], [1, 0.95]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
+  const imageFilter = useTransform(scrollYProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
+  const imageOpacity = useTransform(scrollYProgress, [0.5, 1], [1, 0]);
+
   return (
-    <section id="home" className="relative w-full min-h-[115svh] md:min-h-screen">
+    <section ref={containerRef} id="home" className="relative w-full min-h-[115svh] md:min-h-screen">
       <div className="w-full h-full">
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
@@ -17,7 +30,8 @@ export function Hero() {
           <div className="relative flex min-h-[115svh] md:min-h-screen flex-col">
 
             {/* Large background typography — behind photo */}
-            <div
+            <motion.div
+              style={{ opacity: textOpacity, scale: textScale }}
               className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center select-none z-0"
               aria-hidden
             >
@@ -37,10 +51,11 @@ export function Hero() {
               >
                 DARJI
               </motion.div>
-            </div>
+            </motion.div>
 
             {/* Hero navigation */}
             <motion.nav
+              style={{ opacity: textOpacity, scale: textScale }}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.6 }}
@@ -59,6 +74,7 @@ export function Hero() {
 
             {/* MOBILE ONLY: redesigned info block */}
             <motion.div
+              style={{ opacity: textOpacity, scale: textScale }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.9 }}
@@ -120,36 +136,38 @@ export function Hero() {
             {/* Profile image — centered, touching the bottom */}
             <div className="absolute bottom-0 left-0 right-0 z-10 flex justify-center">
               <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 style={{
                   width: "160%",
                   height: "75svh",
                   marginLeft: "8%",
+                  scale: imageScale,
+                  filter: imageFilter,
+                  opacity: imageOpacity
                 }}
                 className="md:hidden"
               >
-                <ProfileImage scale={2.2} />
+                <ProfileImage scale={2.2} loaded={loaded} />
               </motion.div>
+              
               <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 style={{
                   width: "100%",
                   height: "75vh",
                   maxWidth: "896px",
                   marginLeft: "0",
+                  scale: imageScale,
+                  filter: imageFilter,
+                  opacity: imageOpacity
                 }}
                 className="hidden md:block"
               >
-                <ProfileImage scale={1.2} />
+                <ProfileImage scale={1.2} loaded={loaded} />
               </motion.div>
             </div>
 
             {/* DESKTOP ONLY: meta row pinned to bottom, above image */}
             <motion.div
+              style={{ opacity: textOpacity, scale: textScale }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.9 }}
