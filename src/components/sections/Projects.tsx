@@ -35,7 +35,7 @@ export function Projects() {
             >
               <div className="mb-4 flex items-start justify-between gap-4">
                 <div>
-                  <p className="mb-1 text-xs font-medium uppercase tracking-wider text-zinc-500">
+                  <p className="mb-1 text-xs font-medium uppercase tracking-wider text-zinc-300">
                     {project.category}
                   </p>
                   <h3 className="text-2xl font-bold text-white">
@@ -52,7 +52,7 @@ export function Projects() {
                 </span>
               </div>
 
-              <p className="mb-6 flex-1 text-sm leading-relaxed text-zinc-400 md:text-base">
+              <p className="mb-6 flex-1 text-sm leading-relaxed text-zinc-100 md:text-base">
                 {project.description}
               </p>
 
@@ -60,7 +60,7 @@ export function Projects() {
                 {project.highlights.map((item) => (
                   <li
                     key={item.slice(0, 30)}
-                    className="flex gap-2 text-sm text-zinc-500"
+                    className="flex gap-2 text-sm text-zinc-300"
                   >
                     <ArrowUpRight size={14} className="mt-0.5 shrink-0 text-teal-400" />
                     {item}
@@ -72,7 +72,7 @@ export function Projects() {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-lg border border-white/8 bg-white/5 px-3 py-1 text-xs text-zinc-400"
+                    className="rounded-lg border border-white/8 bg-white/5 px-3 py-1 text-xs text-zinc-200"
                   >
                     {tag}
                   </span>

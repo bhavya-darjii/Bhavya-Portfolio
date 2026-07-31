@@ -46,7 +46,7 @@ export function Skills() {
                 <li key={lang.name}>
                   <div className="mb-1.5 flex justify-between text-sm">
                     <span className="text-white">{lang.name}</span>
-                    <span className="text-zinc-500">{lang.level}</span>
+                    <span className="text-zinc-300">{lang.level}</span>
                   </div>
                   <div className="h-1.5 overflow-hidden rounded-full bg-white/5">
                     <motion.div
@@ -82,7 +82,7 @@ export function Skills() {
                   className="flex items-center gap-3 rounded-xl border border-white/5 bg-white/[0.02] px-4 py-3"
                 >
                   <span className="h-2 w-2 rounded-full bg-gradient-to-r from-teal-400 to-cyan-400" />
-                  <span className="text-sm text-zinc-300">{skill}</span>
+                  <span className="text-sm text-zinc-100">{skill}</span>
                 </div>
               ))}
             </div>
