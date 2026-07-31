@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { heroNavLinks, personal } from "@/data/portfolio";
 import { ProfileImage } from "@/components/ui/ProfileImage";
 
@@ -12,11 +12,18 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
     offset: ["start start", "end start"],
   });
 
-  const textOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
-  const textScale = useTransform(scrollYProgress, [0, 0.4], [1, 0.95]);
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
-  const imageFilter = useTransform(scrollYProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
-  const imageOpacity = useTransform(scrollYProgress, [0.5, 1], [1, 0]);
+  // Apply a spring physics model to smooth out scroll jitter on mobile
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
+  const textOpacity = useTransform(smoothProgress, [0, 0.4], [1, 0]);
+  const textScale = useTransform(smoothProgress, [0, 0.4], [1, 0.95]);
+  const imageScale = useTransform(smoothProgress, [0, 1], [1, 1.25]);
+  const imageFilter = useTransform(smoothProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
+  const imageOpacity = useTransform(smoothProgress, [0.5, 1], [1, 0]);
 
   return (
     <section ref={containerRef} id="home" className="relative w-full min-h-[115svh] md:min-h-screen">
