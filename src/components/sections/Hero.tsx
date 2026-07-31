@@ -12,18 +12,18 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
     offset: ["start start", "end start"],
   });
 
-  // Apply a spring physics model to smooth out scroll jitter on mobile
+  // Apply a tighter spring physics model ONLY for the scale to smooth out scroll jitter
   const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
+    stiffness: 400,
+    damping: 40,
     restDelta: 0.001
   });
 
-  const textOpacity = useTransform(smoothProgress, [0, 0.4], [1, 0]);
-  const textScale = useTransform(smoothProgress, [0, 0.4], [1, 0.95]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
+  const textScale = useTransform(scrollYProgress, [0, 0.4], [1, 0.95]);
   const imageScale = useTransform(smoothProgress, [0, 1], [1, 1.25]);
-  const imageFilter = useTransform(smoothProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
-  const imageOpacity = useTransform(smoothProgress, [0.5, 1], [1, 0]);
+  const imageFilter = useTransform(scrollYProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
+  const imageOpacity = useTransform(scrollYProgress, [0.5, 1], [1, 0]);
 
   return (
     <section ref={containerRef} id="home" className="relative w-full min-h-[115svh] md:min-h-screen">
@@ -155,7 +155,7 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
               >
                 <ProfileImage scale={2.2} loaded={loaded} />
               </motion.div>
-              
+
               <motion.div
                 style={{
                   width: "100%",
