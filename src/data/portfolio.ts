@@ -257,5 +257,6 @@ export const heroNavLinks = [
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Approach" },
-  { href: "#contact", label: "Let's Talk ↗" },
+  { href: "#contact", label: "Let's Talk" },
+  { href: "/resume.pdf", label: "Resume ↗" },
 ];

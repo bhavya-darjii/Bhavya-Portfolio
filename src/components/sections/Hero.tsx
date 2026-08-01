@@ -39,14 +39,14 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
             {/* Large background typography — behind photo */}
             <motion.div
               style={{ opacity: textOpacity, scale: textScale }}
-              className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center select-none z-0"
+              className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center select-none z-0 pb-[10vh] md:pb-0"
               aria-hidden
             >
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
-                className="font-display text-[clamp(8rem,18vw,14rem)] font-extrabold leading-[0.85] text-slate-900/90"
+                className="font-display text-[15.5vw] md:text-[clamp(4rem,18vw,14rem)] font-extrabold leading-[0.85] text-slate-900/90"
               >
                 BHA<span style={{ marginLeft: "-0.28em" }}>V</span><span style={{ marginLeft: "0.03em" }}>Y</span><span style={{ marginLeft: "-0.29em" }}>A</span>
               </motion.div>
@@ -54,7 +54,7 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.45 }}
-                className="font-display text-[clamp(4rem,18vw,14rem)] font-extrabold leading-[0.85] text-slate-900/90"
+                className="font-display text-[15vw] md:text-[clamp(4rem,18vw,14rem)] font-extrabold leading-[0.85] text-slate-900/90"
               >
                 DARJI
               </motion.div>
@@ -72,6 +72,8 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
                 <a
                   key={link.href}
                   href={link.href}
+                  target={link.href.endsWith(".pdf") ? "_blank" : undefined}
+                  rel={link.href.endsWith(".pdf") ? "noopener noreferrer" : undefined}
                   className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-800/70 transition-colors hover:text-slate-900 md:text-xs"
                 >
                   {link.label}
