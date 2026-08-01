@@ -253,10 +253,10 @@ export const footerTags = [
 ];
 
 export const heroNavLinks = [
-  { href: "#about", label: "About Me" },
+  { href: "#about", label: "About Me", hideOnMobile: true },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Approach" },
+  { href: "#skills", label: "Approach", hideOnMobile: true },
   { href: "#contact", label: "Let's Talk" },
   { href: "/resume.pdf", label: "Resume ↗" },
 ];

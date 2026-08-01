@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { heroNavLinks, personal } from "@/data/portfolio";
 import { ProfileImage } from "@/components/ui/ProfileImage";
+import { cn } from "@/lib/utils";
 
 export function Hero({ loaded = true }: { loaded?: boolean }) {
   const containerRef = useRef(null);
@@ -74,7 +75,10 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
                   href={link.href}
                   target={link.href.endsWith(".pdf") ? "_blank" : undefined}
                   rel={link.href.endsWith(".pdf") ? "noopener noreferrer" : undefined}
-                  className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-800/70 transition-colors hover:text-slate-900 md:text-xs"
+                  className={cn(
+                    "text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-800/70 transition-colors hover:text-slate-900 md:text-xs",
+                    (link as any).hideOnMobile && "hidden md:block"
+                  )}
                 >
                   {link.label}
                 </a>
