@@ -124,3 +124,12 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(20, 184, 166, 0.5);
 }
+
+/* Lift all dim grey text to a readable near-white everywhere on the page */
+:is(
+  .text-zinc-400, .text-zinc-500,
+  .text-slate-400, .text-slate-500,
+  .text-gray-400,  .text-gray-500
+) {
+  color: rgb(212 212 216); /* zinc-300 equivalent */
+}

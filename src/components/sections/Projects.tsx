@@ -35,7 +35,7 @@ export function Projects() {
             >
               <div className="mb-4 flex items-start justify-between gap-4">
                 <div>
-                  <p className="mb-1 text-xs font-medium uppercase tracking-wider text-zinc-300">
+                  <p className="mb-1 text-xs font-medium uppercase tracking-wider" style={{ color: "rgb(113 113 122)" }}>
                     {project.category}
                   </p>
                   <h3 className="text-2xl font-bold text-white">
@@ -68,15 +68,28 @@ export function Projects() {
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-lg border border-white/8 bg-white/5 px-3 py-1 text-xs text-zinc-200"
+              <div className="mt-auto flex items-end justify-between gap-2 pt-2">
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-lg border border-white/8 bg-white/5 px-3 py-1 text-xs text-zinc-200"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 text-zinc-400 transition-colors hover:text-teal-300"
+                    aria-label={`View ${project.title}`}
                   >
-                    {tag}
-                  </span>
-                ))}
+                    <ArrowUpRight size={22} />
+                  </a>
+                )}
               </div>
             </GlassCard>
           ))}

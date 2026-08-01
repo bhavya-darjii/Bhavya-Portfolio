@@ -184,7 +184,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-2xl font-medium tracking-wide text-white md:text-4xl"
             >
-              You Design — I Develop
+              I Dream It — I Ship It
             </motion.p>
 
             <motion.span

@@ -79,6 +79,7 @@ export const education = [
 export const projects = [
   {
     title: "Handwrite",
+    link: "https://handwrite-omega.vercel.app/",
     category: "Business Venture",
     status: "Live Product",
     accent: "teal",
@@ -94,6 +95,7 @@ export const projects = [
   },
   {
     title: "Ride Mate",
+    link: "",
     category: "Client Project",
     status: "In Development",
     accent: "cyan",
@@ -103,11 +105,13 @@ export const projects = [
       "Simple booking for one-way, round-trip, or outstation travel with fare estimates",
       "Real-time driver tracking, secure in-app payments, and verified driver profiles",
       "Ratings, reviews, notifications, and booking history for a seamless experience",
+      "Scalable REST API backend with JWT auth, role-based access, and push notification support",
     ],
-    tags: ["React Native", "Expo", "Real-time"],
+    tags: ["Flutter", "Dart", "Maps API", "Real-time"],
   },
   {
     title: "Medway",
+    link: "",
     category: "Healthcare",
     status: "Completed",
     accent: "sky",
@@ -119,10 +123,11 @@ export const projects = [
       "Doctor appointment booking, pharmacy ordering, and monthly health reports",
       "Multi-user access for caregivers and family with real-time alerts",
     ],
-    tags: ["Flutter", "Health Tech", "IoT"],
+    tags: ["Flutter", "Health Tech", "IoT", "Firebase"],
   },
   {
     title: "ATM Promo",
+    link: "https://atm.promo/",
     category: "Web Development",
     status: "Delivered",
     accent: "amber",
@@ -132,11 +137,13 @@ export const projects = [
       "Industry-specific service pages (FinTech, Cybersecurity, Healthcare) and lead CTAs",
       "Outcome-focused UX emphasizing client partnership and measurable results",
       "Fully responsive design with testimonials and consultation booking flow",
+      "Core Web Vitals optimised with lazy loading, minified assets, and schema markup for SEO",
     ],
     tags: ["WordPress", "UI/UX", "Marketing"],
   },
   {
     title: "Prime Financials",
+    link: "https://primefinancials.com/",
     category: "Web Development",
     status: "Delivered",
     accent: "emerald",
@@ -151,6 +158,7 @@ export const projects = [
   },
   {
     title: "Barter Tech",
+    link: "https://www.barter.tech/",
     category: "Web Development",
     status: "Delivered",
     accent: "sky",

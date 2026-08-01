@@ -46,7 +46,7 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
-                className="font-display text-[clamp(4rem,18vw,14rem)] font-extrabold leading-[0.85] text-slate-900/90"
+                className="font-display text-[clamp(8rem,18vw,14rem)] font-extrabold leading-[0.85] text-slate-900/90"
               >
                 BHA<span style={{ marginLeft: "-0.28em" }}>V</span><span style={{ marginLeft: "0.03em" }}>Y</span><span style={{ marginLeft: "-0.29em" }}>A</span>
               </motion.div>

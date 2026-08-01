@@ -35,10 +35,6 @@ export const metadata: Metadata = {
       "Crafting digital experiences that feel effortless. Web & mobile developer from Mumbai.",
     type: "website",
   },
-  icons: {
-    icon: "/bhavya.png",
-    apple: "/bhavya.png",
-  },
 };
 
 export default function RootLayout({

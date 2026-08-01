@@ -46,7 +46,7 @@ export function Skills() {
                 <li key={lang.name}>
                   <div className="mb-1.5 flex justify-between text-sm">
                     <span className="text-white">{lang.name}</span>
-                    <span className="text-zinc-300">{lang.level}</span>
+                    <span style={{ color: "rgb(113 113 122)" }}>{lang.level}</span>
                   </div>
                   <div className="h-1.5 overflow-hidden rounded-full bg-white/5">
                     <motion.div
