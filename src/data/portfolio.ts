@@ -112,7 +112,7 @@ export const projects = [
   {
     title: "Medway",
     link: "",
-    category: "Healthcare",
+    category: "Healthcare Application",
     status: "Completed",
     accent: "sky",
     description:

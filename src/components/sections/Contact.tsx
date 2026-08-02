@@ -103,8 +103,8 @@ export function Contact() {
                     type="button"
                     onClick={() => setSelectedTopic(topic)}
                     className={`rounded-full border-2 px-5 py-2 text-sm font-semibold transition-all md:text-base ${selectedTopic === topic
-                        ? "border-slate-900 bg-slate-900 text-white"
-                        : "border-slate-900/30 text-slate-800 hover:border-slate-900/60"
+                      ? "border-slate-900 bg-slate-900 text-white"
+                      : "border-slate-900/30 text-slate-800 hover:border-slate-900/60"
                       }`}
                   >
                     {topic}
@@ -141,8 +141,8 @@ export function Contact() {
                 type="button"
                 onClick={() => setContactMethod("whatsapp")}
                 className={`rounded-full border-2 px-5 py-2 text-sm font-semibold transition-all ${contactMethod === "whatsapp"
-                    ? "border-slate-900 bg-slate-900 text-white"
-                    : "border-slate-900/30 text-slate-800"
+                  ? "border-slate-900 bg-slate-900 text-white"
+                  : "border-slate-900/30 text-slate-800"
                   }`}
               >
                 WhatsApp
@@ -151,8 +151,8 @@ export function Contact() {
                 type="button"
                 onClick={() => setContactMethod("email")}
                 className={`rounded-full border-2 px-5 py-2 text-sm font-semibold transition-all ${contactMethod === "email"
-                    ? "border-slate-900 bg-slate-900 text-white"
-                    : "border-slate-900/30 text-slate-800"
+                  ? "border-slate-900 bg-slate-900 text-white"
+                  : "border-slate-900/30 text-slate-800"
                   }`}
               >
                 Email
