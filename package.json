@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build:resume": "tsx scripts/generate-resume.ts",
+    "build": "npm run build:resume && next build",
     "start": "next start",
     "lint": "eslint"
   },
@@ -24,6 +25,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
     "tailwindcss": "^4",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.8",
     "typescript": "^5"
   }
 }

@@ -214,6 +214,7 @@ export const technicalSkills = [
   "C++",
   "SQL",
   "MySQL",
+  "Supabase",
   "WordPress",
   "Bootstrap",
   "Adobe Photoshop",

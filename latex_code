@@ -1,0 +1,120 @@
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[a4paper,margin=0.55in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+\setlist[itemize]{leftmargin=15pt,itemsep=1pt,topsep=2pt}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries Bhavya Darji}\\[4pt]
+Software Development Engineer\\[4pt]
+Mumbai, India $\mid$ +91-8433791241 $\mid$
+\href{mailto:bhavyadarji462@gmail.com}{bhavyadarji462@gmail.com}
+\end{center}
+
+\section*{Profile Summary}
+Software Development Engineer with experience developing production-ready web applications, cross-platform mobile applications and AI-powered SaaS products. Skilled in React, React Native, Flutter, Vite, Firebase, REST APIs and modern web technologies through internships, freelancing and entrepreneurial ventures.
+
+\section*{Technical Skills}
+\textbf{Languages:} HTML, CSS, JavaScript, Python, Java, C, C++\\
+\textbf{Frameworks:} React, React Native, Flutter, Expo, Vite, Bootstrap, WordPress\\
+\textbf{Backend:} Node.js, Firebase, Supabase, REST APIs\\
+\textbf{Database:} SQL, MySQL\\
+\textbf{Tools:} Git, Razorpay, Adobe Photoshop
+
+\section*{Professional Experience}
+
+\textbf{Optisoft Vision} \hfill \textit{Software Development Intern | Jun 2026}
+\begin{itemize}
+\item Developed production-ready React/Vite applications including EyeCloud, Lensoui and HelpHub.
+\item Integrated REST APIs, enhanced UI/UX, fixed bugs and participated in production deployments.
+\item Tech Stack: React, Vite, JavaScript, REST APIs.
+\end{itemize}
+
+\textbf{Vinayak Soft Solutions} \hfill \textit{App Developer Intern | Nov 2024 -- Mar 2025}
+\begin{itemize}
+\item Built cross-platform mobile applications using React Native and Expo.
+\item Developed a POS system and Business Insights analytics application.
+\item Tech Stack: React Native, Expo.
+\end{itemize}
+
+\textbf{WebGyor Technologies} \hfill \textit{WordPress Developer | 2022 -- 2023}
+\begin{itemize}
+\item Developed responsive business websites and maintained internal management systems.
+\item Improved UI consistency and user experience across multiple client projects.
+\item Tech Stack: WordPress, HTML, CSS.
+\end{itemize}
+
+\section*{Featured Projects}
+
+\textbf{Handwrite -- AI Powered SaaS Platform}
+\hfill
+\href{https://handwrite-omega.vercel.app}{Live Demo}
+\begin{itemize}
+\item Built an AI platform that converts typed text into realistic handwritten documents.
+\item Integrated Firebase Authentication, Razorpay payments, credit system and PDF generation.
+\item Successfully launched with \textbf{180+ users}.
+\item Tech Stack: React, Firebase, JavaScript, Razorpay.
+\end{itemize}
+
+\textbf{Hasslefree Drive}
+\hfill
+\href{https://www.hasslefreedrive.com/}{Live Site}
+\begin{itemize}
+\item Developing a driver-booking platform with live tracking, booking management, secure payments and notifications.
+\item Tech Stack: Flutter, Firebase.
+\end{itemize}
+
+\textbf{Barter Tech}
+\hfill
+\href{https://barter.tech}{Live Site}
+\begin{itemize}
+\item Designed and developed the official company website.
+\end{itemize}
+
+\textbf{Prime Financials}
+\hfill
+\href{https://primefinancials.com}{Live Site}
+\begin{itemize}
+\item Developed a responsive financial services website.
+\end{itemize}
+
+\textbf{ATM Promo}
+\hfill
+\href{https://atm.promo}{Live Site}
+\begin{itemize}
+\item Built a marketing website focused on branding and lead generation.
+\end{itemize}
+
+\leavevmode\\
+
+\textbf{Medway -- Healthcare Application}
+\begin{itemize}
+\item Developed a healthcare monitoring application with emergency support and appointment management.
+\end{itemize}
+
+\section*{Education}
+
+\textbf{KJ Somaiya Institute of Technology} \hfill 2025--2028\\
+B.Tech in Artificial Intelligence and Data Science
+
+\textbf{Shri Bhagubhai Mafatlal Polytechnic} \hfill 2022--2025\\
+Diploma in Information Technology
+
+\section*{Languages}
+English \textbullet\ Hindi \textbullet\ Gujarati \textbullet\ Marathi
+
+\end{document}
