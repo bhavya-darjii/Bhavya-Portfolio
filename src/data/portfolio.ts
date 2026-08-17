@@ -78,6 +78,22 @@ export const education = [
 
 export const projects = [
   {
+    title: "Velaar",
+    link: "https://velaar.vercel.app/",
+    category: "Educational Platform",
+    status: "Live Product",
+    accent: "indigo",
+    description:
+      "A massive, advanced, AI-powered educational management platform leveraging Generative AI and OCR to provide specialized tools for teachers, students, administrators, and parents.",
+    highlights: [
+      "Global AI Copilot using Gemini for context-aware, role-specific task automation",
+      "Smart Attendance System featuring real-time QR scanning and one-click teacher sessions",
+      "Deep AI Content Engine generating detailed lesson plans and intelligent question banks",
+      "Automated AI PowerPoint generator transforming course topics into fully structured lecture slides",
+    ],
+    tags: ["React 19", "Express", "Supabase", "Gemini AI"],
+  },
+  {
     title: "Handwrite",
     link: "https://handwrite-omega.vercel.app/",
     category: "Business Venture",
@@ -89,7 +105,7 @@ export const projects = [
       "Upload handwriting once to create a personalized engine with accurate style matching",
       "Print-ready PDFs with perfect spacing, margins, alignment, and multi-page flow",
       "Student-friendly page bundles with smart 30-day rollover — no complicated subscriptions",
-      "Mobile-ready editor with preview, in-app guidance, and zero learning curve",
+      "Mobile-ready editor with live document preview, helpful in-app guidance, and zero learning curve",
     ],
     tags: ["SaaS", "Product Design", "Mobile-Ready"],
   },
@@ -105,7 +121,7 @@ export const projects = [
       "Simple booking for one-way, round-trip, or outstation travel with fare estimates",
       "Real-time driver tracking, secure in-app payments, and verified driver profiles",
       "Ratings, reviews, notifications, and booking history for a seamless experience",
-      "Scalable REST API backend with JWT auth, role-based access, and push notification support",
+      "Scalable REST API backend featuring JWT auth, role-based access, and push notifications",
     ],
     tags: ["Flutter", "Dart", "Maps API", "Real-time"],
   },
@@ -118,10 +134,10 @@ export const projects = [
     description:
       "A healthcare monitoring app designed for elderly users and caregivers — real-time vitals, emergency support, and complete care coordination.",
     highlights: [
-      "Wearable heart-rate sensor integration with live vitals display",
-      "One-click emergency ambulance calling for critical situations",
-      "Doctor appointment booking, pharmacy ordering, and monthly health reports",
-      "Multi-user access for caregivers and family with real-time alerts",
+      "Wearable heart-rate sensor integration providing continuous live vitals tracking and display",
+      "One-click emergency ambulance dispatch system designed specifically for critical health situations",
+      "Seamless doctor appointment scheduling, pharmacy ordering, and comprehensive monthly health reports",
+      "Multi-user access portals for caregivers and family members featuring real-time alerts",
     ],
     tags: ["Flutter", "Health Tech", "IoT", "Firebase"],
   },
@@ -134,10 +150,10 @@ export const projects = [
     description:
       "Corporate marketing site for a growth acceleration agency — advertising, AI automation, and international expansion positioned with outcome-focused UX.",
     highlights: [
-      "Industry-specific service pages (FinTech, Cybersecurity, Healthcare) and lead CTAs",
-      "Outcome-focused UX emphasizing client partnership and measurable results",
-      "Fully responsive design with testimonials and consultation booking flow",
-      "Core Web Vitals optimised with lazy loading, minified assets, and schema markup for SEO",
+      "Industry-specific service pages for FinTech and Healthcare with highly optimized lead CTAs",
+      "Outcome-focused UX design emphasizing strategic client partnerships and delivering measurable results",
+      "Fully responsive layout featuring client testimonials and a seamless consultation booking flow",
+      "Core Web Vitals optimized via lazy loading, minified assets, and schema markup",
     ],
     tags: ["WordPress", "UI/UX", "Marketing"],
   },
@@ -150,9 +166,10 @@ export const projects = [
     description:
       "Corporate website for a financial services firm — execution, custody, settlement, and portfolio management presented with authority and clarity.",
     highlights: [
-      "Services, Markets, Insights, About, and Contact navigation structure",
-      "Regulatory licensing, global access, and boutique firm positioning",
-      "Professional branding with advisory board and full legal contact information",
+      "Intuitive navigation structure seamlessly organizing Services, Markets, Insights, and Contact pages",
+      "Strategic content highlighting regulatory licensing, global market access, and boutique firm positioning",
+      "Professional corporate branding highlighting the advisory board and full legal contact details",
+      "Fully responsive layout ensuring a seamless browsing experience across all mobile devices",
     ],
     tags: ["WordPress", "FinTech", "Responsive"],
   },
@@ -165,9 +182,10 @@ export const projects = [
     description:
       "Official company website showcasing Barter.Tech's services and value proposition in a clean, content-driven format.",
     highlights: [
-      "Clean, professional layout showcasing company services and value proposition",
-      "Responsive, user-friendly interface with modern UI/UX across devices",
-      "Content-driven structure for services, company info, and contact details",
+      "Clean and professional layout effectively showcasing core company services and value propositions",
+      "Highly responsive, user-friendly interface featuring modern UI/UX principles across all devices",
+      "Optimized content-driven structure detailing tailored services, company background, and accessible contact information",
+      "Advanced SEO-optimized architecture specifically tailored for B2B lead generation and organic growth",
     ],
     tags: ["WordPress", "Bootstrap", "B2B"],
   },

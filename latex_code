@@ -60,6 +60,16 @@ Software Development Engineer with experience developing production-ready web ap
 
 \section*{Featured Projects}
 
+\textbf{Velaar -- AI Educational Platform}
+\hfill
+\href{https://velaar.vercel.app/}{Live Demo}
+\begin{itemize}
+\item Built a comprehensive AI-powered educational management platform with role-specific dashboards.
+\item Integrated the Gemini API for automated lesson plan, question bank, roadmap and PPT presentation generation.
+\item Implemented a Smart Attendance System featuring real-time student QR scanning and one-click teacher sessions.
+\item Tech Stack: React 19, Express, Supabase, Google Gemini AI.
+\end{itemize}
+
 \textbf{Handwrite -- AI Powered SaaS Platform}
 \hfill
 \href{https://handwrite-omega.vercel.app}{Live Demo}
