@@ -1,8 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bhavya Darji - Personal Portfolio
 
-## Getting Started
+This is the personal portfolio repository for **Bhavya Darji**, a Software Development Engineer. The portfolio showcases my experience, projects, skills, and certifications. 
 
-First, run the development server:
+Built with modern web technologies, this project provides a fast, responsive, and visually appealing digital presence.
+
+## 🚀 Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org) (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React & React Icons
+
+## 🛠️ Getting Started
+
+First, clone the repository and install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +40,30 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/`: Contains the Next.js app router pages, layouts, and global styles.
+- `src/components/`: Reusable React UI components used across the portfolio.
+- `src/data/`: Centralized data file (`portfolio.ts`) containing all the content (experience, projects, skills, etc.) for easy updating.
+- `scripts/`: Contains utility scripts (e.g., generating the resume).
 
-## Learn More
+## 📝 Customization
 
-To learn more about Next.js, take a look at the following resources:
+All the personal information, projects, and experiences are managed centrally. To update the portfolio content, simply edit the `src/data/portfolio.ts` file. The portfolio UI will automatically reflect the changes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📜 Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `npm run dev`: Starts the Next.js development server.
+- `npm run build:resume`: Runs the script to dynamically generate the resume.
+- `npm run build`: Generates the resume and builds the Next.js application for production deployment.
+- `npm run start`: Starts the production server.
+- `npm run lint`: Runs ESLint to check for code quality and issues.
 
-## Deploy on Vercel
+## 🌐 Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Email**: [bhavyadarji462@gmail.com](mailto:bhavyadarji462@gmail.com)
+- **LinkedIn**: [Bhavya Darji](https://www.linkedin.com/in/bhavya-darji-181573242/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+*Crafting digital experiences that feel effortless.*
