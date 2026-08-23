@@ -4,6 +4,62 @@ This is the personal portfolio repository for **Bhavya Darji**, a Software Devel
 
 Built with modern web technologies, this project provides a fast, responsive, and visually appealing digital presence.
 
+## 📸 Screenshots
+
+<!-- You can adjust the width attribute (e.g. width="800", width="600", width="100%") to resize any image -->
+
+### Hero & Introduction
+<p align="center">
+  <img src="./public/screenshots/Screenshot%202026-08-23%20221704.png" alt="Hero Section" width="800"/>
+</p>
+
+### Preloader Animation
+<p align="center">
+  <img src="./public/screenshots/Screenshot%202026-08-23%20221658.png" alt="Preloader Screen" width="800"/>
+</p>
+
+### About Me & Education
+<p align="center">
+  <img src="./public/screenshots/Screenshot%202026-08-23%20221709.png" alt="About Me & Education" width="800"/>
+</p>
+
+### Professional Journey & Experience
+<p align="center">
+  <img src="./public/screenshots/Screenshot%202026-08-23%20221716.png" alt="Professional Journey" width="800"/>
+</p>
+
+<p align="center">
+  <img src="./public/screenshots/Screenshot%202026-08-23%20221723.png" alt="Experience Timeline" width="800"/>
+</p>
+
+### Featured Projects & Ventures
+<p align="center">
+  <img src="./public/screenshots/Screenshot%202026-08-23%20221728.png" alt="Featured Projects - Velaar & Handwrite" width="800"/>
+</p>
+
+<p align="center">
+  <img src="./public/screenshots/Screenshot%202026-08-23%20221748.png" alt="Client Projects - Ride Mate, Medway, ATM Promo, Prime Financials" width="800"/>
+</p>
+
+### Technical Expertise & Skills
+<p align="center">
+  <img src="./public/screenshots/Screenshot%202026-08-23%20221758.png" alt="Technical Expertise" width="800"/>
+</p>
+
+### Licenses & Certifications
+<p align="center">
+  <img src="./public/screenshots/Screenshot%202026-08-23%20221806.png" alt="Licenses & Certifications" width="800"/>
+</p>
+
+### Interactive Contact & Footer
+<p align="center">
+  <img src="./public/screenshots/Screenshot%202026-08-23%20221816.png" alt="Interactive Contact Form" width="800"/>
+</p>
+
+<p align="center">
+  <img src="./public/screenshots/Screenshot%202026-08-23%20221825.png" alt="Footer" width="800"/>
+</p>
+
 ## 🚀 Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org) (App Router)
