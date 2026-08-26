@@ -74,31 +74,33 @@ export function Contact() {
         >
           <form ref={formRef} onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
             <div className="text-lg leading-relaxed text-slate-900 sm:text-xl md:text-2xl lg:text-3xl">
-              <span className="block md:inline">
-                Hey,{" "}
-                <span className="font-bold md:hidden">{personal.name.toUpperCase()}!</span>
-                <span className="hidden font-bold md:inline">{personal.name.split(" ")[0].toUpperCase()}!</span>
-              </span>{" "}
-              {/* Row 1: My name is [Your Name] */}
-              <span className="mt-2.5 flex max-w-[19.5rem] items-baseline sm:mt-3 sm:max-w-[22rem] md:mt-0 md:inline-flex md:max-w-none">
-                <span className="shrink-0 whitespace-nowrap">My name is&nbsp;</span>
-                <input
-                  name="name"
-                  required
-                  placeholder="Your Name"
-                  className="flex-1 min-w-0 border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600 md:w-44 md:flex-none md:min-w-[10rem]"
-                />
-              </span>{" "}
+              <div>
+                <span className="block md:inline">
+                  Hey,{" "}
+                  <span className="font-bold">{personal.name.toUpperCase()}!</span>
+                </span>{" "}
+                {/* Row 1: My name is [Your Name] */}
+                <span className="mt-2.5 flex max-w-[19.5rem] items-baseline sm:mt-3 sm:max-w-[22rem] md:mt-0 md:inline-flex md:max-w-none">
+                  <span className="shrink-0 whitespace-nowrap">My name is&nbsp;</span>
+                  <input
+                    name="name"
+                    required
+                    placeholder="Your Name"
+                    className="flex-1 min-w-0 border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600 md:w-[19.5rem] md:flex-none lg:w-[23.5rem]"
+                  />
+                </span>
+              </div>
+
               {/* Row 2: and I am from [Country] */}
-              <span className="mt-3 flex max-w-[19.5rem] items-baseline sm:mt-4 sm:max-w-[22rem] md:mt-0 md:ml-2 md:inline-flex md:max-w-none">
+              <div className="mt-2 flex max-w-[19.5rem] items-baseline sm:mt-2.5 sm:max-w-[22rem] md:mt-1.5 md:inline-flex md:max-w-none lg:mt-2">
                 <span className="shrink-0 whitespace-nowrap">and I am from&nbsp;</span>
                 <input
                   name="country"
                   required
                   placeholder="Country"
-                  className="flex-1 min-w-0 border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600 md:w-36 md:flex-none md:min-w-[8rem]"
+                  className="flex-1 min-w-0 border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600 md:w-[18rem] md:flex-none lg:w-[21.5rem]"
                 />
-              </span>
+              </div>
             </div>
 
             <div>
@@ -168,16 +170,16 @@ export function Contact() {
               </button>
             </div>
 
-            <p className="text-lg text-slate-900 sm:text-xl md:text-2xl">
-              In short,{" "}
+            <div className="text-lg text-slate-900 sm:text-xl md:text-2xl">
+              <span>In short,</span>
               <textarea
                 name="message"
                 required
-                rows={2}
+                rows={1}
                 placeholder="Type your message"
-                className="mt-2 w-full resize-none border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600"
+                className="mt-1 w-full resize-none border-b-2 border-slate-900/30 bg-transparent px-1 py-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600 md:mt-2"
               />
-            </p>
+            </div>
 
             <div className="flex min-h-[3.5rem] items-center sm:min-h-[4rem] md:h-20">
               {submitStatus === "success" ? (
