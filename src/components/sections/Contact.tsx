@@ -72,37 +72,46 @@ export function Contact() {
           transition={{ duration: 0.8 }}
           className="hero-gradient-bg overflow-hidden rounded-3xl p-8 shadow-2xl shadow-teal-900/20 md:p-12 lg:p-16"
         >
-          <form ref={formRef} onSubmit={handleSubmit} className="space-y-8">
-            <p className="text-xl leading-relaxed text-slate-900 md:text-2xl lg:text-3xl">
-              Hey,{" "}
-              <span className="font-bold">{personal.name.toUpperCase()}!</span>{" "}
-              My name is{" "}
-              <input
-                name="name"
-                required
-                placeholder="Your Name"
-                className="inline-block min-w-[8rem] border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600 md:min-w-[12rem]"
-              />{" "}
-              and I am from{" "}
-              <input
-                name="country"
-                required
-                placeholder="Country"
-                className="inline-block min-w-[6rem] border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600 md:min-w-[10rem]"
-              />
-            </p>
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
+            <div className="text-lg leading-relaxed text-slate-900 sm:text-xl md:text-2xl lg:text-3xl">
+              <span className="block md:inline">
+                Hey,{" "}
+                <span className="font-bold md:hidden">{personal.name.toUpperCase()}!</span>
+                <span className="hidden font-bold md:inline">{personal.name.split(" ")[0].toUpperCase()}!</span>
+              </span>{" "}
+              {/* Row 1: My name is [Your Name] */}
+              <span className="mt-2.5 flex max-w-[19.5rem] items-baseline sm:mt-3 sm:max-w-[22rem] md:mt-0 md:inline-flex md:max-w-none">
+                <span className="shrink-0 whitespace-nowrap">My name is&nbsp;</span>
+                <input
+                  name="name"
+                  required
+                  placeholder="Your Name"
+                  className="flex-1 min-w-0 border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600 md:w-44 md:flex-none md:min-w-[10rem]"
+                />
+              </span>{" "}
+              {/* Row 2: and I am from [Country] */}
+              <span className="mt-3 flex max-w-[19.5rem] items-baseline sm:mt-4 sm:max-w-[22rem] md:mt-0 md:ml-2 md:inline-flex md:max-w-none">
+                <span className="shrink-0 whitespace-nowrap">and I am from&nbsp;</span>
+                <input
+                  name="country"
+                  required
+                  placeholder="Country"
+                  className="flex-1 min-w-0 border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600 md:w-36 md:flex-none md:min-w-[8rem]"
+                />
+              </span>
+            </div>
 
             <div>
-              <p className="mb-4 text-xl text-slate-900 md:text-2xl">
+              <p className="mb-3 text-lg text-slate-900 sm:mb-4 sm:text-xl md:text-2xl">
                 Let&apos;s connect about
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2.5 sm:gap-3">
                 {topics.map((topic) => (
                   <button
                     key={topic}
                     type="button"
                     onClick={() => setSelectedTopic(topic)}
-                    className={`rounded-full border-2 px-5 py-2 text-sm font-semibold transition-all md:text-base ${selectedTopic === topic
+                    className={`rounded-full border-2 px-4 py-1.5 text-xs font-semibold transition-all sm:px-5 sm:py-2 sm:text-sm md:text-base ${selectedTopic === topic
                       ? "border-slate-900 bg-slate-900 text-white"
                       : "border-slate-900/30 text-slate-800 hover:border-slate-900/60"
                       }`}
@@ -113,15 +122,15 @@ export function Contact() {
               </div>
             </div>
 
-            <p className="text-xl leading-relaxed text-slate-900 md:text-2xl">
-              We can talk in more detail at{" "}
+            <p className="text-lg leading-relaxed text-slate-900 sm:text-xl md:text-2xl">
+              <span className="inline-block">We can talk in more detail at</span>{" "}
               {isEmail ? (
                 <input
                   name="contact"
                   type="email"
                   required
                   placeholder="name@website.com"
-                  className="inline-block min-w-[10rem] border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600 md:min-w-[16rem]"
+                  className="inline-block min-w-[10rem] max-w-full border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600 sm:min-w-[13rem] md:min-w-[16rem]"
                 />
               ) : (
                 <input
@@ -131,16 +140,16 @@ export function Contact() {
                   pattern="[0-9+\-\s]+"
                   title="Please enter a valid phone number (numbers, spaces, +, -)"
                   placeholder="Phone Number"
-                  className="inline-block min-w-[10rem] border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600 md:min-w-[16rem]"
+                  className="inline-block min-w-[10rem] max-w-full border-b-2 border-slate-900/30 bg-transparent px-1 font-medium outline-none placeholder:text-slate-600/50 focus:border-teal-600 sm:min-w-[13rem] md:min-w-[16rem]"
                 />
               )}
             </p>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2.5 sm:gap-3">
               <button
                 type="button"
                 onClick={() => setContactMethod("whatsapp")}
-                className={`rounded-full border-2 px-5 py-2 text-sm font-semibold transition-all ${contactMethod === "whatsapp"
+                className={`rounded-full border-2 px-4 py-1.5 text-xs font-semibold transition-all sm:px-5 sm:py-2 sm:text-sm ${contactMethod === "whatsapp"
                   ? "border-slate-900 bg-slate-900 text-white"
                   : "border-slate-900/30 text-slate-800"
                   }`}
@@ -150,7 +159,7 @@ export function Contact() {
               <button
                 type="button"
                 onClick={() => setContactMethod("email")}
-                className={`rounded-full border-2 px-5 py-2 text-sm font-semibold transition-all ${contactMethod === "email"
+                className={`rounded-full border-2 px-4 py-1.5 text-xs font-semibold transition-all sm:px-5 sm:py-2 sm:text-sm ${contactMethod === "email"
                   ? "border-slate-900 bg-slate-900 text-white"
                   : "border-slate-900/30 text-slate-800"
                   }`}
@@ -159,7 +168,7 @@ export function Contact() {
               </button>
             </div>
 
-            <p className="text-xl text-slate-900 md:text-2xl">
+            <p className="text-lg text-slate-900 sm:text-xl md:text-2xl">
               In short,{" "}
               <textarea
                 name="message"
@@ -170,12 +179,12 @@ export function Contact() {
               />
             </p>
 
-            <div className="flex h-16 items-center md:h-20">
+            <div className="flex min-h-[3.5rem] items-center sm:min-h-[4rem] md:h-20">
               {submitStatus === "success" ? (
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="text-2xl font-bold text-teal-700 md:text-4xl whitespace-nowrap"
+                  className="text-xl font-bold text-teal-700 sm:text-2xl md:text-4xl"
                 >
                   Sent! I&apos;ll be in touch soon ✓
                 </motion.p>
@@ -183,7 +192,7 @@ export function Contact() {
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="text-xl font-bold text-red-600 md:text-3xl whitespace-nowrap"
+                  className="text-lg font-bold text-red-600 sm:text-xl md:text-3xl"
                 >
                   Oops! Something went wrong.
                 </motion.p>
@@ -193,19 +202,18 @@ export function Contact() {
                   disabled={isSubmitting}
                   whileHover={isSubmitting ? {} : { scale: 1.02 }}
                   whileTap={isSubmitting ? {} : { scale: 0.98 }}
-                  className="group flex items-center gap-3 text-3xl font-bold text-slate-900 transition-colors hover:text-teal-700 md:text-5xl disabled:opacity-50 disabled:hover:text-slate-900"
+                  className="group flex items-center gap-2 text-2xl font-bold text-slate-900 transition-colors hover:text-teal-700 sm:gap-3 sm:text-3xl md:text-5xl disabled:opacity-50 disabled:hover:text-slate-900"
                 >
                   {isSubmitting ? (
                     <>
                       Sending...
-                      <Loader2 size={40} className="animate-spin" />
+                      <Loader2 className="h-6 w-6 animate-spin sm:h-8 sm:w-8 md:h-10 md:w-10" />
                     </>
                   ) : (
                     <>
                       Send a form
                       <ArrowUpRight
-                        size={40}
-                        className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                        className="h-6 w-6 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 sm:h-8 sm:w-8 md:h-10 md:w-10"
                       />
                     </>
                   )}
