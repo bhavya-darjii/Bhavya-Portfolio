@@ -80,7 +80,7 @@ export const projects = [
   {
     title: "Velaar",
     link: "https://velaar.vercel.app/",
-    category: "Educational Platform",
+    category: "AI EdTech SaaS",
     status: "Live Product",
     accent: "indigo",
     description:
@@ -91,7 +91,7 @@ export const projects = [
       "Deep AI Content Engine generating detailed lesson plans and intelligent question banks",
       "Automated AI PowerPoint generator transforming course topics into fully structured lecture slides",
     ],
-    tags: ["React 19", "Express", "Supabase", "Gemini AI"],
+    tags: ["React 19", "Express", "Supabase", "Gemini AI", "RAG Pipeline"],
   },
   {
     title: "Handwrite",
@@ -107,13 +107,15 @@ export const projects = [
       "Student-friendly page bundles with smart 30-day rollover — no complicated subscriptions",
       "Mobile-ready editor with live document preview, helpful in-app guidance, and zero learning curve",
     ],
-    tags: ["SaaS", "Product Design", "Mobile-Ready"],
+    tags: ["Next.js", "PDF Engine", "SaaS", "Product Design", "Mobile-Ready"],
   },
   {
-    title: "Ride Mate",
-    link: "",
-    category: "Client Project",
-    status: "In Development",
+    title: "Hasslefree Drive",
+    link: "https://play.google.com/store/apps/details?id=com.hasslefreedrive.app",
+    androidLink: "https://play.google.com/store/apps/details?id=com.hasslefreedrive.app",
+    iosLink: "", // Paste your iOS App Store link here once published (e.g. https://apps.apple.com/app/...)
+    category: "Mobile Application",
+    status: "Delivered",
     accent: "cyan",
     description:
       "An on-demand driver booking app connecting users with verified professional drivers for hourly or trip-based rides — personal and corporate, with instant or advance scheduling.",
@@ -123,7 +125,7 @@ export const projects = [
       "Ratings, reviews, notifications, and booking history for a seamless experience",
       "Scalable REST API backend featuring JWT auth, role-based access, and push notifications",
     ],
-    tags: ["Flutter", "Dart", "Maps API", "Real-time"],
+    tags: ["Flutter", "Dart", "Google Maps", "REST API", "Real-time"],
   },
   {
     title: "Medway",
@@ -139,7 +141,7 @@ export const projects = [
       "Seamless doctor appointment scheduling, pharmacy ordering, and comprehensive monthly health reports",
       "Multi-user access portals for caregivers and family members featuring real-time alerts",
     ],
-    tags: ["Flutter", "Health Tech", "IoT", "Firebase"],
+    tags: ["Flutter", "Health Tech", "IoT Sensors", "Firebase", "Emergency SOS"],
   },
   {
     title: "ATM Promo",
@@ -155,7 +157,7 @@ export const projects = [
       "Fully responsive layout featuring client testimonials and a seamless consultation booking flow",
       "Core Web Vitals optimized via lazy loading, minified assets, and schema markup",
     ],
-    tags: ["WordPress", "UI/UX", "Marketing"],
+    tags: ["WordPress", "UI/UX", "Core Web Vitals", "SEO", "Marketing"],
   },
   {
     title: "Prime Financials",
@@ -171,7 +173,7 @@ export const projects = [
       "Professional corporate branding highlighting the advisory board and full legal contact details",
       "Fully responsive layout ensuring a seamless browsing experience across all mobile devices",
     ],
-    tags: ["WordPress", "FinTech", "Responsive"],
+    tags: ["WordPress", "FinTech", "Corporate Branding", "Responsive", "SEO"],
   },
   {
     title: "Barter Tech",
@@ -187,7 +189,7 @@ export const projects = [
       "Optimized content-driven structure detailing tailored services, company background, and accessible contact information",
       "Advanced SEO-optimized architecture specifically tailored for B2B lead generation and organic growth",
     ],
-    tags: ["WordPress", "Bootstrap", "B2B"],
+    tags: ["WordPress", "Bootstrap", "B2B", "SEO Architecture", "Responsive"],
   },
 ];
 
@@ -220,21 +222,27 @@ export const certificates = [
 
 export const technicalSkills = [
   "React Native",
-  "Expo",
-  "Flutter",
   "Next.js",
+  "TypeScript",
+  "Vector RAG",
+  "Expo",
+  "Prompt Engineering",
+  "Flutter",
+  "Blockchain",
+  "Solidity",
+  "Smart Contracts",
+  "Ethers.js",
+  "Python",
+  "JavaScript",
+  "Supabase",
+  "MySQL",
   "HTML5",
   "CSS3",
-  "JavaScript",
-  "Python",
-  "Java",
-  "C",
-  "C++",
-  "SQL",
-  "MySQL",
-  "Supabase",
   "WordPress",
   "Bootstrap",
+  "Java",
+  "C++",
+  "C",
   "Adobe Photoshop",
 ];
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { SectionHeading } from "@/components/sections/About";
 import { projects } from "@/data/portfolio";
@@ -14,6 +15,23 @@ const statusColorMap: Record<string, string> = {
 };
 
 export function Projects() {
+  const [platform, setPlatform] = useState<"ios" | "android" | "other">("other");
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const ua = navigator.userAgent || navigator.vendor || (window as unknown as { opera?: string }).opera || "";
+    const isIOS =
+      /iPad|iPhone|iPod/.test(ua) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    const isAndroid = /Android/i.test(ua);
+
+    if (isIOS) {
+      setPlatform("ios");
+    } else if (isAndroid) {
+      setPlatform("android");
+    }
+  }, []);
+
   return (
     <section id="projects" className="px-4 py-12 md:px-6 md:py-16">
       <div className="mx-auto max-w-6xl">
@@ -24,75 +42,91 @@ export function Projects() {
         />
 
         <div className="grid gap-6 md:grid-cols-2">
-          {projects.map((project, i) => (
-            <GlassCard
-              key={project.title}
-              delay={i * 0.08}
-              className={cn(
-                "flex flex-col",
-                i < 2 && "md:col-span-1 lg:row-span-1"
-              )}
-            >
-              <div className="mb-4 flex items-start justify-between gap-4">
-                <div>
-                  <p className="mb-1 text-xs font-medium uppercase tracking-wider" style={{ color: "rgb(113 113 122)" }}>
-                    {project.category}
-                  </p>
-                  <h3 className="text-2xl font-bold text-white">
-                    {project.title}
-                  </h3>
-                </div>
-                <span
-                  className={cn(
-                    "shrink-0 rounded-full border bg-gradient-to-r px-3 py-1 text-xs font-medium",
-                    statusColorMap[project.status] || "from-white/20 to-white/5 border-white/20 text-white"
-                  )}
-                >
-                  {project.status}
-                </span>
-              </div>
+          {projects.map((project, i) => {
+            const projectItem = project as typeof project & {
+              androidLink?: string;
+              iosLink?: string;
+            };
 
-              <p className="mb-6 flex-1 text-sm leading-relaxed text-zinc-100 md:text-base">
-                {project.description}
-              </p>
+            // Dynamically select OS-specific URL with fallbacks
+            const activeLink =
+              (platform === "ios" && projectItem.iosLink ? projectItem.iosLink : null) ||
+              (platform === "android" && projectItem.androidLink ? projectItem.androidLink : null) ||
+              projectItem.link ||
+              projectItem.androidLink ||
+              projectItem.iosLink ||
+              "";
 
-              <ul className="mb-6 space-y-2">
-                {project.highlights.map((item) => (
-                  <li
-                    key={item.slice(0, 30)}
-                    className="flex gap-2 text-sm text-zinc-300"
-                  >
-                    <ArrowUpRight size={14} className="mt-0.5 shrink-0 text-teal-400" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-auto flex items-end justify-between gap-2 pt-2">
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-lg border border-white/8 bg-white/5 px-3 py-1 text-xs text-zinc-200"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="shrink-0 text-zinc-400 transition-colors hover:text-teal-300"
-                    aria-label={`View ${project.title}`}
-                  >
-                    <ArrowUpRight size={22} />
-                  </a>
+            return (
+              <GlassCard
+                key={project.title}
+                delay={i * 0.08}
+                className={cn(
+                  "flex flex-col",
+                  i < 2 && "md:col-span-1 lg:row-span-1"
                 )}
-              </div>
-            </GlassCard>
-          ))}
+              >
+                <div className="mb-4 flex items-start justify-between gap-4">
+                  <div>
+                    <p className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-teal-400">
+                      {project.category}
+                    </p>
+                    <h3 className="text-2xl font-bold text-white">
+                      {project.title}
+                    </h3>
+                  </div>
+                  <span
+                    className={cn(
+                      "shrink-0 rounded-full border bg-gradient-to-r px-3 py-1 text-xs font-medium",
+                      statusColorMap[project.status] || "from-white/20 to-white/5 border-white/20 text-white"
+                    )}
+                  >
+                    {project.status}
+                  </span>
+                </div>
+
+                <p className="mb-6 flex-1 text-sm leading-relaxed text-zinc-100 md:text-base">
+                  {project.description}
+                </p>
+
+                <ul className="mb-6 space-y-2">
+                  {project.highlights.map((item) => (
+                    <li
+                      key={item.slice(0, 30)}
+                      className="flex gap-2 text-sm text-zinc-300"
+                    >
+                      <ArrowUpRight size={14} className="mt-0.5 shrink-0 text-teal-400" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-auto flex items-end justify-between gap-2 pt-2">
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-lg border border-white/8 bg-white/5 px-3 py-1 text-xs text-zinc-200"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  {activeLink && (
+                    <a
+                      href={activeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="shrink-0 text-zinc-400 transition-colors hover:text-teal-300"
+                      aria-label={`View ${project.title}`}
+                    >
+                      <ArrowUpRight size={22} />
+                    </a>
+                  )}
+                </div>
+              </GlassCard>
+            );
+          })}
         </div>
       </div>
     </section>
