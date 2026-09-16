@@ -140,7 +140,7 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
                       Global Mindset
                     </span>
                     <p className="text-[9px] font-medium uppercase tracking-[0.12em] leading-relaxed whitespace-nowrap" style={{ color: "rgba(0,0,0,0.45)" }}>
-                      Building solutions<br />that create an impact
+                      Building solutions<br />creating an impact
                     </p>
                   </div>
                 </div>

@@ -58,15 +58,15 @@ export function Testimonials() {
 
   return (
     <section id="testimonials" className="relative px-4 py-12 md:px-6 md:py-16">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-6xl">
         <SectionHeading
           label="Endorsements"
           title="Recommendations"
-          description="Verifiable feedback and letters of recommendation from founders I've worked with."
+          description="Hear it from the amazing founders I've worked with."
         />
 
         {/* Minimal Text Slide Container */}
-        <div className="relative min-h-[190px] md:min-h-[170px] flex flex-col justify-center">
+        <div className="mx-auto max-w-4xl relative min-h-[190px] md:min-h-[170px] flex flex-col justify-center">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={active.id}

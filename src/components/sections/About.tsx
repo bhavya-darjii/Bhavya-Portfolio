@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { personal, education } from "@/data/portfolio";
-import { GraduationCap, MapPin } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 
 export function SectionHeading({
   label,
@@ -59,19 +59,6 @@ export function About() {
               <p className="text-sm leading-relaxed text-zinc-400 md:text-base">
                 {personal.profileSummary}
               </p>
-            </div>
-
-            <div className="mt-10 flex flex-wrap gap-3 border-t border-white/5 pt-8">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300">
-                <MapPin size={14} className="text-cyan-400" />
-                {personal.location}
-              </span>
-              <span className="rounded-full border border-teal-500/30 bg-teal-500/10 px-4 py-2 text-sm text-teal-300">
-                Web & Mobile Developer
-              </span>
-              <span className="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 text-sm text-cyan-300">
-                Freelancer
-              </span>
             </div>
           </GlassCard>
 
