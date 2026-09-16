@@ -29,8 +29,8 @@ export const experience = [
     period: "Jun 2026",
     type: "Internship",
     letterId: "optisoft",
-    letterLabel: "Verified Experience Letter",
-    letterUrl: "/letters/bhavya-experience-letter.pdf",
+    letterLabel: "Recommendation Letter",
+    letterUrl: "/letters/bhavya-optisoft-vision-recommendation-letter.pdf",
     highlights: [
       "Contributed to Lensoui, Eyecloud, and HelpHub — shipping features, integrating APIs, and debugging across the stack.",
       "Collaborated on app development workflows with a focus on reliability and clean user experiences.",
@@ -41,6 +41,9 @@ export const experience = [
     role: "App Development Intern",
     period: "Nov 2024 – Mar 2025",
     type: "Internship",
+    letterId: "vinayak",
+    letterLabel: "Recommendation Letter",
+    letterUrl: "/letters/bhavya-vinayak-soft-solutions-recommendation-letter.pdf",
     highlights: [
       "Gained hands-on experience in app development using React Native and Expo during a focused internship.",
       "Built a POS system for local restaurants to manage offline orders seamlessly, streamlining daily operations.",
@@ -55,7 +58,7 @@ export const experience = [
     type: "Internship",
     letterId: "webgyor",
     letterLabel: "Founder Recommendation Letter",
-    letterUrl: "/letters/bhavya-recommendation-letter.pdf",
+    letterUrl: "/letters/bhavya-webgyor-technologies-recommendation-letter.pdf",
     highlights: [
       "Achieved a consistent look and visual theme across the website by promoting uniform fonts, formatting, images, and layout.",
       "Managed front-end and back-end development in Portfolio Analyst, Employee Track, and Account Management systems.",
