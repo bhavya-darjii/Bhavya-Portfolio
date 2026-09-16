@@ -28,6 +28,9 @@ export const experience = [
     role: "Software Development Intern",
     period: "Jun 2026",
     type: "Internship",
+    letterId: "optisoft",
+    letterLabel: "Verified Experience Letter",
+    letterUrl: "/letters/bhavya-experience-letter.pdf",
     highlights: [
       "Contributed to Lensoui, Eyecloud, and HelpHub — shipping features, integrating APIs, and debugging across the stack.",
       "Collaborated on app development workflows with a focus on reliability and clean user experiences.",
@@ -50,10 +53,27 @@ export const experience = [
     role: "WordPress Website Development",
     period: "2022 – 2023",
     type: "Internship",
+    letterId: "webgyor",
+    letterLabel: "Founder Recommendation Letter",
+    letterUrl: "/letters/bhavya-recommendation-letter.pdf",
     highlights: [
       "Achieved a consistent look and visual theme across the website by promoting uniform fonts, formatting, images, and layout.",
       "Managed front-end and back-end development in Portfolio Analyst, Employee Track, and Account Management systems.",
       "Coordinated the design, development, and launch of a new website — increasing online visibility and customer engagement.",
+    ],
+  },
+  {
+    company: "Ayika Foundation",
+    role: "IT Intern",
+    period: "Aug 2022 – Aug 2023",
+    type: "Internship",
+    letterId: "ayika",
+    letterLabel: "Appointment Letter",
+    letterUrl: "/letters/bhavya-ayika-offer-letter.pdf",
+    highlights: [
+      "Selected through a competitive vetting process to drive IT and digital initiatives supporting environmental advocacy.",
+      "Collaborated with co-founders on climate action campaigns and digital content distribution across community platforms.",
+      "Managed digital assets and web content workflows ensuring consistent messaging and online outreach.",
     ],
   },
 ];
@@ -111,7 +131,8 @@ export const projects = [
   },
   {
     title: "Hasslefree Drive",
-    link: "https://play.google.com/store/apps/details?id=com.hasslefreedrive.app",
+    link: "https://www.hasslefreedrive.com/",
+    websiteLink: "https://www.hasslefreedrive.com/",
     androidLink: "https://play.google.com/store/apps/details?id=com.hasslefreedrive.app",
     iosLink: "", // Paste your iOS App Store link here once published (e.g. https://apps.apple.com/app/...)
     category: "Mobile Application",
@@ -262,11 +283,39 @@ export const languages = [
   { name: "Marathi", level: "Intermediate" },
 ];
 
+export const testimonials = [
+  {
+    id: "webgyor",
+    author: "Saurabh Gupta",
+    role: "Founder & Partner",
+    company: "Webgyor Technologies",
+    quote:
+      "I highly recommend Bhavya Darji who has done an internship with us for 3 months. I can assure you that Bhavya has good work ethics and exemplary skills. Bhavya is a team player and very proactive. I strongly recommend Bhavya Darji as an excellent and professional member.",
+  },
+  {
+    id: "vinayak",
+    author: "Jatin Chauhan",
+    role: "Founder",
+    company: "Vinayak Soft Solutions",
+    quote:
+      "Mr. Bhavya Darji was working as Junior React JS Software Developer in our organization. We have found him to be a self-starter who is motivated, duty bound, and highly committed team player with strong conceptual knowledge. During his tenure with us, we found him efficient, his character and conduct were good.",
+  },
+  {
+    id: "ayika",
+    author: "Siya Joshi & Litisha Bagadia",
+    role: "Co-Founders",
+    company: "Ayika Foundation",
+    quote:
+      "After a meticulous process of selection, we, the founders, take great privilege in appointing you as the IT Intern at Ayika Foundation. We are truly impressed with your work and are beyond excited to work with you... we are confident that you will play an instrumental role in furthering our mission.",
+  },
+];
+
 export const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About Me" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
+  { href: "#testimonials", label: "Recommendations" },
   { href: "#skills", label: "Skills" },
   { href: "#certificates", label: "Certificates" },
   { href: "#contact", label: "Contact" },
@@ -287,3 +336,4 @@ export const heroNavLinks = [
   { href: "#contact", label: "Let's Talk" },
   { href: "/resume.pdf", label: "Resume ↗" },
 ];
+

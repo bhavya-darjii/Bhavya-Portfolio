@@ -3,7 +3,7 @@
 import { GlassCard } from "@/components/ui/GlassCard";
 import { SectionHeading } from "@/components/sections/About";
 import { experience } from "@/data/portfolio";
-import { Briefcase } from "lucide-react";
+import { Briefcase, CheckCircle2, ArrowUpRight } from "lucide-react";
 
 export function Experience() {
   return (
@@ -19,7 +19,7 @@ export function Experience() {
           <div className="absolute left-[23px] top-8 hidden h-[calc(100%-4rem)] w-px bg-gradient-to-b from-teal-500/50 via-cyan-500/30 to-transparent md:block" />
 
           {experience.map((job, i) => (
-            <GlassCard key={job.company} delay={i * 0.1} className="md:ml-12">
+            <GlassCard key={`${job.company}-${job.role}`} delay={i * 0.1} className="md:ml-12">
               <div className="absolute -left-[3.25rem] top-8 hidden h-4 w-4 rounded-full border-2 border-teal-500 bg-[#0a0a12] shadow-lg shadow-teal-500/30 md:block" />
 
               <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
@@ -55,6 +55,24 @@ export function Experience() {
                   </li>
                 ))}
               </ul>
+
+              {"letterLabel" in job && job.letterLabel && (
+                <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+                  <a
+                    href={"letterUrl" in job && typeof job.letterUrl === "string" ? job.letterUrl : "#testimonials"}
+                    target={"letterUrl" in job && typeof job.letterUrl === "string" ? "_blank" : undefined}
+                    rel={"letterUrl" in job && typeof job.letterUrl === "string" ? "noopener noreferrer" : undefined}
+                    className="inline-flex items-center gap-1.5 text-xs font-medium text-teal-400 hover:text-teal-300 transition-colors group/link"
+                  >
+                    <CheckCircle2 size={13} className="text-teal-400" />
+                    <span>{job.letterLabel}</span>
+                    <ArrowUpRight
+                      size={13}
+                      className="transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5"
+                    />
+                  </a>
+                </div>
+              )}
             </GlassCard>
           ))}
         </div>

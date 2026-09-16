@@ -77,13 +77,13 @@ export function Header() {
             </span>
           </a>
 
-          <ul className="hidden items-center gap-1 md:flex">
+          <ul className="hidden items-center gap-0.5 md:flex lg:gap-1">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   className={cn(
-                    "relative rounded-lg px-4 py-2 text-sm font-medium transition-colors",
+                    "relative rounded-lg px-2.5 py-1.5 text-xs font-medium transition-colors lg:px-3.5 lg:py-2 lg:text-sm",
                     activeSection === link.href.slice(1)
                       ? "text-white"
                       : "text-zinc-400 hover:text-white"
@@ -96,7 +96,7 @@ export function Header() {
                       transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
                     />
                   )}
-                  <span className="relative">{link.label}</span>
+                  <span className="relative whitespace-nowrap">{link.label}</span>
                 </a>
               </li>
             ))}

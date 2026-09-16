@@ -37,7 +37,7 @@ Software Development Engineer with experience developing production-ready web ap
 
 \section*{Professional Experience}
 
-\textbf{Optisoft Vision} \hfill \textit{Software Development Intern | Jun 2026}
+\textbf{Optisoft Vision} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-experience-letter.pdf}{\footnotesize\textnormal{[Experience Letter]}} \hfill \textit{Software Development Intern | Jun 2026}
 \begin{itemize}
 \item Developed production-ready React/Vite applications including EyeCloud, Lensoui and HelpHub.
 \item Integrated REST APIs, enhanced UI/UX, fixed bugs and participated in production deployments.
@@ -51,11 +51,18 @@ Software Development Engineer with experience developing production-ready web ap
 \item Tech Stack: React Native, Expo.
 \end{itemize}
 
-\textbf{WebGyor Technologies} \hfill \textit{WordPress Developer | 2022 -- 2023}
+\textbf{WebGyor Technologies} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-recommendation-letter.pdf}{\footnotesize\textnormal{[Recommendation Letter]}} \hfill \textit{WordPress Developer | 2022 -- 2023}
 \begin{itemize}
 \item Developed responsive business websites and maintained internal management systems.
 \item Improved UI consistency and user experience across multiple client projects.
 \item Tech Stack: WordPress, HTML, CSS.
+\end{itemize}
+
+\textbf{Ayika Foundation} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-ayika-offer-letter.pdf}{\footnotesize\textnormal{[Offer Letter]}} \hfill \textit{IT Intern | Aug 2022 -- Aug 2023}
+\begin{itemize}
+\item Selected to drive IT and digital initiatives supporting environmental advocacy and climate action.
+\item Managed digital assets and web content workflows ensuring consistent messaging across community platforms.
+\item Tech Stack: Web Technologies, Digital Media, Content Workflows.
 \end{itemize}
 
 \section*{Featured Projects}
@@ -79,6 +86,8 @@ Software Development Engineer with experience developing production-ready web ap
 \item Successfully launched with \textbf{180+ users}.
 \item Tech Stack: React, Firebase, JavaScript, Razorpay.
 \end{itemize}
+
+\newpage
 
 \textbf{Hasslefree Drive}
 \hfill
@@ -109,8 +118,6 @@ Software Development Engineer with experience developing production-ready web ap
 \item Built a marketing website focused on branding and lead generation.
 \end{itemize}
 
-\leavevmode\\
-
 \textbf{Medway -- Healthcare Application}
 \begin{itemize}
 \item Developed a healthcare monitoring application with emergency support and appointment management.
@@ -123,6 +130,9 @@ B.Tech in Artificial Intelligence and Data Science
 
 \textbf{Shri Bhagubhai Mafatlal Polytechnic} \hfill 2022--2025\\
 Diploma in Information Technology
+
+\textbf{Parle Tilak Vidyalaya} \hfill 2010--2020\\
+Secondary Education
 
 \section*{Languages}
 English \textbullet\ Hindi \textbullet\ Gujarati \textbullet\ Marathi

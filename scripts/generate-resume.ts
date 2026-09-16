@@ -44,9 +44,17 @@ async function generateResume() {
 
     const buffer = await response.arrayBuffer();
     const outputPath = path.join(__dirname, "..", "public", "resume.pdf");
-    fs.writeFileSync(outputPath, Buffer.from(buffer));
-
-    console.log(`Successfully generated PDF at ${outputPath}`);
+    try {
+      fs.writeFileSync(outputPath, Buffer.from(buffer));
+      console.log(`Successfully generated PDF at ${outputPath}`);
+    } catch (err: any) {
+      if (err.code === "EBUSY") {
+        console.error("\n⚠️  Could not overwrite public/resume.pdf because it is currently locked by Adobe Acrobat or another PDF viewer.");
+        console.error("👉 Please close resume.pdf in Adobe Acrobat and re-run 'npm run resume'.\n");
+        process.exit(1);
+      }
+      throw err;
+    }
   } catch (error) {
     console.error("Error generating resume:", error);
     process.exit(1);

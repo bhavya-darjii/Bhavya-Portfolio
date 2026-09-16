@@ -44,14 +44,19 @@ export function Projects() {
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project, i) => {
             const projectItem = project as typeof project & {
+              websiteLink?: string;
               androidLink?: string;
               iosLink?: string;
             };
 
-            // Dynamically select OS-specific URL with fallbacks
+            // Dynamically select OS-specific URL with smart fallbacks:
+            // - Android mobile visitor -> Google Play Store
+            // - iOS mobile visitor -> App Store (or landing page if iOS store link not yet live)
+            // - Desktop / Laptop visitor -> App Landing Page website (or store fallback)
             const activeLink =
-              (platform === "ios" && projectItem.iosLink ? projectItem.iosLink : null) ||
               (platform === "android" && projectItem.androidLink ? projectItem.androidLink : null) ||
+              (platform === "ios" && projectItem.iosLink ? projectItem.iosLink : null) ||
+              projectItem.websiteLink ||
               projectItem.link ||
               projectItem.androidLink ||
               projectItem.iosLink ||
@@ -112,6 +117,7 @@ export function Projects() {
                       </span>
                     ))}
                   </div>
+
                   {activeLink && (
                     <a
                       href={activeLink}
