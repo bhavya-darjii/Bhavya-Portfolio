@@ -44,6 +44,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.variable} ${syne.variable} h-full`}>
+      <head>
+        <link rel="preload" href="/resume.pdf" as="fetch" crossOrigin="anonymous" />
+        <link rel="preload" href="/letters/bhavya-optisoft-vision-recommendation-letter.pdf" as="fetch" crossOrigin="anonymous" />
+        <link rel="preload" href="/letters/bhavya-vinayak-soft-solutions-recommendation-letter.pdf" as="fetch" crossOrigin="anonymous" />
+        <link rel="preload" href="/letters/bhavya-webgyor-technologies-recommendation-letter.pdf" as="fetch" crossOrigin="anonymous" />
+      </head>
       <body className="min-h-full font-sans antialiased">{children}</body>
     </html>
   );

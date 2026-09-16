@@ -1,7 +1,7 @@
 
 \documentclass[9.5pt,a4paper]{article}
 
-\usepackage[a4paper,top=0.38in,bottom=0.38in,left=0.45in,right=0.45in]{geometry}
+\usepackage[a4paper,top=0.34in,bottom=0.32in,left=0.45in,right=0.45in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage[hidelinks,pdfnewwindow=true]{hyperref}
@@ -11,34 +11,34 @@
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{3pt}
+\setlength{\parskip}{2.5pt}
 
 \titleformat{\section}{\normalsize\bfseries}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{8pt}{5pt}
+\titlespacing{\section}{0pt}{7pt}{4pt}
 
-\setlist[itemize]{leftmargin=12pt,itemsep=1pt,topsep=3pt,parsep=0pt,partopsep=0pt}
+\setlist[itemize]{leftmargin=12pt,itemsep=1pt,topsep=2.5pt,parsep=0pt,partopsep=0pt}
 
 \begin{document}
 
 \begin{center}
 {\large\bfseries Bhavya Darji}\\[2pt]
 Software Development Engineer \enspace $\mid$ \enspace Mumbai, India \enspace $\mid$ \enspace +91-8433791241\\
-\href{mailto:bhavyadarji462@gmail.com}{bhavyadarji462@gmail.com} \enspace $\mid$ \enspace \href{https://bhavya-darji.vercel.app/}{bhavya-darji.vercel.app}
+\href{mailto:bhavyadarji462@gmail.com}{bhavyadarji462@gmail.com} \enspace $\mid$ \enspace \href{https://bhavya-darji.vercel.app/}{\textit{bhavya-darji.vercel.app}}
 \end{center}
 
 \vspace{3pt}
 
 \section*{Profile Summary}
 \vspace{1pt}
-Full-stack engineer building production-ready web, mobile and AI-powered SaaS products. Proficient in React, React Native, Flutter, Vite, Firebase, REST APIs and modern web technologies through internships, freelancing and entrepreneurial ventures.
+Full-stack engineer building production-ready web, mobile and AI-powered SaaS products. Experienced in RAG (Retrieval-Augmented Generation) pipelines, AI integrations, and structured Git/GitHub branching workflows. Proficient in React, React Native, Flutter, Vite, Firebase, REST APIs and modern web technologies through internships, freelancing and entrepreneurial ventures.
 
 \section*{Technical Skills}
 \vspace{1pt}
 \textbf{Languages:} HTML, CSS, JavaScript, Python, Java, C, C++ \hfill
 \textbf{Frameworks:} React, React Native, Flutter, Expo, Vite, Bootstrap, WordPress\\
-\textbf{Backend:} Node.js, Firebase, Supabase, REST APIs \hfill
+\textbf{Backend \& AI:} Node.js, Firebase, Supabase, REST APIs, RAG Pipelines \hfill
 \textbf{Database:} SQL, MySQL \hfill
-\textbf{Tools:} Git, Razorpay, Adobe Photoshop
+\textbf{Tools:} Git \& GitHub (Branching \& Workflows), Render, Razorpay, Adobe Photoshop
 
 \section*{Professional Experience}
 \vspace{2pt}
@@ -72,32 +72,39 @@ Full-stack engineer building production-ready web, mobile and AI-powered SaaS pr
 \begin{multicols}{2}
 
 \noindent\textbf{Velaar -- AI Educational Platform} \hfill \href{https://velaar.vercel.app/}{Live Demo}\\
-AI education platform with role-specific dashboards; Gemini-powered lesson plans, question banks, PPT generation and Smart Attendance QR system. \textit{React 19, Supabase, Gemini AI.}
+AI education platform with role-specific dashboards; Gemini-powered lesson plans, question banks, PPT generation and Smart Attendance QR system.\\
+\textit{Uses: RAG Pipeline, Supabase, Gemini AI}
 
 \vspace{5pt}
 \noindent\textbf{Hasslefree Drive} \hfill \href{https://www.hasslefreedrive.com/}{Live Site}\\
-Driver-booking app with live tracking, booking management, secure payments and notifications. \textit{Flutter, Firebase.}
+Driver-booking app with live tracking, booking management, secure payments and notifications.\\
+\textit{Uses: Flutter, Dart, Rest API}
 
 \vspace{5pt}
-\noindent\textbf{Prime Financials} \hfill \href{https://primefinancials.com}{Live Site}\\
-Responsive corporate website for a financial services firm with legal and advisory content. \textit{WordPress, SEO.}
+\noindent\textbf{ATM Promo} \hfill \href{https://atm.promo}{Live Site}\\
+Marketing website focused on branding, lead generation and conversion optimization.\\
+\textit{Uses: WordPress, SEO, Lead Generation}
 
 \vspace{5pt}
-\noindent\textbf{Medway -- Healthcare App}\\
-Healthcare monitoring app with emergency support and appointment management. \textit{Flutter, Firebase.}
+\noindent\textbf{Barter Tech} \hfill \href{https://www.barter.tech/}{Live Site}\\
+Official company website with modern UI and B2B-focused content architecture.\\
+\textit{Uses: WordPress, Bootstrap, B2B}
 
 \columnbreak
 
 \noindent\textbf{Handwrite -- AI SaaS Platform} \hfill \href{https://handwrite-omega.vercel.app}{Live Demo}\\
-Converts typed text into realistic handwritten PDFs; Firebase Auth, Razorpay payments, smart credit system. Launched with \textbf{180+ users}. \textit{React, Firebase, Razorpay.}
+Converts typed text into realistic handwritten PDFs; Firebase Auth, Razorpay payments, smart credit system. Launched with \textbf{180+ users}.\\
+\textit{Uses: React, Firebase, Razorpay}
 
 \vspace{5pt}
-\noindent\textbf{Barter Tech} \hfill \href{https://www.barter.tech/}{Live Site}\\
-Official company website with modern UI and B2B-focused content architecture. \textit{WordPress, Bootstrap.}
+\noindent\textbf{Medway -- Healthcare App}\\
+Healthcare monitoring app with emergency support and appointment management.\\
+\textit{Uses: Flutter, Firebase, IoT Sensors}
 
 \vspace{5pt}
-\noindent\textbf{ATM Promo} \hfill \href{https://atm.promo}{Live Site}\\
-Marketing website focused on branding, lead generation and conversion optimization. \textit{WordPress.}
+\noindent\textbf{Prime Financials} \hfill \href{https://primefinancials.com}{Live Site}\\
+Responsive corporate website for a financial services firm with legal and advisory content.\\
+\textit{Uses: WordPress, SEO, FinTech}
 
 \end{multicols}
 

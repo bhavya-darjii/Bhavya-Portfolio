@@ -62,6 +62,7 @@ export function Experience() {
                     href={"letterUrl" in job && typeof job.letterUrl === "string" ? job.letterUrl : "#testimonials"}
                     target={"letterUrl" in job && typeof job.letterUrl === "string" ? "_blank" : undefined}
                     rel={"letterUrl" in job && typeof job.letterUrl === "string" ? "noopener noreferrer" : undefined}
+                    type={"letterUrl" in job && typeof job.letterUrl === "string" && job.letterUrl.endsWith(".pdf") ? "application/pdf" : undefined}
                     className="inline-flex items-center gap-1.5 text-xs font-medium text-teal-400 hover:text-teal-300 transition-colors group/link"
                   >
                     <CheckCircle2 size={13} className="text-teal-400" />

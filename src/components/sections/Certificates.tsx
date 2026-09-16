@@ -41,6 +41,7 @@ export function Certificates() {
                   href={cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  type={cert.link.endsWith(".pdf") ? "application/pdf" : undefined}
                   className="flex items-center gap-1 text-xs font-medium text-teal-400 hover:text-teal-300 transition-colors"
                 >
                   View Certificate

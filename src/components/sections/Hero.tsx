@@ -75,6 +75,7 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
                   href={link.href}
                   target={link.href.endsWith(".pdf") ? "_blank" : undefined}
                   rel={link.href.endsWith(".pdf") ? "noopener noreferrer" : undefined}
+                  type={link.href.endsWith(".pdf") ? "application/pdf" : undefined}
                   className={cn(
                     "text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-800/70 transition-colors hover:text-slate-900 md:text-xs",
                     (link as any).hideOnMobile && "hidden md:block"
@@ -139,7 +140,7 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
                       Global Mindset
                     </span>
                     <p className="text-[9px] font-medium uppercase tracking-[0.12em] leading-relaxed whitespace-nowrap" style={{ color: "rgba(0,0,0,0.45)" }}>
-                      Building solutions<br />that create impact
+                      Building solutions<br />that create an impact
                     </p>
                   </div>
                 </div>

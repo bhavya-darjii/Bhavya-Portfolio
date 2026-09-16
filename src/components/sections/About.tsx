@@ -49,14 +49,14 @@ export function About() {
 
         <div className="grid gap-6 lg:grid-cols-5">
           <GlassCard className="lg:col-span-3" delay={0.1}>
-            <div className="space-y-6">
-              <p className="text-lg font-medium leading-relaxed text-zinc-100 md:text-xl md:leading-relaxed">
+            <div className="space-y-4">
+              <p className="text-sm font-medium leading-relaxed text-zinc-200 md:text-base">
                 {personal.summary}
               </p>
 
               <div className="h-px w-full bg-gradient-to-r from-teal-500/30 via-white/10 to-transparent" />
 
-              <p className="text-base leading-[1.8] text-zinc-400 md:text-lg">
+              <p className="text-sm leading-relaxed text-zinc-400 md:text-base">
                 {personal.profileSummary}
               </p>
             </div>

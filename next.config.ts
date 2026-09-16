@@ -14,6 +14,27 @@ const nextConfig: NextConfig = {
     "192.168.0.105",
     "192.168.0.105:3000",
   ],
+  async headers() {
+    return [
+      {
+        source: "/:path*.pdf",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "application/pdf",
+          },
+          {
+            key: "Content-Disposition",
+            value: "inline",
+          },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
