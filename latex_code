@@ -4,7 +4,7 @@
 \usepackage[a4paper,top=0.38in,bottom=0.38in,left=0.45in,right=0.45in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks,pdfnewwindow=true]{hyperref}
 \usepackage{xcolor}
 \usepackage{multicol}
 \usepackage{array}
@@ -22,8 +22,8 @@
 
 \begin{center}
 {\large\bfseries Bhavya Darji}\\[2pt]
-Software Development Engineer \enspace $\mid$ \enspace Mumbai, India \enspace $\mid$ \enspace +91-8433791241 \enspace $\mid$ \enspace
-\href{mailto:bhavyadarji462@gmail.com}{bhavyadarji462@gmail.com}
+Software Development Engineer \enspace $\mid$ \enspace Mumbai, India \enspace $\mid$ \enspace +91-8433791241\\
+\href{mailto:bhavyadarji462@gmail.com}{bhavyadarji462@gmail.com} \enspace $\mid$ \enspace \href{https://bhavya-darji.vercel.app/}{bhavya-darji.vercel.app}
 \end{center}
 
 \vspace{3pt}
@@ -83,7 +83,7 @@ Driver-booking app with live tracking, booking management, secure payments and n
 Responsive corporate website for a financial services firm with legal and advisory content. \textit{WordPress, SEO.}
 
 \vspace{5pt}
-\noindent\textbf{Medway -- Healthcare App} \hfill --\\
+\noindent\textbf{Medway -- Healthcare App}\\
 Healthcare monitoring app with emergency support and appointment management. \textit{Flutter, Firebase.}
 
 \columnbreak
