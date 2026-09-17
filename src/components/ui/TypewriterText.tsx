@@ -117,6 +117,13 @@ export function Preloader({ onComplete }: PreloaderProps) {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
+    // If already preloaded in this browser session, skip immediately
+    if (typeof window !== "undefined" && sessionStorage.getItem("portfolio_preloaded")) {
+      setVisible(false);
+      onComplete();
+      return;
+    }
+
     // Lock scroll but use scrollbar-gutter to prevent layout shift
     document.body.style.overflow = "hidden";
 
@@ -129,6 +136,9 @@ export function Preloader({ onComplete }: PreloaderProps) {
         clearInterval(interval);
         setTimeout(() => {
           setVisible(false);
+          if (typeof window !== "undefined") {
+            sessionStorage.setItem("portfolio_preloaded", "true");
+          }
           onComplete(); // Call immediately as it starts fading out
           setTimeout(() => {
             document.body.style.overflow = "";

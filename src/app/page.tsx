@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BackgroundEffects } from "@/components/BackgroundEffects";
 import { MiddleBackground } from "@/components/MiddleBackground";
 import { Footer } from "@/components/Footer";
@@ -16,6 +16,12 @@ import { Certificates } from "@/components/sections/Certificates";
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && sessionStorage.getItem("portfolio_preloaded")) {
+      setLoaded(true);
+    }
+  }, []);
 
   return (
     <>

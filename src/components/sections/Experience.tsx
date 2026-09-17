@@ -4,6 +4,7 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import { SectionHeading } from "@/components/sections/About";
 import { experience } from "@/data/portfolio";
 import { Briefcase, CheckCircle2, ArrowUpRight } from "lucide-react";
+import { handlePdfClick } from "@/lib/pdf";
 
 export function Experience() {
   return (
@@ -59,9 +60,14 @@ export function Experience() {
               {"letterLabel" in job && job.letterLabel && (
                 <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
                   <a
-                    href={"letterUrl" in job && typeof job.letterUrl === "string" ? `/view?doc=${encodeURIComponent(job.letterUrl)}` : "#testimonials"}
+                    href={"letterUrl" in job && typeof job.letterUrl === "string" ? job.letterUrl : "#testimonials"}
                     target={"letterUrl" in job && typeof job.letterUrl === "string" ? "_blank" : undefined}
                     rel={"letterUrl" in job && typeof job.letterUrl === "string" ? "noopener noreferrer" : undefined}
+                    onClick={(e) => {
+                      if ("letterUrl" in job && typeof job.letterUrl === "string") {
+                        handlePdfClick(e, job.letterUrl);
+                      }
+                    }}
                     className="inline-flex items-center gap-1.5 text-xs font-medium text-teal-400 hover:text-teal-300 transition-colors group/link"
                   >
                     <CheckCircle2 size={13} className="text-teal-400" />

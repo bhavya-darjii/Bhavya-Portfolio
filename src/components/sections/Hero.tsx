@@ -1,23 +1,55 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { heroNavLinks, personal } from "@/data/portfolio";
 import { ProfileImage } from "@/components/ui/ProfileImage";
 import { cn } from "@/lib/utils";
+import { handlePdfClick } from "@/lib/pdf";
 
 export function Hero({ loaded = true }: { loaded?: boolean }) {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"],
+  const containerRef = useRef<HTMLElement>(null);
+  const heroHeightRef = useRef(800);
+
+  // Use window scroll from Framer Motion's internal RAF ticker (buttery smooth 60/120fps)
+  const { scrollY } = useScroll();
+
+  useEffect(() => {
+    const updateHeight = () => {
+      if (containerRef.current) {
+        heroHeightRef.current = containerRef.current.offsetHeight;
+      } else {
+        heroHeightRef.current = window.innerHeight;
+      }
+    };
+
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+
+    // Handles iOS Safari Back-Forward Cache (bfcache) restoration cleanly
+    const onPageShow = () => {
+      updateHeight();
+      window.dispatchEvent(new Event("scroll"));
+    };
+    window.addEventListener("pageshow", onPageShow);
+
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+      window.removeEventListener("pageshow", onPageShow);
+    };
+  }, []);
+
+  // Compute normalized progress without querying layout during scroll
+  const scrollYProgress = useTransform(scrollY, (y) => {
+    const h = heroHeightRef.current || 800;
+    return Math.min(1, Math.max(0, y / h));
   });
 
-  // Apply a tighter spring physics model ONLY for the scale to smooth out scroll jitter
+  // Apply spring physics model for the scale to smooth out touch scroll jitter
   const smoothProgress = useSpring(scrollYProgress, {
     stiffness: 400,
     damping: 40,
-    restDelta: 0.001
+    restDelta: 0.001,
   });
 
   const textOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
@@ -71,13 +103,17 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
             >
               {heroNavLinks.map((link) => {
                 const isPdf = link.href.endsWith(".pdf");
-                const href = isPdf ? `/view?doc=${encodeURIComponent(link.href)}` : link.href;
                 return (
                   <a
                     key={link.href}
-                    href={href}
+                    href={link.href}
                     target={isPdf ? "_blank" : undefined}
                     rel={isPdf ? "noopener noreferrer" : undefined}
+                    onClick={(e) => {
+                      if (isPdf) {
+                        handlePdfClick(e, link.href);
+                      }
+                    }}
                     className={cn(
                       "text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-800/70 transition-colors hover:text-slate-900 md:text-xs",
                       (link as any).hideOnMobile && "hidden md:block"

@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/sections/About";
 import { certificates } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, Award } from "lucide-react";
+import { handlePdfClick } from "@/lib/pdf";
 
 export function Certificates() {
   return (
@@ -38,9 +39,14 @@ export function Certificates() {
               <div className="mt-auto pt-4 flex items-center justify-between border-t border-white/5">
                 <span className="text-xs text-zinc-500">{cert.date}</span>
                 <a
-                  href={cert.link.endsWith(".pdf") ? `/view?doc=${encodeURIComponent(cert.link)}` : cert.link}
+                  href={cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => {
+                    if (cert.link.endsWith(".pdf")) {
+                      handlePdfClick(e, cert.link);
+                    }
+                  }}
                   className="flex items-center gap-1 text-xs font-medium text-teal-400 hover:text-teal-300 transition-colors"
                 >
                   View Certificate
