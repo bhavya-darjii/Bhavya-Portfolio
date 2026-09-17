@@ -69,21 +69,24 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
               transition={{ duration: 0.7, delay: 0.6 }}
               className="relative z-20 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 px-6 pt-8 md:gap-x-10"
             >
-              {heroNavLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target={link.href.endsWith(".pdf") ? "_blank" : undefined}
-                  rel={link.href.endsWith(".pdf") ? "noopener noreferrer" : undefined}
-                  type={link.href.endsWith(".pdf") ? "application/pdf" : undefined}
-                  className={cn(
-                    "text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-800/70 transition-colors hover:text-slate-900 md:text-xs",
-                    (link as any).hideOnMobile && "hidden md:block"
-                  )}
-                >
-                  {link.label}
-                </a>
-              ))}
+              {heroNavLinks.map((link) => {
+                const isPdf = link.href.endsWith(".pdf");
+                const href = isPdf ? `/view?doc=${encodeURIComponent(link.href)}` : link.href;
+                return (
+                  <a
+                    key={link.href}
+                    href={href}
+                    target={isPdf ? "_blank" : undefined}
+                    rel={isPdf ? "noopener noreferrer" : undefined}
+                    className={cn(
+                      "text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-800/70 transition-colors hover:text-slate-900 md:text-xs",
+                      (link as any).hideOnMobile && "hidden md:block"
+                    )}
+                  >
+                    {link.label}
+                  </a>
+                );
+              })}
             </motion.nav>
 
             {/* MOBILE ONLY: redesigned info block */}

@@ -45,7 +45,20 @@ async function generateResume() {
     const buffer = await response.arrayBuffer();
     const outputPath = path.join(__dirname, "..", "public", "resume.pdf");
     try {
-      fs.writeFileSync(outputPath, Buffer.from(buffer));
+      let finalBuffer = Buffer.from(buffer);
+      try {
+        const { PDFDocument } = await import("pdf-lib");
+        const pdfDoc = await PDFDocument.load(finalBuffer);
+        pdfDoc.setTitle("Bhavya Darji — Resume");
+        pdfDoc.setAuthor("Bhavya Darji");
+        pdfDoc.setSubject("Bhavya Darji Resume");
+        pdfDoc.setCreator("Bhavya Darji");
+        pdfDoc.setProducer("Bhavya Darji");
+        finalBuffer = Buffer.from(await pdfDoc.save());
+      } catch (metaErr) {
+        console.warn("Could not attach metadata to resume:", metaErr);
+      }
+      fs.writeFileSync(outputPath, finalBuffer);
       console.log(`Successfully generated PDF at ${outputPath}`);
     } catch (err: any) {
       if (err.code === "EBUSY") {

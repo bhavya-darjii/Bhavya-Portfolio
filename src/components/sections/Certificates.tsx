@@ -38,10 +38,9 @@ export function Certificates() {
               <div className="mt-auto pt-4 flex items-center justify-between border-t border-white/5">
                 <span className="text-xs text-zinc-500">{cert.date}</span>
                 <a
-                  href={cert.link}
+                  href={cert.link.endsWith(".pdf") ? `/view?doc=${encodeURIComponent(cert.link)}` : cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  type={cert.link.endsWith(".pdf") ? "application/pdf" : undefined}
                   className="flex items-center gap-1 text-xs font-medium text-teal-400 hover:text-teal-300 transition-colors"
                 >
                   View Certificate

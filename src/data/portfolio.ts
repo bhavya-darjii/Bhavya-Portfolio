@@ -54,7 +54,7 @@ export const experience = [
   {
     company: "WebGyor Technologies",
     role: "WordPress Website Development",
-    period: "2022 – 2023",
+    period: "June 2022 – August 2022",
     type: "Internship",
     letterId: "webgyor",
     letterLabel: "Recommendation Letter",

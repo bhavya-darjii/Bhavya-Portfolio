@@ -6,6 +6,7 @@
     "dev": "next dev",
     "resume": "tsx scripts/generate-resume.ts",
     "build:resume": "tsx scripts/generate-resume.ts",
+    "update-pdf-metadata": "node scripts/update-pdf-metadata.js",
     "build": "npm run build:resume && next build",
     "start": "next start",
     "lint": "eslint"
@@ -14,6 +15,7 @@
     "framer-motion": "^12.42.2",
     "lucide-react": "^1.23.0",
     "next": "16.2.10",
+    "pdf-lib": "^1.17.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-icons": "^5.7.0"

@@ -133,3 +133,7 @@ body {
 ) {
   color: rgb(212 212 216); /* zinc-300 equivalent */
 }
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

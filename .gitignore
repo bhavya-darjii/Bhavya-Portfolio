@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local utility scripts (not needed in the repo)
+scripts/update-pdf-metadata.js
