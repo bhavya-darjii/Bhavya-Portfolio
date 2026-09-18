@@ -122,4 +122,4 @@ All the personal information, projects, and experiences are managed centrally. T
 
 ---
 
-*Crafting digital experiences that feel effortless.*
+<p align="center">Made with ❤️ by <a href="https://bhavya-darji.vercel.app/" target="_blank" rel="noopener noreferrer"><strong>Bhavya Darji</strong></a></p>
