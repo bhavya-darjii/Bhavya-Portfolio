@@ -25,7 +25,7 @@ export const personal = {
 export const experience = [
   {
     company: "Optisoft Vision",
-    role: "Software Development Intern",
+    role: "React JS Software Developer",
     period: "Jun 2026",
     type: "Internship",
     letterId: "optisoft",
@@ -304,7 +304,7 @@ export const testimonials = [
     role: "Founder",
     company: "Vinayak Soft Solutions",
     quote:
-      "Mr. Bhavya Darji was working as Junior React JS Software Developer in our organization. We have found him to be a self-starter who is motivated, duty bound, and highly committed team player with strong conceptual knowledge. During his tenure with us, we found him efficient, his character and conduct were good.",
+      "We have found Mr. Bhavya Darji to be a self-starter who is motivated, duty bound, and highly committed team player with strong conceptual knowledge. During his tenure with us as a Junior React JS Software Developer, we found him efficient, his character and conduct were good.",
   },
   {
     id: "ayika",
