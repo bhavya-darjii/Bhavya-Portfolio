@@ -43,7 +43,10 @@ async function generateResume() {
     }
 
     const buffer = await response.arrayBuffer();
-    const outputPath = path.join(__dirname, "..", "public", "resume.pdf");
+    const outputPaths = [
+      path.join(__dirname, "..", "public", "resume.pdf"),
+      path.join(__dirname, "..", "public", "Bhavya Darji — Resume.pdf"),
+    ];
     try {
       let finalBuffer = Buffer.from(buffer);
       try {
@@ -58,12 +61,14 @@ async function generateResume() {
       } catch (metaErr) {
         console.warn("Could not attach metadata to resume:", metaErr);
       }
-      fs.writeFileSync(outputPath, finalBuffer);
-      console.log(`Successfully generated PDF at ${outputPath}`);
+      for (const p of outputPaths) {
+        fs.writeFileSync(p, finalBuffer);
+        console.log(`Successfully generated PDF at ${p}`);
+      }
     } catch (err: any) {
       if (err.code === "EBUSY") {
-        console.error("\n⚠️  Could not overwrite public/resume.pdf because it is currently locked by Adobe Acrobat or another PDF viewer.");
-        console.error("👉 Please close resume.pdf in Adobe Acrobat and re-run 'npm run resume'.\n");
+        console.error("\n⚠️  Could not overwrite resume PDF files because a file is currently locked by Adobe Acrobat or another PDF viewer.");
+        console.error("👉 Please close the PDF in Adobe Acrobat and re-run 'npm run resume'.\n");
         process.exit(1);
       }
       throw err;

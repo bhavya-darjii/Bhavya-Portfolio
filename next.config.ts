@@ -35,6 +35,49 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        source: "/resume.pdf",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "application/pdf",
+          },
+          {
+            key: "Content-Disposition",
+            value: 'inline; filename="Bhavya Darji - Resume.pdf"; filename*=UTF-8\'\'Bhavya%20Darji%20%E2%80%94%20Resume.pdf',
+          },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/:path*Resume.pdf",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "application/pdf",
+          },
+          {
+            key: "Content-Disposition",
+            value: 'inline; filename="Bhavya Darji - Resume.pdf"; filename*=UTF-8\'\'Bhavya%20Darji%20%E2%80%94%20Resume.pdf',
+          },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: "/resume.pdf",
+        destination: "/Bhavya%20Darji%20%E2%80%94%20Resume.pdf",
+        permanent: false,
+      },
     ];
   },
 };

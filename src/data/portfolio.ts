@@ -340,6 +340,6 @@ export const heroNavLinks = [
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Approach", hideOnMobile: true },
   { href: "#contact", label: "Let's Talk" },
-  { href: "/resume.pdf", label: "Resume ↗" },
+  { href: "/Bhavya%20Darji%20%E2%80%94%20Resume.pdf", label: "Resume ↗" },
 ];
 
