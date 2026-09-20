@@ -68,7 +68,7 @@ Full-stack and AI engineer building production-grade web, mobile, and AI product
 
 \textbf{Velaar -- AI Educational Platform} \hfill \href{https://velaar.vercel.app/}{\textit{Live Demo}} \enspace$\mid$\enspace \textit{React 19, Gemini AI, Supabase, RAG, Express}
 \begin{itemize}
-\item Architected an AI edtech copilot platform using Gemini 1.5 Pro and a Supabase pgvector RAG pipeline to generate curriculum-grounded lesson plans and Bloom's taxonomy question banks, cutting teacher preparation time by $\sim$85\%.
+\item Architected an AI edtech copilot platform using Gemini 1.5 Pro and a Supabase pgvector RAG pipeline to generate curriculum-grounded lesson plans and Bloom's taxonomy question banks, substantially reducing teacher preparation time.
 \item Engineered an automated Topic-to-Presentation PowerPoint slide generator and real-time QR attendance verification system with JWT auth and role-based access control across teacher, student, admin, and parent portals.
 \end{itemize}
 
@@ -86,10 +86,10 @@ Full-stack and AI engineer building production-grade web, mobile, and AI product
 
 \section*{Education}
 \vspace{1pt}
-\begin{tabular}{@{}p{0.78\textwidth}@{\extracolsep{\fill}}r@{}}
-\textbf{KJ Somaiya Institute of Technology} --- B.Tech in AI \& Data Science (\textit{Current CGPA: \textbf{8.7 / 10.0}}) & 2025--2028 \\
-\textbf{Shri Bhagubhai Mafatlal Polytechnic} --- Diploma in Information Technology (\textit{Aggregate: \textbf{85.73\%}}) & 2022--2025 \\
-\textbf{Parle Tilak Vidyalaya} --- Secondary Education (Class 10) (\textit{Aggregate: \textbf{93.50\%}}) & 2010--2020 \\
+\begin{tabular}{@{}p{\textwidth}@{}}
+\textbf{KJ Somaiya Institute of Technology} --- B.Tech in AI \& Data Science \hfill \textit{Current CGPA: \textbf{8.7 / 10.0}} \quad \textbf{2025--2028} \\
+\textbf{Shri Bhagubhai Mafatlal Polytechnic} --- Diploma in Information Technology \hfill \textit{Aggregate: \textbf{85.73\%}} \quad \textbf{2022--2025} \\
+\textbf{Parle Tilak Vidyalaya} --- Secondary Education (Class 10) \hfill \textit{Aggregate: \textbf{93.50\%}} \quad \textbf{2010--2020} \\
 \end{tabular}
 
 \section*{Certifications \& Leadership}
