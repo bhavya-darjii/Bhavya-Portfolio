@@ -1,124 +1,99 @@
+\documentclass[9pt,a4paper]{article}
 
-\documentclass[9.5pt,a4paper]{article}
-
-\usepackage[a4paper,top=0.34in,bottom=0.32in,left=0.45in,right=0.45in]{geometry}
+\usepackage[a4paper,top=0.28in,bottom=0.28in,left=0.42in,right=0.42in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage[hidelinks,pdfnewwindow=true]{hyperref}
 \usepackage{xcolor}
-\usepackage{multicol}
 \usepackage{array}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{2.5pt}
+\setlength{\parskip}{1.5pt}
 
 \titleformat{\section}{\normalsize\bfseries}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{7pt}{4pt}
+\titlespacing{\section}{0pt}{4pt}{2pt}
 
-\setlist[itemize]{leftmargin=12pt,itemsep=1pt,topsep=2.5pt,parsep=0pt,partopsep=0pt}
+\setlist[itemize]{leftmargin=11pt,itemsep=0.8pt,topsep=1.2pt,parsep=0pt,partopsep=0pt}
 
 \begin{document}
 
 \begin{center}
 {\large\bfseries Bhavya Darji}\\[2pt]
-Software Development Engineer \enspace $\mid$ \enspace Mumbai, India \enspace $\mid$ \enspace +91-8433791241\\
+B.Tech AI \& Data Science, KJ Somaiya Institute of Technology '28 \enspace $\mid$ \enspace Mumbai, India \enspace $\mid$ \enspace +91-8433791241\\
 \href{mailto:bhavyadarji462@gmail.com}{bhavyadarji462@gmail.com} \enspace $\mid$ \enspace \href{https://bhavya-darji.vercel.app/}{\textit{bhavya-darji.vercel.app}}
 \end{center}
 
-\vspace{3pt}
-
+\vspace{-4pt}
 \section*{Profile Summary}
 \vspace{1pt}
-Full-stack engineer building production-ready web, mobile and AI-powered SaaS products. Experienced in RAG (Retrieval-Augmented Generation) pipelines, AI integrations, and structured Git/GitHub branching workflows. Proficient in React, React Native, Flutter, Vite, Firebase, REST APIs and modern web technologies through internships, freelancing and entrepreneurial ventures.
+Full-stack and AI engineer building production-grade web, mobile, and AI products. Experienced in RAG (Retrieval-Augmented Generation) pipelines, Gemini API integrations, cross-platform mobile development, and structured Git/GitHub branching workflows. Founder of Velaar (AI EdTech platform) and Handwrite (past SaaS venture with 180+ users).
 
 \section*{Technical Skills}
 \vspace{1pt}
-\textbf{Languages:} HTML, CSS, JavaScript, Python, Java, C, C++ \hfill
-\textbf{Frameworks:} React, React Native, Flutter, Expo, Vite, Bootstrap, WordPress\\
-\textbf{Backend \& AI:} Node.js, Firebase, Supabase, REST APIs, RAG Pipelines \hfill
-\textbf{Database:} SQL, MySQL \hfill
-\textbf{Tools:} Git \& GitHub (Branching \& Workflows), Render, Razorpay, Adobe Photoshop
+\textbf{Core Engineering Stack:} React, Next.js, React Native, TypeScript, Python, RAG Pipelines, Node.js, Express, Supabase, PostgreSQL, Firebase\\
+\textbf{Tools \& Frameworks:} Flutter, Dart, Tailwind CSS, REST APIs, Git/GitHub, Docker, Redis, Google Cloud, MySQL, C/C++, Java, WordPress
 
 \section*{Professional Experience}
+\vspace{1pt}
+
+\textbf{Optisoft Vision} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-optisoft-vision-recommendation-letter.pdf}{\footnotesize\textnormal{[Recommendation Letter]}} \hfill \textit{React JS Software Developer \enspace$\mid$\enspace Jun 2024 -- Aug 2024}
+\begin{itemize}
+\item Engineered 12+ modular React/Vite components across EyeCloud, Lensoui, and HelpHub enterprise web applications.
+\item Integrated REST APIs with asynchronous state handling, reducing UI render latency and improving data synchronization.
+\item Resolved 25+ critical cross-browser rendering inconsistencies and participated in structured production sprint deployments.
+\end{itemize}
+
 \vspace{2pt}
-
-\textbf{Optisoft Vision} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-optisoft-vision-recommendation-letter.pdf}{\footnotesize\textnormal{[Recommendation Letter]}} \hfill \textit{React JS Software Developer | Jun 2026}
+\textbf{Vinayak Soft Solutions} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-vinayak-soft-solutions-recommendation-letter.pdf}{\footnotesize\textnormal{[Recommendation Letter]}} \hfill \textit{App Developer Intern \enspace$\mid$\enspace Nov 2024 -- Mar 2025}
 \begin{itemize}
-\item Developed React/Vite apps (EyeCloud, Lensoui, HelpHub); integrated REST APIs, enhanced UI/UX, fixed bugs and participated in production deployments.
+\item Developed cross-platform mobile apps with React Native and Expo; built an offline-first POS system for restaurants to capture table orders.
+\item Built a real-time Business Insights analytics dashboard delivering sales, inventory, and performance metrics for local businesses.
 \end{itemize}
 
-\vspace{4pt}
-\textbf{Vinayak Soft Solutions} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-vinayak-soft-solutions-recommendation-letter.pdf}{\footnotesize\textnormal{[Recommendation Letter]}} \hfill \textit{App Developer Intern | Nov 2024 -- Mar 2025}
+\vspace{2pt}
+\textbf{WebGyor Technologies} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-webgyor-technologies-recommendation-letter.pdf}{\footnotesize\textnormal{[Recommendation Letter]}} \hfill \textit{WordPress Developer \enspace$\mid$\enspace Jun 2022 -- Aug 2022}
 \begin{itemize}
-\item Built cross-platform apps with React Native and Expo; delivered a POS system for local restaurants and a Business Insights analytics application.
+\item Developed responsive client web portals (Portfolio Analyst, Employee Track, Account Management); improved page speed by 35\%.
 \end{itemize}
 
-\vspace{4pt}
-\textbf{WebGyor Technologies} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-webgyor-technologies-recommendation-letter.pdf}{\footnotesize\textnormal{[Recommendation Letter]}} \hfill \textit{WordPress Developer | June 2022 -- August 2022}
+\vspace{2pt}
+\textbf{Ayika Foundation} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-ayika-offer-letter.pdf}{\footnotesize\textnormal{[Offer Letter]}} \hfill \textit{IT Intern \enspace$\mid$\enspace Aug 2022 -- Aug 2023}
 \begin{itemize}
-\item Developed responsive client websites; managed front-end and back-end of Portfolio Analyst, Employee Track and Account Management systems.
+\item Directed IT digital initiatives and content distribution workflows for environmental campaigns, reaching 10,000+ community members.
 \end{itemize}
 
-\vspace{4pt}
-\textbf{Ayika Foundation} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-ayika-offer-letter.pdf}{\footnotesize\textnormal{[Offer Letter]}} \hfill \textit{IT Intern | Aug 2022 -- Aug 2023}
+\section*{Featured Projects \& Founder Ventures}
+\vspace{1pt}
+
+\textbf{Velaar -- AI Educational Platform} \hfill \href{https://velaar.vercel.app/}{\textit{Live Demo}} \enspace$\mid$\enspace \textit{React 19, Gemini AI, Supabase, RAG, Express}
 \begin{itemize}
-\item Drove IT and digital initiatives for environmental advocacy; managed digital assets and content workflows across community platforms.
+\item Architected an AI edtech copilot platform using Gemini 1.5 Pro and a Supabase pgvector RAG pipeline to generate curriculum-grounded lesson plans and Bloom's taxonomy question banks, cutting teacher preparation time by $\sim$85\%.
+\item Engineered an automated Topic-to-Presentation PowerPoint slide generator and real-time QR attendance verification system with JWT auth and role-based access control across teacher, student, admin, and parent portals.
 \end{itemize}
 
-\section*{Featured Projects}
-\setlength{\columnsep}{16pt}
-\vspace{-8pt}
-\begin{multicols}{2}
+\vspace{2pt}
+\textbf{Hasslefree Drive -- On-Demand Driver Booking App} \hfill \href{https://www.hasslefreedrive.com/}{\textit{Live Site}} \enspace$\mid$\enspace \textit{Flutter, Dart, REST API, Google Maps}
+\begin{itemize}
+\item Built dual-sided driver booking application with real-time GPS tracking via Google Maps API, automated tiered fare estimation, and scalable REST API backend with JWT authentication and push notifications (currently in launch phase).
+\end{itemize}
 
-\noindent\textbf{Velaar -- AI Educational Platform} \hfill \href{https://velaar.vercel.app/}{Live Demo}\\
-AI education platform with role-specific dashboards; Gemini-powered lesson plans, question banks, PPT generation and Smart Attendance QR system.\\
-\textit{Uses: RAG Pipeline, Supabase, Gemini AI}
+\vspace{2pt}
+\noindent\textbf{Handwrite (2024--25):} Built and launched SaaS product to \textbf{180+ users} automating handwritten assignments (1,200+ pages rendered, Razorpay credit packs); retired platform after analyzing compute unit economics --- gained firsthand founder experience in CAC, feedback loops, and cost optimization.
 
-\vspace{5pt}
-\noindent\textbf{Hasslefree Drive} \hfill \href{https://www.hasslefreedrive.com/}{Live Site}\\
-Driver-booking app with live tracking, booking management, secure payments and notifications.\\
-\textit{Uses: Flutter, Dart, Rest API}
-
-\vspace{5pt}
-\noindent\textbf{ATM Promo} \hfill \href{https://atm.promo}{Live Site}\\
-Marketing website focused on branding, lead generation and conversion optimization.\\
-\textit{Uses: WordPress, SEO, Lead Generation}
-
-\vspace{5pt}
-\noindent\textbf{Barter Tech} \hfill \href{https://www.barter.tech/}{Live Site}\\
-Official company website with modern UI and B2B-focused content architecture.\\
-\textit{Uses: WordPress, Bootstrap, B2B}
-
-\columnbreak
-
-\noindent\textbf{Handwrite -- AI SaaS Platform} \hfill \href{https://handwrite-omega.vercel.app}{Live Demo}\\
-Converts typed text into realistic handwritten PDFs; Firebase Auth, Razorpay payments, smart credit system. Launched with \textbf{180+ users}.\\
-\textit{Uses: React, Firebase, Razorpay}
-
-\vspace{5pt}
-\noindent\textbf{Medway -- Healthcare App}\\
-Healthcare monitoring app with emergency support and appointment management.\\
-\textit{Uses: Flutter, Firebase, IoT Sensors}
-
-\vspace{5pt}
-\noindent\textbf{Prime Financials} \hfill \href{https://primefinancials.com}{Live Site}\\
-Responsive corporate website for a financial services firm with legal and advisory content.\\
-\textit{Uses: WordPress, SEO, FinTech}
-
-\end{multicols}
+\vspace{2pt}
+\noindent\textbf{Freelance Web Engineering (2023--24):} Delivered 3 commercial client sites (\textbf{ATM Promo}, \textbf{Prime Financials}, \textbf{Barter Tech}) using WordPress, PHP, and Bootstrap; achieved 95+ Core Web Vitals, improved load speeds by 40\%, and integrated lead capture funnels.
 
 \section*{Education}
-\vspace{2pt}
-\begin{tabular}{@{}l@{\hskip 0.3in}r@{\hskip 0.5in}l@{\hskip 0.3in}r@{}}
-\textbf{KJ Somaiya Institute of Technology} & 2025--2028 & \textbf{Shri Bhagubhai Mafatlal Polytechnic} & 2022--2025 \\
-B.Tech in AI \& Data Science & & Diploma in Information Technology & \\[2pt]
-\textbf{Parle Tilak Vidyalaya} & 2010--2020 & & \\
-Secondary Education & & & \\
+\vspace{1pt}
+\begin{tabular}{@{}p{0.78\textwidth}@{\extracolsep{\fill}}r@{}}
+\textbf{KJ Somaiya Institute of Technology} --- B.Tech in AI \& Data Science (\textit{Current CGPA: \textbf{8.7 / 10.0}}) & 2025--2028 \\
+\textbf{Shri Bhagubhai Mafatlal Polytechnic} --- Diploma in Information Technology (\textit{Aggregate: \textbf{85.73\%}}) & 2022--2025 \\
+\textbf{Parle Tilak Vidyalaya} --- Secondary Education (Class 10) (\textit{Aggregate: \textbf{93.50\%}}) & 2010--2020 \\
 \end{tabular}
 
-
-\section*{Languages}
-English \textbullet\ Hindi \textbullet\ Gujarati \textbullet\ Marathi
-
+\section*{Certifications \& Leadership}
+\vspace{1pt}
+\textbf{Certifications:} Claude AI Fluency (Anthropic), Claude for Small Businesses, Artificial Intelligence \& Machine Learning\\
+\textbf{Leadership \& Beyond:} Founder at Velaar \& Handwrite; Technical mentor to junior students in React Native \& Git; Spoken: English, Hindi, Gujarati
 \end{document}

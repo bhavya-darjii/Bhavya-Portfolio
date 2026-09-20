@@ -135,14 +135,14 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
             >
               {/* Big role title */}
               <p
-                className="font-sans text-lg font-bold uppercase tracking-[0.2em] leading-none text-center"
+                className="font-sans text-base sm:text-lg font-bold uppercase tracking-[0.15em] leading-tight text-center"
                 style={{ color: "rgba(0,0,0,0.85)" }}
               >
                 {personal.techStack}
               </p>
               <p
-                className="mt-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-center"
-                style={{ color: "rgba(0,0,0,0.5)" }}
+                className="mt-1.5 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.12em] text-center"
+                style={{ color: "rgba(0,0,0,0.65)" }}
               >
                 {personal.animations}
               </p>

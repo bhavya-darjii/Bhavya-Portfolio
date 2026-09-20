@@ -12,6 +12,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { Hero } from "@/components/sections/Hero";
 import { Projects } from "@/components/sections/Projects";
 import { Skills } from "@/components/sections/Skills";
+import { Leadership } from "@/components/sections/Leadership";
 import { Certificates } from "@/components/sections/Certificates";
 
 export default function Home() {
@@ -39,6 +40,7 @@ export default function Home() {
           <Projects />
           <Testimonials />
           <Skills />
+          <Leadership />
           <Certificates />
           <Contact />
         </div>

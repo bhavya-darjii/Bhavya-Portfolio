@@ -80,7 +80,14 @@ export function About() {
                   <span className="absolute left-0 top-1.5 h-2.5 w-2.5 rounded-full border-2 border-teal-500 bg-[#0a0a12]" />
                   <p className="text-sm font-medium text-white">{item.degree}</p>
                   <p className="text-sm text-zinc-400">{item.school}</p>
-                  <p className="mt-0.5 text-xs text-zinc-500">{item.period}</p>
+                  <div className="mt-1 flex items-center justify-between gap-2 text-xs">
+                    <span className="text-zinc-500">{item.period}</span>
+                    {(item as any).score && (
+                      <span className="rounded-md border border-teal-500/20 bg-teal-500/10 px-2 py-0.5 font-medium text-teal-400">
+                        {(item as any).score}
+                      </span>
+                    )}
+                  </div>
                 </li>
               ))}
             </ul>
