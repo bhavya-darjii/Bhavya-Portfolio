@@ -4,15 +4,10 @@ import { useEffect } from "react";
 
 const PRELOAD_DOCS = [
   "/Bhavya%20Darji%20%E2%80%94%20Resume.pdf",
-  "/resume.pdf",
   "/letters/bhavya-optisoft-vision-recommendation-letter.pdf",
   "/letters/bhavya-vinayak-soft-solutions-recommendation-letter.pdf",
   "/letters/bhavya-webgyor-technologies-recommendation-letter.pdf",
   "/letters/bhavya-ayika-offer-letter.pdf",
-  "/certificates/claude-ai-fluency.pdf",
-  "/certificates/claude-ai-fluency-students.pdf",
-  "/certificates/claude-small-businesses.pdf",
-  "/certificates/ai-ml-course.pdf",
 ];
 
 export function PdfPreloader() {

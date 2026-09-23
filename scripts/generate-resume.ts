@@ -3,25 +3,25 @@ import * as path from "path";
 
 async function generateResume() {
   try {
-    const templatePath = path.join(__dirname, "..", "latex_code");
+    const templatePath = path.join(__dirname, "..", "resume_latex");
     const latexContent = fs.readFileSync(templatePath, "utf-8");
 
-    console.log("Read latex_code (length: " + latexContent.length + " bytes)");
+    console.log("Read resume_latex (length: " + latexContent.length + " bytes)");
     console.log("Sending to LaTeX API...");
-    
+
     // @ts-ignore
     let fetchObj: any;
     // @ts-ignore
     let FormDataObj: any;
-    
+
     if (typeof fetch === 'undefined') {
-        // @ts-ignore
-        const nodeFetch = await import('node-fetch');
-        fetchObj = nodeFetch.default;
-        FormDataObj = nodeFetch.FormData || global.FormData;
+      // @ts-ignore
+      const nodeFetch = await import('node-fetch');
+      fetchObj = nodeFetch.default;
+      FormDataObj = nodeFetch.FormData || global.FormData;
     } else {
-        fetchObj = fetch;
-        FormDataObj = FormData;
+      fetchObj = fetch;
+      FormDataObj = FormData;
     }
 
     const formData = new FormDataObj();
@@ -44,7 +44,6 @@ async function generateResume() {
 
     const buffer = await response.arrayBuffer();
     const outputPaths = [
-      path.join(__dirname, "..", "public", "resume.pdf"),
       path.join(__dirname, "..", "public", "Bhavya Darji — Resume.pdf"),
     ];
     try {
