@@ -131,7 +131,7 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.9 }}
-              className="relative z-20 px-6 pt-18 pb-6 md:hidden"
+              className="relative z-20 px-6 pt-13 pb-4 md:hidden"
             >
               {/* Big role title */}
               <p
