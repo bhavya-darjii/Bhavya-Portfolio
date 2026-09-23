@@ -45,18 +45,31 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
     return Math.min(1, Math.max(0, y / h));
   });
 
-  // Apply spring physics model for the scale to smooth out touch scroll jitter
+  // One smoothed progress drives every hero motion — same curves as before, but
+  // scroll jitter / momentum on iOS eases out instead of snapping frame-to-frame.
   const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 400,
-    damping: 40,
-    restDelta: 0.001,
+    stiffness: 120,
+    damping: 28,
+    mass: 0.55,
+    restDelta: 0.0005,
   });
 
-  const textOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
-  const textScale = useTransform(scrollYProgress, [0, 0.4], [1, 0.95]);
+  // Snappier follow on scroll-up so BHAVYA / DARJI comes back sooner; still smooth.
+  const textProgress = useSpring(scrollYProgress, {
+    stiffness: 200,
+    damping: 32,
+    mass: 0.38,
+    restDelta: 0.0005,
+  });
+
+  const textOpacity = useTransform(textProgress, [0, 0.38], [1, 0.22]);
+  const textScale = useTransform(textProgress, [0, 0.38], [1, 0.95]);
   const imageScale = useTransform(smoothProgress, [0, 1], [1, 1.25]);
-  const imageFilter = useTransform(scrollYProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
-  const imageOpacity = useTransform(scrollYProgress, [0.5, 1], [1, 0]);
+  const imageFilter = useTransform(smoothProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
+  const imageOpacity = useTransform(smoothProgress, [0.5, 1], [1, 0]);
+
+  const scrollLayerClass =
+    "transform-gpu will-change-[transform,opacity] [backface-visibility:hidden]";
 
   return (
     <section ref={containerRef} id="home" className="relative w-full min-h-[115svh] md:min-h-screen">
@@ -72,7 +85,10 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
             {/* Large background typography — behind photo */}
             <motion.div
               style={{ opacity: textOpacity, scale: textScale }}
-              className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center select-none z-0 pb-[10vh] md:pb-0"
+              className={cn(
+                "pointer-events-none absolute inset-0 flex flex-col items-center justify-center select-none z-0 pb-[10vh] md:pb-0",
+                scrollLayerClass
+              )}
               aria-hidden
             >
               <motion.div
@@ -99,7 +115,10 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.6 }}
-              className="relative z-20 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 px-6 pt-8 md:gap-x-10"
+              className={cn(
+                "relative z-20 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 px-6 pt-8 md:gap-x-10",
+                scrollLayerClass
+              )}
             >
               {heroNavLinks.map((link) => {
                 const isPdf = link.href.endsWith(".pdf");
@@ -131,7 +150,7 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.9 }}
-              className="relative z-20 px-6 pt-13 pb-4 md:hidden"
+              className={cn("relative z-20 px-6 pt-13 pb-4 md:hidden", scrollLayerClass)}
             >
               {/* Big role title */}
               <p
@@ -195,9 +214,9 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
                   marginLeft: "8%",
                   scale: imageScale,
                   filter: imageFilter,
-                  opacity: imageOpacity
+                  opacity: imageOpacity,
                 }}
-                className="md:hidden"
+                className={cn("md:hidden", scrollLayerClass)}
               >
                 <ProfileImage scale={2.2} loaded={loaded} />
               </motion.div>
@@ -210,9 +229,9 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
                   marginLeft: "0",
                   scale: imageScale,
                   filter: imageFilter,
-                  opacity: imageOpacity
+                  opacity: imageOpacity,
                 }}
-                className="hidden md:block"
+                className={cn("hidden md:block", scrollLayerClass)}
               >
                 <ProfileImage scale={1.2} loaded={loaded} />
               </motion.div>
@@ -224,7 +243,10 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.9 }}
-              className="absolute bottom-0 left-0 right-0 z-20 hidden md:flex items-end justify-between px-6 pb-8"
+              className={cn(
+                "absolute bottom-0 left-0 right-0 z-20 hidden md:flex items-end justify-between px-6 pb-8",
+                scrollLayerClass
+              )}
             >
               {/* Left */}
               <div>
