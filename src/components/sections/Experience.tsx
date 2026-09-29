@@ -13,7 +13,7 @@ export function Experience() {
         <SectionHeading
           label="Experience"
           title="Professional Journey"
-          description="A track record of building robust applications and delivering scalable software solutions across diverse environments."
+          description="A track record of building robust applications and delivering scalable software across diverse environments."
         />
 
         <div className="relative space-y-6">

@@ -12,7 +12,7 @@ export function Skills() {
         <SectionHeading
           label="Skills"
           title="Technical Expertise"
-          description="A two-tier view of my skillset: core production technologies I use daily, backed by auxiliary tools and frameworks."
+          description="A two-tier view of my skill set: core production technologies I use regularly, backed by supporting tools and frameworks."
         />
 
         {/* PRIMARY STACK — full-width card */}

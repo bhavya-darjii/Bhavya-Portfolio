@@ -36,7 +36,7 @@ export function Projects() {
         <SectionHeading
           label="Projects"
           title="Featured Work & Ventures"
-          description="A curated collection of impactful applications, demonstrating expertise in product design and robust engineering."
+          description="Products I've built, shipped, and learned from across AI platforms, mobile applications, and client systems."
         />
 
         {/* Row 1: Velaar — full width */}
