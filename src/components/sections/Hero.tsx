@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { heroNavLinks, personal } from "@/data/portfolio";
 import { ProfileImage } from "@/components/ui/ProfileImage";
@@ -54,7 +54,7 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
     restDelta: 0.0005,
   });
 
-  // Snappier follow on scroll-up so BHAVYA / DARJI comes back sooner; still smooth.
+  // Mobile: snappier text on scroll-up (keeps faint type visible while scrolled).
   const textProgress = useSpring(scrollYProgress, {
     stiffness: 200,
     damping: 32,
@@ -62,14 +62,51 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
     restDelta: 0.0005,
   });
 
-  const textOpacity = useTransform(textProgress, [0, 0.38], [1, 0.22]);
-  const textScale = useTransform(textProgress, [0, 0.38], [1, 0.95]);
+  // Laptop: image leads on scroll-up; text lags so it never beats the photo back in.
+  const desktopImageProgress = useSpring(scrollYProgress, {
+    stiffness: 200,
+    damping: 32,
+    mass: 0.38,
+    restDelta: 0.0005,
+  });
+  const desktopTextProgress = useSpring(scrollYProgress, {
+    stiffness: 120,
+    damping: 28,
+    mass: 0.55,
+    restDelta: 0.0005,
+  });
+
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const sync = () => setIsDesktop(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
+
+  const mobileTextOpacity = useTransform(textProgress, [0, 0.38], [1, 0.22]);
+  const mobileTextScale = useTransform(textProgress, [0, 0.38], [1, 0.95]);
+  const desktopNameOpacity = useTransform(desktopTextProgress, [0.1, 0.62], [1, 0]);
+  const desktopNameScale = useTransform(desktopTextProgress, [0.1, 0.62], [1, 0.92]);
+  const desktopChromeOpacity = useTransform(desktopTextProgress, [0.1, 0.62], [1, 0]);
+
   const imageScale = useTransform(smoothProgress, [0, 1], [1, 1.25]);
   const imageFilter = useTransform(smoothProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
   const imageOpacity = useTransform(smoothProgress, [0.5, 1], [1, 0]);
 
+  const desktopImageScale = useTransform(desktopImageProgress, [0, 1], [1, 1.25]);
+  const desktopImageFilter = useTransform(
+    desktopImageProgress,
+    [0, 1],
+    ["blur(0px)", "blur(10px)"]
+  );
+  const desktopImageOpacity = useTransform(desktopImageProgress, [0.5, 1], [1, 0]);
+
   const scrollLayerClass =
     "transform-gpu will-change-[transform,opacity] [backface-visibility:hidden]";
+  const scrollFadeClass =
+    "transform-gpu will-change-[opacity] [backface-visibility:hidden]";
 
   return (
     <section ref={containerRef} id="home" className="relative w-full min-h-[115svh] md:min-h-screen">
@@ -84,7 +121,10 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
 
             {/* Large background typography — behind photo */}
             <motion.div
-              style={{ opacity: textOpacity, scale: textScale }}
+              style={{
+                opacity: isDesktop ? desktopNameOpacity : mobileTextOpacity,
+                scale: isDesktop ? desktopNameScale : mobileTextScale,
+              }}
               className={cn(
                 "pointer-events-none absolute inset-0 flex flex-col items-center justify-center select-none z-0 pb-[10vh] md:pb-0",
                 scrollLayerClass
@@ -111,7 +151,10 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
 
             {/* Hero navigation */}
             <motion.nav
-              style={{ opacity: textOpacity, scale: textScale }}
+              style={{
+                opacity: isDesktop ? desktopChromeOpacity : mobileTextOpacity,
+                scale: isDesktop ? 1 : mobileTextScale,
+              }}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.6 }}
@@ -146,7 +189,7 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
 
             {/* MOBILE ONLY: redesigned info block */}
             <motion.div
-              style={{ opacity: textOpacity, scale: textScale }}
+              style={{ opacity: mobileTextOpacity, scale: mobileTextScale }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.9 }}
@@ -227,9 +270,9 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
                   height: "75vh",
                   maxWidth: "896px",
                   marginLeft: "0",
-                  scale: imageScale,
-                  filter: imageFilter,
-                  opacity: imageOpacity,
+                  scale: desktopImageScale,
+                  filter: desktopImageFilter,
+                  opacity: desktopImageOpacity,
                 }}
                 className={cn("hidden md:block", scrollLayerClass)}
               >
@@ -239,13 +282,13 @@ export function Hero({ loaded = true }: { loaded?: boolean }) {
 
             {/* DESKTOP ONLY: meta row pinned to bottom, above image */}
             <motion.div
-              style={{ opacity: textOpacity, scale: textScale }}
+              style={{ opacity: desktopChromeOpacity }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.9 }}
               className={cn(
                 "absolute bottom-0 left-0 right-0 z-20 hidden md:flex items-end justify-between px-6 pb-8",
-                scrollLayerClass
+                scrollFadeClass
               )}
             >
               {/* Left */}
