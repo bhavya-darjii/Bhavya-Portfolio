@@ -1,6 +1,6 @@
 \documentclass[9pt,a4paper]{article}
 
-\usepackage[a4paper,top=0.28in,bottom=0.28in,left=0.42in,right=0.42in]{geometry}
+\usepackage[a4paper,top=0.25in,bottom=0.25in,left=0.4in,right=0.4in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage[hidelinks,pdfnewwindow=true]{hyperref}
@@ -9,12 +9,13 @@
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{1.5pt}
+\setlength{\parskip}{1pt}
+\emergencystretch=2em
 
 \titleformat{\section}{\normalsize\bfseries}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{4pt}{2pt}
+\titlespacing{\section}{0pt}{3pt}{1.5pt}
 
-\setlist[itemize]{leftmargin=11pt,itemsep=0.8pt,topsep=1.2pt,parsep=0pt,partopsep=0pt}
+\setlist[itemize]{leftmargin=10pt,itemsep=0.5pt,topsep=1pt,parsep=0pt,partopsep=0pt}
 
 \begin{document}
 
@@ -25,83 +26,76 @@ B.Tech AI \& Data Science, KJ Somaiya Institute of Technology '28 \enspace $\mid
 \href{mailto:bhavyadarji462@gmail.com}{\underline{bhavyadarji462@gmail.com}} \enspace $\mid$ \enspace \href{https://bhavya-darji.vercel.app/}{\underline{\textit{https://bhavya-darji.vercel.app/}}}
 \end{center}
 
-\vspace{-4pt}
+\vspace{-5pt}
 \section*{Profile Summary}
-\vspace{1pt}
-Full-stack and AI engineer building production-grade web, mobile, and AI products. Experienced in RAG (Retrieval-Augmented Generation) pipelines, Gemini API integrations, cross-platform mobile development, and structured Git/GitHub branching workflows. Founder of Velaar (AI EdTech platform) and Handwrite (past SaaS venture with 180+ users).
+\vspace{0.5pt}
+Full-stack and AI engineer building production web, mobile, and AI applications. Hands-on experience implementing RAG pipelines with Supabase pgvector, shipping LLM integrations, and building cross-platform mobile apps in React Native and Flutter. Founder of Velaar (AI EdTech copilot) and creator of Handwrite (180+ organic users).
 
 \section*{Technical Skills}
-\vspace{1pt}
-\textbf{Core Engineering Stack:} React, Next.js, React Native, TypeScript, Python, RAG Pipelines, Node.js, Express, Supabase, PostgreSQL, Firebase\\
+\vspace{0.5pt}
+\textbf{Core Engineering Stack:} React, Next.js, React Native, TypeScript, Python, Node.js, Express, Supabase (pgvector), PostgreSQL, Firebase\\
 \textbf{Tools \& Frameworks:} Flutter, Dart, Tailwind CSS, REST APIs, Git/GitHub, Docker, Redis, Google Cloud, MySQL, C/C++, Java, WordPress
 
 \section*{Professional Experience}
-\vspace{1pt}
+\vspace{0.5pt}
 
-\textbf{SunMac Solar (Ecomac Energy Pty Ltd)} \hfill \textit{Founder's Office Intern \enspace$\mid$\enspace Sep 2026 -- Present}
+\textbf{SunMac Solar (Ecomac Energy Pty Ltd)} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-sunmac-solar-offer-letter.pdf}{\footnotesize\textnormal{[\underline{Offer Letter}]}} \hfill \textit{Founder's Office Intern \enspace$\mid$\enspace Sep 2026 -- Present}
 \begin{itemize}
-\item Working directly in the Founder's Office on strategic operations and business execution for an Australian B2B solar energy company.
-\item Engineered a full-stack AI Lead Intelligence Platform: ingests Australian postcodes, queries ABN Lookup API, detects solar panel presence via Google Maps satellite imagery, segments businesses by size, scrapes LinkedIn contact intelligence and industry pain points, and generates hyper-personalised cold outreach emails using a Supabase pgvector RAG pipeline.
-\item Redesigned and built the official SunMac Solar corporate website (sunmacsolar.com.au) with a modern UI, improved conversion architecture, and SEO enhancements for the Australian B2B solar market.
+\item Working in the Founder's Office on software systems and operations for an Australian commercial solar energy provider.
+\item Engineered an AI Lead Intelligence platform: automated business discovery via ABN Lookup, rooftop solar detection via Google Maps satellite imagery, lead enrichment, and Supabase pgvector semantic search to generate tailored cold outreach emails.
+\item Redesigned and launched the SunMac Solar website (\href{https://sunmacsolar.com.au/}{\underline{\textit{sunmacsolar.com.au}}}) with Next.js, optimizing load performance, mobile layout, and commercial SEO.
 \end{itemize}
 
-\vspace{2pt}
+\vspace{1.5pt}
 \textbf{Optisoft Vision} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-optisoft-vision-recommendation-letter.pdf}{\footnotesize\textnormal{[\underline{Recommendation Letter}]}} \hfill \textit{React JS Software Developer \enspace$\mid$\enspace Jun 2024 -- Aug 2024}
 \begin{itemize}
-\item Engineered 12+ modular React/Vite components across EyeCloud, Lensoui, and HelpHub enterprise web applications.
-\item Integrated REST APIs with asynchronous state handling, reducing UI render latency and improving data synchronization.
-\item Resolved 25+ critical cross-browser rendering inconsistencies and participated in structured production sprint deployments.
+\item Built and refactored 12+ modular React/Vite components across EyeCloud, Lensoui, and HelpHub web portals.
+\item Connected REST APIs with asynchronous state caching and error boundaries, eliminating UI render lag and sync issues.
+\item Resolved 25+ cross-browser bugs and delivered production patches across structured agile sprint cycles.
 \end{itemize}
 
-\vspace{2pt}
+\vspace{1.5pt}
 \textbf{Vinayak Soft Solutions} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-vinayak-soft-solutions-recommendation-letter.pdf}{\footnotesize\textnormal{[\underline{Recommendation Letter}]}} \hfill \textit{App Developer Intern \enspace$\mid$\enspace Nov 2024 -- Mar 2025}
 \begin{itemize}
-\item Developed cross-platform mobile apps with React Native and Expo; built an offline-first POS system for restaurants to capture table orders.
-\item Built a real-time Business Insights analytics dashboard delivering sales, inventory, and performance metrics for local businesses.
+\item Developed cross-platform mobile apps in React Native and Expo, including an offline-first restaurant POS system for table orders.
+\item Built a real-time analytics dashboard tracking daily sales, inventory levels, and operational metrics for local business owners.
 \end{itemize}
 
-\vspace{2pt}
+\vspace{1.5pt}
 \textbf{WebGyor Technologies} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-webgyor-technologies-recommendation-letter.pdf}{\footnotesize\textnormal{[\underline{Recommendation Letter}]}} \hfill \textit{WordPress Developer \enspace$\mid$\enspace Jun 2022 -- Aug 2022}
 \begin{itemize}
-\item Developed responsive client web portals (Portfolio Analyst, Employee Track, Account Management); improved page speed by 35\%.
+\item Developed responsive client web portals (Portfolio Analyst, Employee Track); reduced page load times by 35\% via caching and asset delivery optimizations.
 \end{itemize}
 
-\vspace{2pt}
+\vspace{1.5pt}
 \textbf{Ayika Foundation} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-ayika-offer-letter.pdf}{\footnotesize\textnormal{[\underline{Offer Letter}]}} \hfill \textit{IT Intern \enspace$\mid$\enspace Aug 2022 -- Aug 2023}
 \begin{itemize}
-\item Directed IT digital initiatives and content distribution workflows for environmental campaigns, reaching 10,000+ community members.
+\item Managed digital infrastructure and automated content distribution workflows for environmental campaigns reaching 10,000+ people.
 \end{itemize}
 
 \section*{Featured Projects \& Founder Ventures}
-\vspace{1pt}
+\vspace{0.5pt}
 
-\textbf{SunMac Solar -- AI Lead Intelligence Platform} \hfill \href{https://sunmacsolar.com.au/}{\underline{\textit{sunmacsolar.com.au}}} \enspace$\mid$\enspace \textit{Next.js, Supabase, pgvector, Google Maps API, ABN Lookup, LLM}
+\textbf{Velaar -- AI Educational Platform} \hfill \href{https://velaar.vercel.app/}{\underline{\textit{Live Demo}}} \enspace$\mid$\enspace \textit{React 19, Gemini 1.5 Pro, Supabase, pgvector, Express}
 \begin{itemize}
-\item Built end-to-end B2B lead generation engine: postcode input $\rightarrow$ ABN Lookup business discovery $\rightarrow$ Google Maps solar detection $\rightarrow$ business size segmentation $\rightarrow$ LinkedIn contact enrichment $\rightarrow$ pgvector RAG storage $\rightarrow$ AI-generated personalised cold emails.
-\item Rebuilt the official SunMac Solar corporate website with a modern design system, conversion-optimised layout, and improved SEO for the Australian solar market.
+\item Built an AI teaching assistant using Gemini 1.5 Pro and a Supabase pgvector RAG pipeline to generate curriculum-grounded lesson plans and Bloom's taxonomy assessments with sub-1.8s streaming responses.
+\item Created an automated Topic-to-PowerPoint slide generator and a real-time QR attendance verification system with role-based JWT auth.
 \end{itemize}
 
-\vspace{2pt}
-\textbf{Velaar -- AI Educational Platform} \hfill \href{https://velaar.vercel.app/}{\underline{\textit{Live Demo}}} \enspace$\mid$\enspace \textit{React 19, Gemini AI, Supabase, RAG, Express}
+\vspace{1.5pt}
+\textbf{Hasslefree Drive -- On-Demand Driver Booking App} \hfill \href{https://www.hasslefreedrive.com/}{\underline{\textit{Live Site}}} \enspace$\mid$\enspace \textit{Flutter, Dart, Google Maps API, REST}
 \begin{itemize}
-\item Architected an AI edtech copilot platform using Gemini 1.5 Pro and a Supabase pgvector RAG pipeline to generate curriculum-grounded lesson plans and Bloom's taxonomy question banks, substantially reducing teacher preparation time.
-\item Engineered an automated Topic-to-Presentation PowerPoint slide generator and real-time QR attendance verification system with JWT auth and role-based access control across teacher, student, admin, and parent portals.
+\item Built a dual-sided driver booking mobile app featuring live GPS tracking via Google Maps, automated tiered fare estimation, and a REST API backend with JWT authentication and push notifications (currently in launch phase).
 \end{itemize}
 
-\vspace{2pt}
-\textbf{Hasslefree Drive -- On-Demand Driver Booking App} \hfill \href{https://www.hasslefreedrive.com/}{\underline{\textit{Live Site}}} \enspace$\mid$\enspace \textit{Flutter, Dart, REST API, Google Maps}
-\begin{itemize}
-\item Built dual-sided driver booking application with real-time GPS tracking via Google Maps API, automated tiered fare estimation, and scalable REST API backend with JWT authentication and push notifications (currently in launch phase).
-\end{itemize}
+\vspace{1.5pt}
+\noindent\textbf{Handwrite (2024--25):} Built and launched a SaaS product to \textbf{180+ organic users} converting digital text into realistic handwritten PDFs (1,200+ pages rendered, Razorpay credit packs); shut down after analyzing server canvas compute economics versus student pricing tolerance.
 
-\vspace{2pt}
-\noindent\textbf{Handwrite (2024--25):} Built and launched SaaS product to \textbf{180+ users} automating handwritten assignments (1,200+ pages rendered, Razorpay credit packs); retired platform after analyzing compute unit economics --- gained firsthand founder experience in CAC, feedback loops, and cost optimization.
-
-\vspace{2pt}
-\noindent\textbf{Freelance Web Engineering (2023--24):} Delivered 3 commercial client sites (\href{https://atm.promo/}{\underline{\textbf{ATM Promo}}}, \href{https://primefinancials.com/}{\underline{\textbf{Prime Financials}}}, \href{https://www.barter.tech/}{\underline{\textbf{Barter Tech}}}) using WordPress, PHP, and Bootstrap; achieved 95+ Core Web Vitals, improved load speeds by 40\%, and integrated lead capture funnels.
+\vspace{1.5pt}
+\noindent\textbf{Freelance Web Engineering (2023--24):} Delivered 3 client sites (\href{https://atm.promo/}{\underline{\textbf{ATM Promo}}}, \href{https://primefinancials.com/}{\underline{\textbf{Prime Financials}}}, \href{https://www.barter.tech/}{\underline{\textbf{Barter Tech}}}) achieved 95+ Core Web Vitals, improved load speeds by 40\%, and built high-converting B2B lead funnels.
 
 \section*{Education}
-\vspace{1pt}
+\vspace{0.5pt}
 \begin{tabular}{@{}p{\textwidth}@{}}
 \textbf{KJ Somaiya Institute of Technology} --- B.Tech in AI \& Data Science \hfill \textit{Current CGPA: \textbf{8.7 / 10.0}} \quad \textbf{2025--2028} \\
 \textbf{Shri Bhagubhai Mafatlal Polytechnic} --- Diploma in Information Technology \hfill \textit{Aggregate: \textbf{85.73\%}} \quad \textbf{2022--2025} \\
@@ -109,7 +103,7 @@ Full-stack and AI engineer building production-grade web, mobile, and AI product
 \end{tabular}
 
 \section*{Certifications \& Leadership}
-\vspace{1pt}
-\textbf{Certifications:} Claude AI Fluency, Claude AI Fluency for Students, Claude for Small Businesses, AI \& ML Course, AI Agents Workshop, Ideathon Competition, KJSIT Campus Hackathon, Claude Integration with Google Vertex\\
-\textbf{Leadership \& Beyond:} Founder at Velaar \& Handwrite; Technical mentor to junior students in React Native \& Git; Spoken: English, Hindi, Gujarati, Marathi
+\vspace{0.5pt}
+\textbf{Certifications:} Claude AI Fluency, Claude AI Fluency for Students, Claude for Small Businesses, AI \& ML Specialization, AI Agents Workshop, KJSIT Campus Hackathon, Claude Vertex AI\\
+\textbf{Leadership \& Beyond:} Founder at Velaar \& Handwrite; Peer mentor in React Native \& Git; Languages: English, Hindi, Gujarati, Marathi
 \end{document}
