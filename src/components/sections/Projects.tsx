@@ -18,6 +18,7 @@ const statusColorMap: Record<string, string> = {
 export function Projects() {
   const [platform, setPlatform] = useState<"ios" | "android" | "other">("other");
   const [activeFreelanceTab, setActiveFreelanceTab] = useState(0);
+  const [activeSunmacTab, setActiveSunmacTab] = useState(0);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -132,6 +133,7 @@ export function Projects() {
           {projects.slice(1).map((project, i) => {
             const isPastVenture = (project as any).isPastVenture;
             const isFreelanceGroup = (project as any).isFreelanceGroup;
+            const isSunmac = (project as any).isSunmac;
             const reflection = (project as any).founderReflection;
             const clients = (project as any).clientProjects || [];
 
@@ -150,7 +152,9 @@ export function Projects() {
               projectItem.iosLink ||
               "";
 
-            const activeClient = clients[activeFreelanceTab] || clients[0];
+            const activeClient = isSunmac
+              ? clients[activeSunmacTab] || clients[0]
+              : clients[activeFreelanceTab] || clients[0];
 
             return (
               <GlassCard key={project.title} delay={(i + 1) * 0.08} className="flex flex-col">
@@ -190,6 +194,51 @@ export function Projects() {
                       <span className="font-semibold text-zinc-200">Key takeaway: </span>
                       {reflection.whatLearned}
                     </p>
+                  </div>
+                )}
+
+                {/* SunMac: Tabbed client projects */}
+                {isSunmac && clients.length > 0 && (
+                  <div className="mb-5">
+                    <div className="mb-3 flex gap-1.5 rounded-xl border border-white/8 bg-white/[0.02] p-1">
+                      {clients.map((c: any, idx: number) => (
+                        <button
+                          key={c.name}
+                          onClick={() => setActiveSunmacTab(idx)}
+                          className={cn(
+                            "flex-1 rounded-lg px-2 py-1.5 text-sm font-medium transition-colors",
+                            activeSunmacTab === idx
+                              ? "bg-white/10 text-white"
+                              : "text-zinc-500 hover:text-zinc-300"
+                          )}
+                        >
+                          {c.name}
+                        </button>
+                      ))}
+                    </div>
+                    {activeClient && (
+                      <div className="rounded-xl border border-white/8 bg-white/[0.03] p-4">
+                        <div className="flex items-center justify-between gap-2 mb-2">
+                          <p className="text-base font-semibold text-white">{activeClient.name}</p>
+                          {activeClient.url && (
+                            <a
+                              href={activeClient.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-1 text-sm text-zinc-400 hover:text-teal-300 transition-colors"
+                            >
+                              Live Site <ArrowUpRight size={13} />
+                            </a>
+                          )}
+                        </div>
+                        <p className="text-sm text-zinc-500 mb-2">{activeClient.type}</p>
+                        <p className="text-sm leading-relaxed text-zinc-300">{activeClient.details}</p>
+                        <p className="mt-2 text-sm text-zinc-400">
+                          <span className="text-zinc-300 font-medium">Impact: </span>
+                          {activeClient.metrics}
+                        </p>
+                      </div>
+                    )}
                   </div>
                 )}
 
@@ -238,8 +287,8 @@ export function Projects() {
                   </div>
                 )}
 
-                {/* Standard highlights (non-flagship, non-freelance) */}
-                {!isFreelanceGroup && !isPastVenture && (
+                {/* Standard highlights (non-flagship, non-freelance, non-sunmac) */}
+                {!isFreelanceGroup && !isPastVenture && !isSunmac && (
                   <ul className="mb-6 space-y-2">
                     {project.highlights.map((item) => (
                       <li key={item.slice(0, 30)} className="flex gap-2 text-sm text-zinc-300">
@@ -250,7 +299,7 @@ export function Projects() {
                   </ul>
                 )}
 
-                {/* Footer: tags + link (no link for freelance group) */}
+                {/* Footer: tags + link (no link for freelance/sunmac group) */}
                 <div className="mt-auto flex items-end justify-between gap-2 pt-2">
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
@@ -263,7 +312,7 @@ export function Projects() {
                     ))}
                   </div>
 
-                  {!isFreelanceGroup && activeLink && (
+                  {!isFreelanceGroup && !isSunmac && activeLink && (
                     <a
                       href={activeLink}
                       target="_blank"

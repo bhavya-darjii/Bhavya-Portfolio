@@ -24,6 +24,20 @@ export const personal = {
 
 export const experience = [
   {
+    company: "SunMac Solar (Ecomac Energy Pty Ltd)",
+    role: "Founder's Office Intern",
+    period: "Sep 2026 – Present",
+    type: "Internship",
+    letterId: "sunmac",
+    letterLabel: "Offer Letter",
+    letterUrl: "/letters/bhavya-sunmac-solar-offer-letter.pdf",
+    highlights: [
+      "Working in the Founder's Office on strategic operations and business execution for an Australian B2B solar energy company.",
+      "Engineered an AI-powered B2B lead generation platform automating business discovery, solar panel detection, lead enrichment, and personalised outreach email generation.",
+      "Redesigned and developed the official SunMac Solar corporate website, improving UI, conversion architecture, and SEO.",
+    ],
+  },
+  {
     company: "Optisoft Vision",
     role: "React JS Software Developer",
     period: "Jun 2024 – Aug 2024",
@@ -164,6 +178,24 @@ export const projects = [
       "Built custom canvas rendering engine with realistic paper textures, rule lines, and ink flow",
     ],
     tags: ["React 19", "Micro-SaaS", "Razorpay", "PDF Engine", "Founder Journey"],
+  },
+  {
+    title: "SunMac Solar — Lead Intelligence Platform",
+    link: "https://sunmacsolar.com.au/",
+    category: "AI · B2B · Lead Generation · Solar Tech",
+    status: "Delivered",
+    accent: "amber",
+    tagline: "AI-powered lead generation platform for the Australian B2B solar market.",
+    description:
+      "Built for SunMac Solar (Australia) — an AI-driven platform that automates business discovery, solar panel detection, lead enrichment, and personalised cold outreach email generation. Also redesigned the official SunMac Solar corporate website.",
+    highlights: [
+      "Engineered an AI platform automating B2B lead discovery, enrichment, and personalised cold email generation",
+      "Integrated Google Maps satellite imagery and ABN Lookup API for solar detection and business profiling",
+      "Stored enriched lead profiles as pgvectors in Supabase for semantic retrieval and precision targeting",
+      "Scraped LinkedIn and industry data to surface key decision-makers and business pain points per lead",
+      "Rebuilt the official SunMac Solar corporate website with improved UI, conversion layout, and SEO",
+    ],
+    tags: ["Next.js", "Supabase", "pgvector", "Google Maps API", "RAG Pipeline", "B2B"],
   },
   {
     title: "Freelance Client Work",

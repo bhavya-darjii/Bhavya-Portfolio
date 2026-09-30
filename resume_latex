@@ -38,6 +38,14 @@ Full-stack and AI engineer building production-grade web, mobile, and AI product
 \section*{Professional Experience}
 \vspace{1pt}
 
+\textbf{SunMac Solar (Ecomac Energy Pty Ltd)} \hfill \textit{Founder's Office Intern \enspace$\mid$\enspace Sep 2026 -- Present}
+\begin{itemize}
+\item Working directly in the Founder's Office on strategic operations and business execution for an Australian B2B solar energy company.
+\item Engineered a full-stack AI Lead Intelligence Platform: ingests Australian postcodes, queries ABN Lookup API, detects solar panel presence via Google Maps satellite imagery, segments businesses by size, scrapes LinkedIn contact intelligence and industry pain points, and generates hyper-personalised cold outreach emails using a Supabase pgvector RAG pipeline.
+\item Redesigned and built the official SunMac Solar corporate website (sunmacsolar.com.au) with a modern UI, improved conversion architecture, and SEO enhancements for the Australian B2B solar market.
+\end{itemize}
+
+\vspace{2pt}
 \textbf{Optisoft Vision} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-optisoft-vision-recommendation-letter.pdf}{\footnotesize\textnormal{[\underline{Recommendation Letter}]}} \hfill \textit{React JS Software Developer \enspace$\mid$\enspace Jun 2024 -- Aug 2024}
 \begin{itemize}
 \item Engineered 12+ modular React/Vite components across EyeCloud, Lensoui, and HelpHub enterprise web applications.
@@ -67,6 +75,13 @@ Full-stack and AI engineer building production-grade web, mobile, and AI product
 \section*{Featured Projects \& Founder Ventures}
 \vspace{1pt}
 
+\textbf{SunMac Solar -- AI Lead Intelligence Platform} \hfill \href{https://sunmacsolar.com.au/}{\underline{\textit{sunmacsolar.com.au}}} \enspace$\mid$\enspace \textit{Next.js, Supabase, pgvector, Google Maps API, ABN Lookup, LLM}
+\begin{itemize}
+\item Built end-to-end B2B lead generation engine: postcode input $\rightarrow$ ABN Lookup business discovery $\rightarrow$ Google Maps solar detection $\rightarrow$ business size segmentation $\rightarrow$ LinkedIn contact enrichment $\rightarrow$ pgvector RAG storage $\rightarrow$ AI-generated personalised cold emails.
+\item Rebuilt the official SunMac Solar corporate website with a modern design system, conversion-optimised layout, and improved SEO for the Australian solar market.
+\end{itemize}
+
+\vspace{2pt}
 \textbf{Velaar -- AI Educational Platform} \hfill \href{https://velaar.vercel.app/}{\underline{\textit{Live Demo}}} \enspace$\mid$\enspace \textit{React 19, Gemini AI, Supabase, RAG, Express}
 \begin{itemize}
 \item Architected an AI edtech copilot platform using Gemini 1.5 Pro and a Supabase pgvector RAG pipeline to generate curriculum-grounded lesson plans and Bloom's taxonomy question banks, substantially reducing teacher preparation time.
