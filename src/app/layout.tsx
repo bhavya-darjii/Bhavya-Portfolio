@@ -20,7 +20,7 @@ const syne = Syne({
 export const metadata: Metadata = {
   title: "Bhavya Darji",
   description:
-    "Portfolio of Bhavya Darji — B.Tech AI & Data Science '28, Full-Stack & AI Engineer building Velaar. Specializing in RAG pipelines, React, Next.js, and Supabase. Based in Mumbai, India.",
+    "Portfolio of Bhavya Darji, B.Tech AI & Data Science '28, Full-Stack & AI Engineer building Velaar. Specializing in RAG pipelines, React, Next.js, and Supabase. Based in Mumbai, India.",
   keywords: [
     "Bhavya Darji",
     "Full-Stack Engineer",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Bhavya Darji" }],
   openGraph: {
-    title: "Bhavya Darji — B.Tech AI & Data Science '28 · Full-Stack & AI Engineer",
+    title: "Bhavya Darji | B.Tech AI & Data Science '28, Full-Stack & AI Engineer",
     description:
       "Full-stack and AI engineer building Velaar, an AI-native educational copilot platform with RAG and Gemini. Based in Mumbai.",
     type: "website",
