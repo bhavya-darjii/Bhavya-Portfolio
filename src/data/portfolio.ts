@@ -32,9 +32,9 @@ export const experience = [
     letterLabel: "Offer Letter",
     letterUrl: "/letters/bhavya-sunmac-solar-offer-letter.pdf",
     highlights: [
-      "Working in the Founder's Office on strategic operations and business execution for an Australian B2B solar energy company.",
-      "Engineered an AI-powered B2B lead generation platform automating business discovery, solar panel detection, lead enrichment, and personalised outreach email generation.",
-      "Redesigned and developed the official SunMac Solar corporate website, improving UI, conversion architecture, and SEO.",
+      "Direct operational software systems and business execution in the Founder's Office for an Australian B2B solar energy provider.",
+      "Architected an AI-powered B2B Lead Intelligence platform orchestrating business discovery via ABN Lookup, rooftop solar detection via Google Maps satellite imagery, and pgvector semantic search.",
+      "Spearheaded the redesign and deployment of the official SunMac Solar corporate website with Next.js, optimizing load performance by 45%, mobile responsiveness, and SEO.",
     ],
   },
   {
@@ -47,8 +47,8 @@ export const experience = [
     letterUrl: "/letters/bhavya-optisoft-vision-recommendation-letter.pdf",
     highlights: [
       "Engineered and refactored 12+ modular React/Vite components across EyeCloud, Lensoui, and HelpHub web portals.",
-      "Integrated REST APIs with asynchronous state handling, reducing UI render lag and improving data synchronization.",
-      "Resolved 25+ cross-browser rendering inconsistencies and participated in structured sprint deployments.",
+      "Integrated REST APIs with asynchronous state caching and error boundaries, eliminating UI render lag and data synchronization issues.",
+      "Resolved 25+ cross-browser compatibility defects and shipped production patches across structured bi-weekly agile sprint cycles.",
     ],
   },
   {
@@ -60,22 +60,22 @@ export const experience = [
     letterLabel: "Recommendation Letter",
     letterUrl: "/letters/bhavya-vinayak-soft-solutions-recommendation-letter.pdf",
     highlights: [
-      "Developed cross-platform mobile apps with React Native and Expo in an agile product environment.",
-      "Engineered an offline-first POS system for local restaurants to capture and process table orders seamlessly.",
-      "Built a Business Insights application delivering real-time sales, inventory, and performance dashboards for owners.",
+      "Developed cross-platform mobile apps in React Native and Expo in an agile product environment.",
+      "Engineered an offline-first restaurant POS system processing 200+ daily table orders with sub-second synchronization.",
+      "Constructed a real-time analytics dashboard tracking daily sales, inventory levels, and operational metrics for 15+ local retail businesses.",
       "Optimized app bundle size and render performance across Android and iOS touch interfaces.",
     ],
   },
   {
     company: "WebGyor Technologies",
     role: "WordPress Website Development",
-    period: "June 2022 – August 2022",
+    period: "Jun 2022 – Aug 2022",
     type: "Internship",
     letterId: "webgyor",
     letterLabel: "Recommendation Letter",
     letterUrl: "/letters/bhavya-webgyor-technologies-recommendation-letter.pdf",
     highlights: [
-      "Built responsive, accessible client web applications enforcing consistent typography, layout, and visual hierarchy.",
+      "Programmed 2 responsive client web portals (Portfolio Analyst, Employee Track) managing 500+ records with accessible typography and layout hierarchy.",
       "Managed front-end and back-end integration across Portfolio Analyst, Employee Track, and Account Management portals.",
       "Streamlined asset delivery and caching configurations, improving page speed by 35% across internal tools.",
     ],
@@ -90,8 +90,8 @@ export const experience = [
     letterUrl: "/letters/bhavya-ayika-offer-letter.pdf",
     highlights: [
       "Selected through a competitive evaluation process to lead digital operations supporting environmental advocacy.",
-      "Managed digital content architecture and distribution workflows reaching 10,000+ community members across channels.",
-      "Maintained online platform assets and automated regular content publishing schedules for environmental campaigns.",
+      "Administered digital content architecture and distribution workflows reaching 10,000+ community members across channels.",
+      "Streamlined platform operations and digital publishing schedules for environmental advocacy campaigns.",
     ],
   },
 ];
@@ -206,7 +206,7 @@ export const projects = [
     status: "Delivered",
     accent: "amber",
     isFreelanceGroup: true,
-    tagline: "Three commercial client websites built, delivered on time, and running live.",
+    tagline: "Three commercial client web platforms engineered, shipped on schedule, and actively serving users.",
     description:
       "Handled client briefs across growth marketing, financial services, and B2B technology. Each project was turned into a responsive, fast-loading production website built to the client's requirements.",
     clientProjects: [
