@@ -200,6 +200,26 @@ export const projects = [
     tags: ["Next.js", "Supabase", "pgvector", "Google Maps API", "RAG Pipeline", "B2B"],
   },
   {
+    title: "Remora",
+    link: "https://remoraheart.vercel.app/",
+    category: "Computer Vision · Signal Processing · rPPG",
+    status: "Completed",
+    accent: "violet",
+    isRemora: true,
+    tagline: "Measure your heart rate in real time — no wearable, no sensor, just your webcam.",
+    description:
+      "Built as a computer vision course project, Remora measures your heart rate and other health signals just by watching your face through a regular webcam. It detects tiny colour changes in your skin caused by blood flowing through your face with each heartbeat — changes completely invisible to the naked eye — and turns them into a live pulse reading. It tracks 12 health metrics including heart rate, breathing rate, and stress indicators, all running directly in the browser with no app to install.",
+    highlights: [
+      "Reads heart rate from a regular webcam by detecting invisible colour shifts in facial skin caused by blood flow",
+      "Tracks 12 health signals live: heart rate, breathing rate, stress level, blood oxygen estimate, pulse variability, and more",
+      "Works entirely in the browser with no backend required — deployed on Vercel with zero server costs",
+      "Also ships a full Python backend mode for higher accuracy using SciPy signal processing over a WebSocket connection",
+      "Live oscilloscope and frequency chart update in real time as you sit in front of the camera",
+      "Smart face-detection lock: the HUD only activates once your face is properly detected — no stray boxes or ghost overlays",
+    ],
+    tags: ["Python", "FastAPI", "React 19", "Vite", "MediaPipe", "OpenCV", "WebSockets", "WASM", "Signal Processing", "Computer Vision"],
+  },
+  {
     title: "Freelance Client Work",
     link: "https://atm.promo/",
     category: "Client Engineering · 3 Projects",
