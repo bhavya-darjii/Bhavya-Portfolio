@@ -41,36 +41,31 @@ Full-stack and AI engineer specializing in production web, mobile, and AI system
 
 \textbf{SunMac Solar (Ecomac Energy Pty Ltd)} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-sunmac-solar-offer-letter.pdf}{\footnotesize\textnormal{[\underline{Offer Letter}]}} \hfill \textit{Founder's Office Intern \enspace$\mid$\enspace Sep 2026 -- Present}
 \begin{itemize}
-\item Direct operational software development in the Founder's Office for an Australian commercial solar energy provider.
-\item Architected an AI Lead Intelligence platform orchestrating business discovery via ABN Lookup, rooftop solar detection via Google Maps satellite imagery, lead enrichment, and Supabase pgvector semantic search to generate tailored cold outreach emails.
-\item Spearheaded the redesign and deployment of the SunMac Solar web platform (\href{https://sunmacsolar.com.au/}{\underline{\textit{sunmacsolar.com.au}}}) with Next.js, optimizing page load performance by 45\%, mobile responsiveness, and commercial SEO.
+\item Architected an AI Lead Intelligence platform (ABN Lookup, Google Maps satellite rooftop detection, Supabase pgvector semantic search) to generate tailored outreach emails; redesigned the SunMac Solar site (\href{https://sunmacsolar.com.au/}{\underline{\textit{sunmacsolar.com.au}}}) in Next.js, improving load performance by 45\% and SEO.
 \end{itemize}
 
-\vspace{1.5pt}
+\vspace{1pt}
 \textbf{Optisoft Vision} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-optisoft-vision-recommendation-letter.pdf}{\footnotesize\textnormal{[\underline{Recommendation Letter}]}} \hfill \textit{React JS Software Developer \enspace$\mid$\enspace Jun 2024 -- Aug 2024}
 \begin{itemize}
-\item Engineered and refactored 12+ modular React/Vite components across EyeCloud, Lensoui, and HelpHub web portals.
-\item Integrated REST APIs with asynchronous state caching and error boundaries, eliminating UI render lag and data synchronization issues.
-\item Resolved 25+ cross-browser compatibility defects and shipped production patches across structured agile sprint cycles.
+\item Engineered 12+ modular React/Vite components across EyeCloud, Lensoui, and HelpHub portals; integrated REST APIs with async state caching, and resolved 25+ cross-browser defects across agile sprint cycles.
 \end{itemize}
 
-\vspace{1.5pt}
+\vspace{1pt}
 \textbf{Vinayak Soft Solutions} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-vinayak-soft-solutions-recommendation-letter.pdf}{\footnotesize\textnormal{[\underline{Recommendation Letter}]}} \hfill \textit{App Developer Intern \enspace$\mid$\enspace Nov 2024 -- Mar 2025}
 \begin{itemize}
-\item Developed cross-platform mobile apps in React Native and Expo, including an offline-first restaurant POS system processing 200+ daily table orders.
-\item Constructed a real-time analytics dashboard tracking daily sales, inventory levels, and operational metrics for 15+ local retail businesses.
+\item Built cross-platform React Native apps: an offline-first restaurant POS processing 200+ daily orders and a real-time sales analytics dashboard for 15+ retail businesses.
 \end{itemize}
 
-\vspace{1.5pt}
+\vspace{1pt}
 \textbf{WebGyor Technologies} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-webgyor-technologies-recommendation-letter.pdf}{\footnotesize\textnormal{[\underline{Recommendation Letter}]}} \hfill \textit{WordPress Developer \enspace$\mid$\enspace Jun 2022 -- Aug 2022}
 \begin{itemize}
-\item Programmed responsive client web portals (Portfolio Analyst, Employee Track) managing 500+ records; reduced page load times by 35\% via caching and asset delivery optimizations.
+\item Programmed responsive client portals (Portfolio Analyst, Employee Track) managing 500+ records; reduced page load times by 35\% via caching optimizations.
 \end{itemize}
 
-\vspace{1.5pt}
+\vspace{1pt}
 \textbf{Ayika Foundation} \enspace \href{https://bhavya-darji.vercel.app/letters/bhavya-ayika-offer-letter.pdf}{\footnotesize\textnormal{[\underline{Offer Letter}]}} \hfill \textit{IT Intern \enspace$\mid$\enspace Aug 2022 -- Aug 2023}
 \begin{itemize}
-\item Administered digital infrastructure and streamlined content distribution workflows for environmental campaigns reaching 10,000+ active participants.
+\item Administered digital infrastructure and content distribution workflows for environmental campaigns reaching 10,000+ active participants.
 \end{itemize}
 
 \section*{Technical Projects}
@@ -78,21 +73,32 @@ Full-stack and AI engineer specializing in production web, mobile, and AI system
 
 \textbf{Velaar -- AI Educational Platform} \hfill \href{https://velaar.vercel.app/}{\underline{\textit{Live Demo}}} \enspace$\mid$\enspace \textit{Jan 2025 -- Present}
 \begin{itemize}
-\item Implemented an AI teaching assistant using Gemini 1.5 Pro and a Supabase pgvector RAG pipeline to generate syllabus-grounded lesson plans and Bloom's taxonomy assessments with streaming responses under 1.8 seconds.
-\item Designed a Topic-to-PowerPoint slide generator cutting lesson prep time by 70\%, and a real-time QR attendance verification system validating 100+ students in under 30 seconds with role-based JWT auth.
+\item Implemented an AI teaching assistant using the Gemini API and Supabase pgvector RAG to generate syllabus-grounded lesson plans and assessments with streaming responses under 1.8s; QR attendance system validating 100+ students in under 30 seconds with role-based JWT auth.
 \end{itemize}
 
-\vspace{1.5pt}
-\textbf{Hasslefree Drive -- On-Demand Driver Booking App} \hfill \href{https://www.hasslefreedrive.com/}{\underline{\textit{Live Site}}} \enspace$\mid$\enspace \textit{Aug 2024 -- Present}
+\vspace{1pt}
+\textbf{Hasslefree Drive -- On-Demand Driver Booking App} \hfill \href{https://www.hasslefreedrive.com/}{\underline{\textit{Live Demo}}} \enspace$\mid$\enspace \textit{Aug 2024 -- Oct 2026}
 \begin{itemize}
-\item Constructed a dual-sided driver booking mobile app featuring live GPS tracking via Google Maps, dynamic tiered fare computation, and a REST API backend with JWT authentication and push notifications.
+\item Dual-sided mobile app with live GPS tracking via Google Maps, dynamic tiered fare computation, and a REST API backend with JWT authentication and push notifications.
 \end{itemize}
 
-\vspace{1.5pt}
-\noindent\textbf{Handwrite (2024 -- 2025):} Founded a micro-SaaS platform serving \textbf{180+ organic users} converting digital text into realistic handwritten PDFs (1,200+ pages rendered, Razorpay credit packs); concluded operations after analyzing server canvas compute economics versus student pricing tolerance.
+\vspace{1pt}
+\textbf{Remora -- Contact-Free Heart Rate Monitor} \hfill \href{https://remoraheart.vercel.app/}{\underline{\textit{Live Demo}}} \enspace$\mid$\enspace \textit{Jun 2026 -- Oct 2026}
+\begin{itemize}
+\item College IVP project extracting live heart rate from webcam video via facial skin pixel colour shifts; achieved 98.9\% pulse detection accuracy benchmarking 3 rPPG algorithms across 12 real-time telemetry metrics. Built with React 19, FastAPI, and MediaPipe.
+\end{itemize}
 
-\vspace{1.5pt}
-\noindent\textbf{Freelance Web Engineering (2023 -- 2024):} Engineered 3 client sites (\href{https://atm.promo/}{\underline{\textbf{ATM Promo}}}, \href{https://primefinancials.com/}{\underline{\textbf{Prime Financials}}}, \href{https://www.barter.tech/}{\underline{\textbf{Barter Tech}}}), achieving 95+ Core Web Vitals, improving load speeds by 40\%, and establishing high-converting B2B lead capture funnels.
+\vspace{1pt}
+\textbf{Handwrite -- Handwritten PDF Generator} \hfill \href{https://handwrite-omega.vercel.app/}{\underline{\textit{Live Demo}}} \enspace$\mid$\enspace \textit{Nov 2025 -- Sep 2026}
+\begin{itemize}
+\item Founded a micro-SaaS serving \textbf{180+ organic users} converting typed text into realistic handwritten PDFs (1,200+ pages rendered, Razorpay credit packs); shut down after evaluating server compute costs vs.\ student pricing tolerance.
+\end{itemize}
+
+\vspace{1pt}
+\textbf{Freelance Web Engineering -- Client Platforms} \hfill \textit{2023 -- 2024}
+\begin{itemize}
+\item Engineered 3 client sites (\href{https://atm.promo/}{\underline{\textbf{ATM Promo}}}, \href{https://primefinancials.com/}{\underline{\textbf{Prime Financials}}}, \href{https://www.barter.tech/}{\underline{\textbf{Barter Tech}}}), achieving 95+ Core Web Vitals and improving load speeds by 40\%.
+\end{itemize}
 
 \section*{Education}
 \vspace{0.5pt}
